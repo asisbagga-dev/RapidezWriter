@@ -6,7 +6,8 @@
   box-sizing: border-box;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
-p, li{
+p,
+li {
   font-size: 16px;
 }
 
@@ -31,7 +32,7 @@ header {
   /* overflow: hidden; */
   /* z-index: 888; */
 }
-header h5{
+header h5 {
   font-weight: 600 !important;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 
@@ -39,7 +40,7 @@ header h5{
   padding-top: 15px;
 }
 
-header.sticky h5{
+header.sticky h5 {
   padding-top: 0px;
 }
 
@@ -62,7 +63,6 @@ header.sticky {
 header.sticky a {
   padding-bottom: 0px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 
 header.sticky ul li:hover > ul {
@@ -87,7 +87,7 @@ header.sticky .ser:hover {
 header .logo {
   display: flex;
   position: relative;
-  
+
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
@@ -137,7 +137,6 @@ header.sticky ul li a {
 .drop ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 .drop ul ul {
   position: absolute;
@@ -252,7 +251,7 @@ header.sticky ul li a {
   /* border-radius: 5px; */
   /* margin-left: 230px; */
 }
-.btn:hover{
+.btn:hover {
   background: #5ec4f7;
   /* border-radius: 5px; */
 }
@@ -263,8 +262,11 @@ header.sticky ul li a {
   /* border-bottom: 2px solid rgb(226, 215, 215); */
   /* padding-top: 100px; */
   padding: 20px;
+  width: 100%;
 }
-
+.headline h4 {
+  margin-bottom: 5px;
+}
 .colo1 {
   padding-bottom: 60px;
 }
@@ -275,86 +277,93 @@ header.sticky ul li a {
   border-radius: 50%;
   padding: 20px;
 }
-
+.boss {
+  margin-left: auto;
+}
 .maindetail {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 63px 250px 63px 250px 63px 250px;
   height: 300px;
   justify-items: center;
+  grid-gap: 30px;
+  margin-left: 10%;
 }
 
 .pt {
   align-items: center;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
+  margin-left: 10px;
+  /* padding-right: 20px; */
+}
+
+.pt p span {
+  font-weight: bold;
 }
 
 /* -------------------------------------------how it work------------------------------- */
 
-.work {
-  /* height: 300px; */
-  /* background: #223c99; */
-  /* color: #fff; */
+.gworkm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  /* margin-top: 30px; */
+}
+
+.ptt1 img {
+  margin-left: 30px;
+}
+.ptt1 p {
+  padding: 0 50px;
+}
+
+.container .pt {
+  margin-top: 0;
+}
+
+/* <!-- -------------------------------------------------memorial-design--------------------------------- --> */
+.all1 {
+  /* width: 50%; */
+  float: left;
+}
+
+.all1 img {
+  margin: 50px 0;
+  margin-left: 30%;
+  width: 450px;
+}
+
+.tex1 {
+  background: #fff;
+  width: 400px;
+  height: 200px;
+  border-radius: 15px;
+  padding: 20px 30px;
+}
+
+.tex1 p {
+  font-size: large;
+  line-height: 30px;
+}
+
+.tex2 h5 {
   margin-top: 50px;
 }
 
-.PART {
-  padding-top: 10px;
+.tex2 h5 i {
+  margin-right: 20px;
+  padding-left: 30px;
 }
 
-.d2 {
-  margin: 0 auto;
+.mtex {
+  /* width: 50%; */
+  float: right;
+  margin: 50px 17% 0px 0px;
 }
 
-.d1 {
-  margin-left: auto;
-}
-
-.pt12 {
-  position: relative;
-
-  height: 300px;
-  width: 300px;
-  border: 2px solid rgb(226, 215, 215);
-}
-.fori {
-  position: absolute;
-  top: 0;
-}
-
-.pt12 img {
-  height: 100px;
-  width: 296px;
-}
-
-.fa-colors {
-  margin-left: 110px;
-  margin-top: 40px;
-}
-
-.chead {
-  font-weight: bold;
-  height: 50px;
-  margin-top: 100px;
-
-  text-align: center;
-  padding-top: 15px;
-  border-bottom: 1px solid rgb(226, 215, 215);
-}
-.chead1 {
-  text-align: center;
-  padding-top: 15px;
-  /* border-bottom: 1px solid rgb(226, 215, 215); */
-  padding: 30px 5px;
-}
-
-.gworkm {
-}
-
-.gwork {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 30px;
+.boss1 {
+  height: 750px;
+  width: 100%;
 }
 
 /* <!-- ---------------------------------------------------resume sample---------------------------------- --> */
@@ -405,6 +414,7 @@ header.sticky ul li a {
   background: #fff;
   margin: 0 10px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .post-slider .next {
@@ -465,13 +475,17 @@ header.sticky ul li a {
   display: grid;
   grid-template-columns: repeat(3, 250px) 1fr;
   height: 273px;
-    /* margin-top: 80px; */
+  /* margin-top: 80px; */
   /* border-top: 2px solid #a7b2d8; */
   padding: 9px 60px;
   background: #09143b;
   color: #6275b975;
   margin-top: 40px;
-  background-image: linear-gradient(174deg, rgba(59,11,72,0) 32%, rgba(59,11,72,0.5));
+  background-image: linear-gradient(
+    174deg,
+    rgba(59, 11, 72, 0) 32%,
+    rgba(59, 11, 72, 0.5)
+  );
   position: relative;
   bottom: 0;
   left: 0;
@@ -519,7 +533,7 @@ header.sticky ul li a {
   font-size: 1.5rem;
 }
 
-.btn-large{
+.btn-large {
   text-transform: none;
   font-size: 20px;
   font-weight: 600;

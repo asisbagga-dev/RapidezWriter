@@ -91,7 +91,7 @@
         </li>
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
         <li><a href="#">Quiz</a></li>
-        <li><a href="#">Career Advice</a></li>    
+        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
         <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
       </ul>
     </header>
@@ -332,17 +332,17 @@
     </div>
 
     <!-- -------------------------------Resumes have been shortlisted by--------------------------- -->
-    <div class="headline container" style="padding-bottom: 10px;">
+    <div class="headline container" style="padding-bottom: 0px;">
       <h4>Resumes Have Been Shortlisted By</h4>
     </div>
 
 
-    <div class="image1" style="padding: 0 80px;">
+    <div class="image1" style="padding: 0 150px;">
+      <img src="{% static '/image/logo8.png' %}" alt="" />
+      <img src="{% static '/image/logo2.png' %}" alt="" />
       <img src="{% static '/image/logo8.png' %}" alt="" />
       <img src="{% static '/image/logo9.png' %}" alt="" />
-      <img src="{% static '/image/logo1.png' %}" alt="" />
-      <img src="{% static '/image/logo3.png' %}" alt="" />
-      <img src="{% static '/image/logo 4.png' %}" alt="" />
+      <img src="{% static '/image/logo8.png' %}" alt="" />
     </div>
 
     <!-- --------------------------------------------------footer----------------------------- -->

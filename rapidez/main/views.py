@@ -1,16 +1,21 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Home Page
 
 def home(request):
     return render(request,"home.html")
 
+# About the company Pages
 def about(request):
     return render(request,"about.html")
 
 def contact_us(request):
     return render(request,"contact.html")
 
+def testimonials(request):
+    return render(request,"testimonials.html")
+
+# Service Pages
 def resume_consulting(request):
     return render(request,"resume_consulting.html")
 
@@ -30,5 +35,14 @@ def resume_video(request):
 def linkedin(request):
     return render(request,"linkedin.html")
 
-def testimonials(request):
-    return render(request,"testimonials.html")
+
+# Career Advise List Pages
+def career_list_page(request):
+    return render(request, "career_list.html")
+
+def career_detail_page(request):
+    return render(request, "career_detail.html")
+
+def career_view_all_page(request):
+    return render(request, "career_view_all.html")
+

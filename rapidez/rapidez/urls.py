@@ -22,8 +22,8 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('About', views.about, name="about"),
-    path('Contact-Us', views.contact_us, name="contactUs"),
+
+    #Service Pages
     path('Resume-Consulting', views.resume_consulting, name="resumeConsulting"),
     path('Resume-Writing', views.resume_writing, name="resumeWriting"),
     path('Resume-Makeover', views.resume_makeover, name="resumeMakeover"),
@@ -31,8 +31,18 @@ urlpatterns = [
     path('Resume-Makeover2', views.resume_makeover_2, name="resumeMakeover2"),
     path('Resume-Video', views.resume_video, name="resumeVideo"),
     path('linkedIn', views.linkedin, name="linkedIn"),
+
+    # About Pages
+    path('About', views.about, name="about"),
+    path('Contact-Us', views.contact_us, name="contactUs"),
     path('Testimonials', views.testimonials, name="testimonials"),
+
+    #Blog Pages
+    path('career-advise-list', views.career_list_page, name="career_list_page"),
+    path('career-advise-detail', views.career_detail_page, name="career_detail_page"),
+    path('career-advise-view-all', views.career_view_all_page, name="career_view_all_page"),
     
+    # Bharath's Work
     path('resumeupload/', include('resumeAnalysis.urls')),
 ]
 

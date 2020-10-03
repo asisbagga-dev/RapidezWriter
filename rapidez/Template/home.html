@@ -16,6 +16,9 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!--Import materialize.css-->
     <link
       type="text/css"
@@ -24,11 +27,17 @@
       media="screen,projection"
     />
     <link rel="stylesheet" href="{% static '/css/home.css' %}" />
-    <link rel="stylesheet" href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}"
+    />
 
     <!-- ----------------slick--------------------------- -->
     <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick.css' %}" />
-    <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick-theme.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/slick-1.8.1/slick/slick-theme.css' %}"
+    />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -41,7 +50,7 @@
     <header class="drop">
       <a href="{% url 'home' %}" class="logo">
         <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
       </a>
       <ul>
         <li><a href="#">Resume Analysis</a></li>
@@ -59,11 +68,15 @@
               aria-hidden="true"
             ></i
           ></a>
-          <ul class="ser1 ser12" style="left: 38%;">
+          <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"><li>Resume template makeover</li></a>
-            <a href="{% url 'linkedIn' %}"><li>Linkedin profile branding</li></a>
+            <a href="{% url 'resumeMakeover' %}"
+              ><li>Resume template makeover</li></a
+            >
+            <a href="{% url 'linkedIn' %}"
+              ><li>Linkedin profile branding</li></a
+            >
             <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
             <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
           </ul>
@@ -83,7 +96,7 @@
               aria-hidden="true"
             ></i
           ></a>
-          <ul class="ser1 ser11" style="left: -30%;">
+          <ul class="ser1 ser11" style="left: -30%">
             <div class="box111"></div>
             <a href="{% url 'about' %}"><li>About Us</li></a>
             <a href="#"><li>FAQ</li></a>
@@ -91,7 +104,9 @@
         </li>
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
         <li><a href="#">Quiz</a></li>
+
         <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
+
         <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
       </ul>
     </header>
@@ -100,7 +115,7 @@
       <div class="headtex">
         <h4>
           Getting a great job starts
-          <div class="sp" style="margin: 11px;"></div>
+          <div class="sp" style="margin: 11px"></div>
           with a great resume.
         </h4>
         <br />
@@ -111,7 +126,10 @@
     </div>
     <section class="Banner">
       <video autoplay loop muted>
-        <source src="{% static '/video/Rapidez Writer-1.mp4' %}" type="video/mp4" />
+        <source
+          src="{% static '/video/RapidezWriter-1.mp4' %}"
+          type="video/mp4"
+        />
       </video>
     </section>
 
@@ -119,101 +137,120 @@
     <div class="headline container">
       <h4>What's Preventing You From Your Dream Job?</h4>
     </div>
+    <div class="boss">
+      <div class="maindetail">
+        <div class="image1212">
+          <br />
+          <img src="{% static '\image\Capture0.PNG' %}" />
+        </div>
+        <div class="pt1 pt" data-aos="fade-left" data-aos-duration="1500">
+          <p>
+            <span>Cover Letter Builder</span><br />
 
-    <div class="maindetail container">
-      <div class="pt1 pt">
+            Write a cover letter using the same templates as your resume.
+          </p>
+        </div>
 
-        <i class="fas fa-search fa-2x fa-color"></i><br /><br />
-        <p>
-          RECRUITERS AREN’T FINDING <br />
-          ME ON JOB PORTALS
-        </p>
-      </div>
+        <div class="image1212">
+          <br />
+          <img src="{% static '\image\Capture1.PNG' %}" />
+        </div>
 
-      <div class="pt2 pt">
-        <i class="fas fa-user-times fa-2x fa-color"></i><br /><br />
-        <p>
-          RESUME IS NOT SHORTLISTED
-        </p>
-      </div>
+        <div class="pt2 pt" data-aos="fade-left" data-aos-duration="2000">
+          <p>
+            <span>20+ Best Resume Templates</span><br />
 
-      <div class="pt3 pt">
-        <i class="fas fa-list-alt fa-2x fa-color"></i><br /><br />
-        <p>
-          VAGUE CONTENT
-        </p>
-      </div>
+            Create a morden and professional resume and cover letter
+          </p>
+        </div>
 
-      <div class="pt4 pt">
-        <i class="fas fa-bug fa-2x fa-color"></i><br /><br />
-        <p>
-          GRAMMATICAL ERROR
-        </p>
-      </div>
+        <div class="image1212">
+          <br />
+          <img src="{% static '\image\Capture2.PNG' %}" />
+        </div>
 
-      <div class="pt5 pt">
-        <i class="fas fa-file-word fa-2x fa-color"></i><br /><br />
-        <p>
-          VISIBILITY OF RESUME
-        </p>
-      </div>
+        <div class="pt3 pt" data-aos="fade-left" data-aos-duration="2500">
+          <p>
+            <span>Resume Check</span><br />
 
-      <div class="p6 pt">
-        <i class="fas fa-phone-alt fa-2x fa-color"></i><br /><br />
-        <p>
-          IRRELEVANT INTERVIEW CALLS
-        </p>
+            Our builder will give you suggestion how to improve your resume
+          </p>
+        </div>
+
+        <div class="image1212">
+          <br />
+          <img src="{% static '\image\Capture3.PNG' %}" />
+        </div>
+
+        <div class="pt4 pt" data-aos="fade-left" data-aos-duration="1500">
+          <p>
+            <span>Fallow Tips From Experts</span><br />
+
+            Our experts tips will show you how to write a Resume.
+          </p>
+        </div>
+
+        <div class="image1212">
+          <br />
+          <img src="{% static '\image\Capture4.PNG' %}" />
+        </div>
+
+        <div class="pt5 pt" data-aos="fade-left" data-aos-duration="2000">
+          <p>
+            <span>Its Fast And Easy To Use </span><br />
+
+            Our online resume builder will help you write a perfect resume in
+            minutes.
+          </p>
+        </div>
+
+        <div class="image1212">
+          <br />
+          <img src="{% static '\image\Capture5.PNG' %}" />
+        </div>
+
+        <div class="p6 pt" data-aos="fade-left" data-aos-duration="2500">
+          <p>
+            <span>Flexible Text Editor</span><br />
+
+            You will have access to the best text editor available
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- ------------------------------------------------------------how it work ------------------------------------ -->
-    <div class="work" style="background: #f8f8f8;">
+    <div class="work">
       <div class="headline container">
         <h4>How It Works</h4>
       </div>
+      <div class="container">
+        <div class="gworkm pt ptt1">
+          <div class="pat1">
+            <img src="{% static '\image\hiw1.PNG' %}" />
+            <p>
+              <span>Get matched</span>
 
-      <div class="gworkm">
-        <div class="gwork">
-          <div class="pt12 z-depth-2 d1" style="background: #fff;">
-            <div class="fori">
-              <i class="fas fa-clipboard-check fa-4x fa-colors"></i>
-            </div>
-
-            <div class="chead"><p>Choose an exclusive template</p></div>
-            <div class="chead1">
-              <p>
-                ExpressCV offers a wide selection of CV templates that you can
-                easily customise.
-              </p>
-            </div>
+              with an expert write
+            </p>
           </div>
 
-          <div class="pt12 z-depth-2 d2" style="background: #fff;">
-            <div class="fori">
-              <i class="fas fa-chalkboard-teacher fa-4x fa-colors"></i>
-            </div>
+          <div class="pat2">
+            <img src="{% static '\image\hiw2.PNG' %}" />
+            <p>
+              <span>Work one-on-one </span>
 
-            <div class="chead"><p>Build your professional CV</p></div>
-            <div class="chead1">
-              <p>
-                Edit your CV in just a few minutes with our online creation
-                platform.
-              </p>
-            </div>
+              to craft your career story
+            </p>
           </div>
 
-          <div class="pt12 z-depth-2 d3" style="background: #fff;">
-            <div class="fori">
-              <i class="fas fa-cloud-download-alt fa-4x fa-colors"></i>
-            </div>
+          <div class="pat3">
+            <img src="{% static '\image\hiw3.PNG' %}" />
+            <p>
+              <span>Receive a resume</span>
 
-            <div class="chead"><p>Download the perfect CV</p></div>
-            <div class="chead1">
-              <p>
-                Download your CV in PDF or TXT format, in one click, and finally
-                complete all of your projects
-              </p>
-            </div>
+              tailored to your goals
+            </p>
           </div>
         </div>
       </div>
@@ -223,35 +260,101 @@
       <br /><br />
     </div>
 
+    <!-- -------------------------------------------------memorial-design--------------------------------- -->
+    <div class="boss1" style="background: #f8f8f8"> 
+      <div class="allb">
+        <div class="all1">
+          <img src="{% static '\image\resume0.PNG' %}" />
+        </div>
+
+        <div class="all2">
+          <div class="mtex">
+            <div class="tex1 z-depth-1">
+              <h5>
+                <i class="fa fa-magic" aria-hidden="true"></i> Memorable Design
+              </h5>
+              <p>
+                Create a sophisticated modern desigh with 1000s of combinations
+                of backgrounds, colors, section, icons, and templates.
+              </p>
+            </div>
+            <div class="tex2" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
+              <h5 >
+                <i class="fa fa-rocket" aria-hidden="true"></i> No learning
+                curve
+              </h5>
+
+              <h5>
+                <i class="fa fa-file-text-o" aria-hidden="true"></i></i> Content analyzer
+                
+              </h5>
+              
+              <h5>
+                <i class="fa fa-comments" aria-hidden="true"></i>Improve with feedback 
+                
+              </h5>
+                      <h5>
+                        <i class="fa fa-smile-o" aria-hidden="true"></i>professional, yet personal
+                        
+                      </h5>
+
+                      <h5>
+                        <i class="fa fa-scissors" aria-hidden="true"></i>Tailor your application
+                        
+                      </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ---------------------------------------------------resume sample---------------------------------- -->
     <div class="headline container">
       <h4>Professionally Designed Resumes</h4>
     </div>
 
-   <div class="image">
+    <div class="image">
       <div class="carousel">
-        <a class="carousel-item" href="{% static '/image/p1.jpg' %}" data-lightbox="mygallery"
-          ><img src="{% static '/image/p1.jpg' %}"
+        <a
+          class="carousel-item"
+          href="{% static '/image/tem2.jpg' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/tem2.jpg' %}"
         /></a>
-        <a class="carousel-item" href="{% static '/image/p2.jpg' %}" data-lightbox="mygallery"
-          ><img src="{% static '/image/p2.jpg' %}"
+        <a
+          class="carousel-item"
+          href="{% static '/image/tem1.jpg' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/tem1.jpg' %}"
         /></a>
-        <a class="carousel-item" href="{% static '/image/p3.jpg' %}" data-lightbox="mygallery"
-          ><img src="{% static '/image/p3.jpg' %}"
+        <a
+          class="carousel-item"
+          href="{% static '/image/tem3.jpg' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/tem3.jpg' %}"
         /></a>
-        <a class="carousel-item" href="{% static '/image/p4.jpg' %}" data-lightbox="mygallery"
-          ><img src="{% static '/image/p4.jpg' %}"
+        <a
+          class="carousel-item"
+          href="{% static '/image/tem4.jpg' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/tem4.jpg' %}"
         /></a>
-        <a class="carousel-item" href="{% static '/image/p5.jpg' %}" data-lightbox="mygallery"
-          ><img src="{% static '/image/p5.jpg' %}"
+        <a
+          class="carousel-item"
+          href="{% static '/image/tem5.png' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/tem5.png' %}"
         /></a>
       </div>
     </div>
 
     <!-- -----------------------------------------------------customer raiting------------------------------ -->
-    <div class="colo1" style="background: #f8f8f8;">
-      <div class="headline container" style="padding-bottom: 10px;">
-        <h4>One Word? HIRED</h4>
+    <div class="colo1" style="background: #f8f8f8">
+      <div class="headline container" style="padding-bottom: 10px">
+        <h4>One Customers Love Us </h4>
+        <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
       </div>
 
       <div class="page-wrapper">
@@ -259,12 +362,12 @@
           <i class="fas fa-chevron-left fa-3x prev"></i>
           <i class="fas fa-chevron-right fa-3x next"></i>
           <div class="post-wrapper">
-            <div class="post z-depth-5">
+            <div class="post z-depth-3">
               <p class="b">
                 Rose Birdsell Jr. <br />
                 <span>&#9733; &#9733; &#9733; &#9733;</span>
               </p>
-              <img src="{% static '/image/f1.jpg' %}" alt="" /><br />
+              <br />
               <p>
                 I utilized Zety’s builder app to the fullest, applying
                 everything I learned, and even added some unique touches the
@@ -273,12 +376,12 @@
                 job offer to accept.
               </p>
             </div>
-            <div class="post z-depth-2">
+            <div class="post z-depth-3">
               <p class="b">
                 Denise P. Jr. <br />
                 <span>&#9733; &#9733; &#9733; &#9733;</span>
               </p>
-              <img src="{% static '/image/f3.jpg' %}" alt="" /><br />
+             <br />
               <p>
                 I went from fired to hired in less than 3 weeks. I was let go
                 from my old job due to downsizing. With Zety, I was able to
@@ -287,12 +390,12 @@
                 offers by 3/25/18. Accepted an excellent job on 3/27/18.
               </p>
             </div>
-            <div class="post z-depth-2">
+            <div class="post z-depth-3">
               <p class="b">
                 Jeanne Jr. <br />
                 <span>&#9733; &#9733; &#9733; &#9733;</span>
               </p>
-              <img src="{% static '/image/f5.jpg' %}" alt="" /><br />
+              <br />
               <p>
                 Zety is what will make you stand out. In less than a month and a
                 half, I got contacted by six employers and went in for three
@@ -300,12 +403,12 @@
                 eye, and how “visually pleasant” it is.
               </p>
             </div>
-            <div class="post z-depth-2">
+            <div class="post z-depth-3">
               <p class="b">
                 Rania Jr. <br />
                 <span>&#9733; &#9733; &#9733; &#9733;</span>
               </p>
-              <img src="{% static '/image/f2.jpg' %}" alt="" /><br />
+              <br />
               <p>
                 Zety is what will make you stand out. In less than a month and a
                 half, I got contacted by six employers and went in for three
@@ -313,12 +416,12 @@
                 eye, and how “visually pleasant” it is.
               </p>
             </div>
-            <div class="post z-depth-2">
+            <div class="post z-depth-3">
               <p class="b">
                 Olivia William <br />
                 <span>&#9733; &#9733; &#9733; &#9733;</span>
               </p>
-              <img src="{% static '/image/f4.jpg' %}" alt="" /><br />
+              <br />
               <p>
                 Zety is what will make you stand out. In less than a month and a
                 half, I got contacted by six employers and went in for three
@@ -332,6 +435,7 @@
     </div>
 
     <!-- -------------------------------Resumes have been shortlisted by--------------------------- -->
+
     <div class="headline container" style="padding-bottom: 0px;">
       <h4>Resumes Have Been Shortlisted By</h4>
     </div>
@@ -340,6 +444,7 @@
     <div class="image1" style="padding: 0 150px;">
       <img src="{% static '/image/logo8.png' %}" alt="" />
       <img src="{% static '/image/logo2.png' %}" alt="" />
+
       <img src="{% static '/image/logo8.png' %}" alt="" />
       <img src="{% static '/image/logo9.png' %}" alt="" />
       <img src="{% static '/image/logo8.png' %}" alt="" />
@@ -376,22 +481,24 @@
 
       <div class="branded">
         <a href="#">
-          <h5 style="color:#fff;"><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+          <h5 style="color: #fff">
+            <span style="color: #0da1ec">Rapidez</span>Writer
+          </h5>
 
-          <a href="#" style="color: #a7b2d8;"
+          <a href="#" style="color: #a7b2d8"
             ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-twitter fa-2x"
-              style="margin-left: 20px;"
+              style="margin-left: 20px"
               aria-hidden="true"
             ></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-linkedin fa-2x"
-              style="margin-left: 20px; margin-right: 7px;"
+              style="margin-left: 20px; margin-right: 7px"
               aria-hidden="true"
             ></i
           ></a>
@@ -433,6 +540,13 @@
         autoplaySpeed: 2000,
         nextArrow: $(".next"),
         prevArrow: $(".prev"),
+      });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1200,
       });
     </script>
   </body>

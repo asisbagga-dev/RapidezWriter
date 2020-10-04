@@ -119,7 +119,7 @@
           <ul>
             <li>
               <a href="#"
-                >Resume Services
+                >Topics
                 <i
                   class="fa fa-chevron-down"
                   style="
@@ -133,17 +133,9 @@
               ></a>
               <ul class="ser1 ser12" style="left: 38%">
                 <div class="box1111"></div>
-                <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-                <a href="{% url 'resumeMakeover' %}"
-                  ><li>Resume template makeover</li></a
-                >
-                <a href="{% url 'linkedIn' %}"
-                  ><li>Linkedin profile branding</li></a
-                >
-                <a href="{% url 'resumeVideo' %}"
-                  ><li>Video Resume Building</li></a
-                >
-                <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
+                {% for i in category %}
+                <a href="{% url 'view_category_wise' i.category %}"><li>{{i}}</li></a>
+                {% endfor %}
               </ul>
             </li>
           </ul>
@@ -169,6 +161,9 @@
         <div class="headline">
           <a class="waves-effect waves-light btn" href="{% url 'blog_update' blog_details.pk %}">Update</a>
           <a class="waves-effect waves-light btn" href="{% url 'blog_delete' blog_details.pk %}">Delete</a>
+          {% for i in  blog_details.category.all %}
+          <a class="waves-effect waves-light btn" href="{% url 'blog_delete' blog_details.pk %}">{{i}}</a>
+          {% endfor %}
           <a class="waves-effect waves-light btn">AMANDAS</a>
           <h4><span>          {{blog_details.heading}}          </span></h4>
         </div>
@@ -187,7 +182,7 @@
     <div class="t-head">
       <div class="text1">
         <h5>
-          {{blog_details.description}}
+          {{blog_details.description | safe}}
         </h5>
         <p>
           With every new year comes a new playing field for job seekers to

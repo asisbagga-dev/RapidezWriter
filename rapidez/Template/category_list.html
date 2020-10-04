@@ -110,12 +110,12 @@
 <script>window.CKEDITOR_BASEPATH = '{% static "ckeditor/ckeditor/ckeditor" %}';</script>
 {% endblock %}
         <div class="container" style="margin: 180px;" style="">
-            <h2>Create your Blog!</h2>
-            <form action="" method="post" enctype="multipart/form-data" >
-                {% csrf_token %}
-              {% bootstrap_form form %}
-                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
-            </form>
+            <h2>Category Actions!</h2>
+            <ul>
+                {% for i in objects %}
+                <li>{{ i.category }}<a href="{% url 'delete_category' i.pk %}"> Delete </a></li>
+                {% endfor %}
+            </ul>
         </div>
 
 

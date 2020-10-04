@@ -166,24 +166,27 @@
       </div>
 
       <div class="headline">
-        <h3><span>Career Advice: COVID-19 </span></h3>
+        <h3><span>Career Advice: {{filter}} </span></h3>
       </div>
     </div>
     <!-- -------------------------------------------------view all---------------------------------------------- -->
     <div class="m-head11">
       <div class="g-img1">
+        {% for i in filter_op %}
         <div class="part11 ptt">
-          <a href="#">
+          <a href="{% url 'career_detail_page' i.pk %}">
+            {% if i.banner %}
             <img
-              src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
+              src="{{ i.banner.url }}"
               alt=""
             />
+            {% endif %}
             <p>
-              Stay at Home Mom Returning to Work? 10 Ways to Land the Job You
-              Want and Need
+              {{i.heading}}
             </p>
           </a>
         </div>
+        {% endfor %}
 
         <div class="part12 ptt">
           <a href="#">

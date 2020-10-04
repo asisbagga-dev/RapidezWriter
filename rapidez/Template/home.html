@@ -81,6 +81,7 @@
             <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
           </ul>
         </li>
+        <li><a href="#">Resume Analysis</a></li>
 
         <li class="ser">
           <a href="#"
@@ -108,6 +109,29 @@
         <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
 
         <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
+        {% if user.is_authenticated %}
+        <li>
+          <a href="#"
+            >Accounts
+            <i
+              class="fa fa-chevron-down"
+              style="
+                font-size: 10px;
+                position: relative;
+                bottom: 1px;
+                opacity: 0.3;
+              "
+              aria-hidden="true"
+            ></i
+          ></a>
+          <ul class="ser1 ser12" style="left: 38%">
+            <div class="box111"></div>
+            <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
+            <a href="{% url 'add_category' %}"><li>Create Category</li></a>
+            <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+        {% endif %}
+          </ul>
+        </li>
       </ul>
     </header>
     <!-- navbar-end -->
@@ -264,7 +288,7 @@
     <div class="boss1" style="background: #f8f8f8"> 
       <div class="allb">
         <div class="all1">
-          <img src="{% static '\image\resume0.PNG' %}" />
+          <img src="{% static '\image\tem2.jpg' %}" />
         </div>
 
         <div class="all2">
@@ -477,6 +501,8 @@
         <a href="#"><p>Careers</p></a>
         <a href="{% url 'about' %}"><p>About Us</p></a>
         <a href="{% url 'contactUs' %}"><p>Contact Us</p></a>
+        <a href="http://127.0.0.1:8000/admin/"> <p> Login </p></a>
+
       </div>
 
       <div class="branded">

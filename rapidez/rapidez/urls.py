@@ -47,6 +47,7 @@ urlpatterns = [
     path('career-advise-list', views.career_list_page, name="career_list_page"),
     path('career-advise-detail/<int:pk>', views.career_detail_page, name="career_detail_page"),
     path('career-advise-view-all', views.career_view_all_page, name="career_view_all_page"),
+    path('view_category_wise/<str:filter>', views.view_category_wise, name="view_category_wise"),
     #CKEditor
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     # url(r'^ckeditor/upload/', uploader_views.upload, name='ckeditor_upload'),
@@ -54,6 +55,11 @@ urlpatterns = [
 
     # url(r'^upload/', staff_member_required(views.upload), name='ckeditor_upload'),
     # url(r'^browse/', never_cache(staff_member_required(views.browse)), name='ckeditor_browse'),
+
+    # Category Creation and deletion 
+    path('createCategory/', views.add_category, name="add_category"),
+    path('deleteCategory/<int:pk>', views.delete_category, name="delete_category"),
+    path('CategoryActions/', views.category_list_page, name="category_list_page"),
 
     # Bharath's Work
     path('resumeupload/', include('resumeAnalysis.urls')),

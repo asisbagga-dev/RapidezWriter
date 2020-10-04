@@ -208,6 +208,9 @@ header.sticky ul li a {
 }
 
 /* --------------------------------------------------top-read-------------------------------- */
+.all-m {
+  margin: 0 50px;
+}
 
 .m-owner {
   display: grid;
@@ -238,16 +241,16 @@ header.sticky ul li a {
 .topread img {
   width: 233px;
   height: 155px;
-
 }
 
 .topread {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
   justify-items: center;
   justify-content: center;
+  margin-right: 20px;
 }
 
 .topread .ptt {
@@ -261,11 +264,13 @@ header.sticky ul li a {
 .topread p {
   font-weight: 550;
   color: #333;
-  padding: 0 20px;
+  padding: 0 31px;
+
   margin-top: 5px;
   margin-left: 15px;
   /* padding-right: 20px; */
   text-align: left;
+  font-size: 17px;
 }
 
 /* -------------------------------------------------------covid-19---------------------------------------------- */
@@ -296,10 +301,10 @@ header.sticky ul li a {
   /* width: 80px; */
   /* margin-bottom: 10px; */
   height: 25px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 25px;
   border: 1px solid #333;
-  padding: 0 10px;
+  padding: 0 16px;
   margin-left: 15px;
 }
 
@@ -328,9 +333,9 @@ header.sticky ul li a {
 .g-img1 p {
   font-weight: 550;
   color: #333;
-  padding: 0 10px;
+  padding: 0 30px;
   margin-top: 5px;
-  padding: 0 44px;
+  padding: 0 50px;
   text-align: left;
 }
 
@@ -349,7 +354,7 @@ header.sticky ul li a {
 }
 
 .ptt p:hover {
-  /* font-size: 20px; */
+  font-size: 20px;
   text-decoration-line: underline;
   text-decoration-color: #0da1ec;
 } */

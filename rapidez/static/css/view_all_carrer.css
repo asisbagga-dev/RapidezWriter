@@ -236,9 +236,93 @@ header.sticky ul li a {
   background: #f8f8f8;
 }
 
+.headline h4 span {
+  /* color: #0da1ec; */
+  font-weight: 600;
+}
+.headline h4 {
+  margin-top: 0px;
+  padding-bottom: 30px;
+  margin-right: 40px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.headline {
+  /* margin-top: 130px; */
+  margin-left: 50px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.headline {
+  margin-top: 40px;
+}
+.headline .btn {
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background: #ada5a5;
+}
+
+.m-opt {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 0 40px;
+  grid-gap: 20px;
+  padding-top: 60px;
+}
+
+.m-opt ul {
+  width: 230px;
+}
+
+.row a i {
+  margin-top: 35px;
+  margin-left: -10px;
+  float: right;
+}
+.ser .input-field {
+  float: right;
+}
+
+.ser {
+  /* display: flex; */
+}
+
+.all-one {
+  background: #f8f8f8;
+}
+
+.big-img img {
+  width: 890px;
+  margin-bottom: 20px;
+  height: 400px;
+}
+
+.big-img {
+  text-align: center;
+}
+
+.m-headlin {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  height: 450px;
+  margin-top: 50px;
+}
+
 /* -------------------------------------------------------view all---------------------------------------------- */
 .g-img1 img {
   width: 430px;
+  height: 303px;
 }
 
 .g-img1 {
@@ -262,9 +346,11 @@ header.sticky ul li a {
 }
 
 /* --------------------------------------------------------dropdown career------------------------------------ */
+/* --------------------------------------------------------dropdown career------------------------------------ */
 .opt ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  border-bottom: 1px #dbe0eb solid;
 }
 .opt ul ul {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -274,7 +360,11 @@ header.sticky ul li a {
   display: none;
   top: 100%;
   left: 0%;
+  width: 283px;
+  overflow: hidden;
   /* margin-left: -80px; */
+  background: #f8f8f8;
+  /* border-bottom: 1px #dbe0eb solid; */
 }
 
 .opt ul li:hover > ul {
@@ -283,9 +373,11 @@ header.sticky ul li a {
   /* padding: 0 10px; */
   border-radius: 5px;
   width: 283px;
+  background: #f8f8f8;
+  border: 1px #dbe0eb solid;
 }
 .opt ul li:hover > ul li:hover {
-  background: #d4effc;
+  background: #0da1ec;
   /* padding: 10px 0; */
   width: 100%;
 }
@@ -297,6 +389,10 @@ header.sticky ul li a {
   width: 100%;
 }
 
+.opt ul ul li:hover {
+  color: #fff;
+}
+
 .opt ul ul li {
   padding-left: 25px;
 }
@@ -306,7 +402,7 @@ header.sticky ul li a {
 }
 
 .opt ul ul {
-  margin-top: 20px;
+  margin-top: 10px;
   background: #fff;
 }
 
@@ -338,7 +434,8 @@ header.sticky ul li a {
 }
 
 .opt ul i {
-  padding-left: 60px;
+  padding-left: 10px;
+  padding-right: 110px;
 }
 .opt ul ul {
   border: none;
@@ -347,18 +444,37 @@ header.sticky ul li a {
 }
 .opt ul {
   border: 1px solid #333;
-  padding: 10px 0;
+  padding: 8px 0;
   z-index: 55;
   border-radius: 7px;
 }
 
 .opt ul li a {
   font-size: 20px;
+  width: 283px;
 }
 
 .opt {
   margin-top: 15px;
 }
+
+.no-lin {
+  border-bottom: none !important;
+}
+.ser #input_text {
+  border: 1px solid #464242;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.input-field.col label {
+  left: 1.75rem;
+}
+
+.ptt p {
+  line-height: normal;
+}
+
 /* ---------------------------------------------------------------footer---------------------------- */
 /* -------------------------------------------------------footer--------------------------------- */
 

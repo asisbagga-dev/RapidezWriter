@@ -3,7 +3,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 class Category(models.Model):
-    category = models.CharField(max_length=300)
+    category = models.CharField(max_length=30)
     def __str__(self):
         return self.category
 

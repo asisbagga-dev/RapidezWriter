@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse_lazy, reverse
+from django.shortcuts import get_object_or_404
 
+from .models import Database
+from .forms import Databaseform
 # Home Page
 
 def home(request):
@@ -35,13 +40,45 @@ def resume_video(request):
 def linkedin(request):
     return render(request,"linkedin.html")
 
+def create_blog(request):
+    forms = Databaseform()
+    if request.method == "POST":
+        forms = Databaseform(request.POST, request.FILES)
+        if forms.is_valid():
+            forms.save()
+            return HttpResponseRedirect(reverse('home'))
+    return render(request, 'createBlog.html', {'form': forms})
+
 
 # Career Advise List Pages
 def career_list_page(request):
-    return render(request, "career_list.html")
+    all_objects = Database.objects.all()
+    return render(request, 'career_list.html', {"objects": all_objects})
 
-def career_detail_page(request):
-    return render(request, "career_detail.html")
+def career_detail_page(request, pk):
+    blog = get_object_or_404(Database, pk=pk)
+    return render(request, "career_detail.html",  {"blog_details":blog})
+
+
+def blog_update(request, pk):
+    blog = get_object_or_404(Database, pk=pk)
+    forms = Databaseform(request.POST or None, instance = blog)
+    if request.method == "POST":
+        if forms.is_valid():
+            forms.save()
+            return HttpResponseRedirect(reverse( 'career_detail_page', args=[pk]))
+        else:
+            print(forms.errors.as_data())
+    return render(request, "blogUpdate.html", {"forms":forms})  
+
+# Delete a Blog
+def blog_delete(request, pk):
+    obj = get_object_or_404(Database, pk=pk)
+    if request.method == "POST":
+        obj.delete()
+        return HttpResponseRedirect(reverse('career_list_page'))
+    return render(request, 'blogDelete.html')
+
 
 def career_view_all_page(request):
     return render(request, "career_view_all.html")

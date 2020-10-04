@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'resumeAnalysis',
     'main',
+    'ckeditor',
+    'ckeditor_uploader',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -151,3 +154,27 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587 #use 587, 25 or 465
 EMAIL_HOST_USER = 'apikey'
 EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'height' : 400,
+        # 'width' : 1080
+        'width' : 1080,
+        'toolbar_Custom' : [
+            ['Font','FontSize','Bold','Italic','Underline','Blockquote','Subscript','Superscript', 'Link', 'Unlink', 'NumberedList','BulletedList'],
+            ['Image', 'List','ListStyle','Table',],
+            ['TextColor', 'BGColor'],
+            ['JustifyLeft','JustifyRight','JustifyCenter'],
+            ['StylesCombo','colorButton','Maximize', 'Preview'],
+        ],
+        'contentsCss': 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
+        'allowedContent' : True,
+    },
+}

@@ -134,18 +134,22 @@
         </div>
       </div>
       <div class="topread">
+        {% for i in objects %}
         <div class="part1 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="{% url 'career_detail_page' i.pk %}">
+            {% if i.banner %}
             <img
-              src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
+              src="{{ i.banner.url }}"
               alt=""
             />
-            <p>What Is an ATS? How to Write a Resume to Beat the Bots</p>
+            {% endif %}
+            <p>{{i.heading}}</p>
           </a>
         </div>
+        {% endfor %}
 
         <div class="part2 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/scott-graham-5fNmWej4tAA-unsplash.jpg' %}"
               alt=""
@@ -157,14 +161,24 @@
         </div>
 
         <div class="part3 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img src="{% static '/image/meeting.jpg' %}" alt="" />
             <p>4 Ways to Support Diversity and Inclusion at Work</p>
           </a>
         </div>
-
+        <div class="part3 ptt">
+          <a href="#">
+            <img src="{% static '/image/meeting.jpg' %}" alt="" />
+            <p>4 Ways to Support Diversity and Inclusion at Work</p>
+          </a>
+        </div>        <div class="part3 ptt">
+          <a href="#">
+            <img src="{% static '/image/meeting.jpg' %}" alt="" />
+            <p>4 Ways to Support Diversity and Inclusion at Work</p>
+          </a>
+        </div>
         <div class="part4 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/scott-graham-5fNmWej4tAA-unsplash.jpg' %}"
               alt=""
@@ -174,7 +188,7 @@
         </div>
 
         <div class="part5 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img src="{% static '/image/rw2.jpg' %}" alt="" />
             <p>
               Why Do Entry-Level Positions Require Experience? Plus How To Get
@@ -184,7 +198,7 @@
         </div>
 
         <div class="part6 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img src="{% static '/image/video-r.jpg' %}" alt="" />
             <p>It's OK to Quit (Your Job)</p>
           </a>
@@ -195,7 +209,7 @@
     <!-- -----------------------------------------------------COVID 19--------------------------------- -->
     <div class="m-head11">
       <div class="head11">
-        <a href="{% url 'career_detail_page' %}"
+        <a href="#"
           ><h5>
             COVID 19
             <a
@@ -209,7 +223,7 @@
 
       <div class="g-img1">
         <div class="part11 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/christian-wiediger-rymh7EZPqRs-unsplash.jpg' %}"
               alt=""
@@ -219,14 +233,14 @@
         </div>
 
         <div class="part12 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img src="{% static '/image//video-r.jpg' %}" alt="" />
             <p>It's OK to Quit (Your Job)</p>
           </a>
         </div>
 
         <div class="part13 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -239,7 +253,7 @@
         </div>
 
         <div class="part14 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/cytonn-photography-n95VMLxqM2I-unsplash.jpg' %}"
               alt=""
@@ -256,7 +270,7 @@
 
     <div class="m-head11 pttt1">
       <div class="head11">
-        <a href="{% url 'career_detail_page' %}"
+        <a href="#"
           ><h5>
             Resume and Cover Letter
             <a
@@ -270,7 +284,7 @@
 
       <div class="g-img1">
         <div class="part11 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -280,7 +294,7 @@
         </div>
 
         <div class="part12 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -292,7 +306,7 @@
         </div>
 
         <div class="part13 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -305,7 +319,7 @@
         </div>
 
         <div class="part14 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -320,7 +334,7 @@
 
     <div class="m-head11">
       <div class="head11">
-        <a href="{% url 'career_detail_page' %}"
+        <a href="#"
           ><h5>
             Interview
             <a
@@ -334,7 +348,7 @@
 
       <div class="g-img1">
         <div class="part11 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -347,7 +361,7 @@
         </div>
 
         <div class="part12 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -359,7 +373,7 @@
         </div>
 
         <div class="part13 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -372,7 +386,7 @@
         </div>
 
         <div class="part14 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -390,7 +404,7 @@
 
     <div class="m-head11 pttt1">
       <div class="head11">
-        <a href="{% url 'career_detail_page' %}"
+        <a href="#"
           ><h5>
             Personal Branding
             <a
@@ -404,7 +418,7 @@
 
       <div class="g-img1">
         <div class="part11 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -414,7 +428,7 @@
         </div>
 
         <div class="part12 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -424,7 +438,7 @@
         </div>
 
         <div class="part13 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -434,7 +448,7 @@
         </div>
 
         <div class="part14 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -450,7 +464,7 @@
     <!-- ------------------------------------------------------Networking--------------------------------------- -->
     <div class="m-head11">
       <div class="head11">
-        <a href="{% url 'career_detail_page' %}"
+        <a href="#"
           ><h5>
             Networking
             <a
@@ -464,7 +478,7 @@
 
       <div class="g-img1">
         <div class="part11 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -474,7 +488,7 @@
         </div>
 
         <div class="part12 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -487,7 +501,7 @@
         </div>
 
         <div class="part13 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -499,7 +513,7 @@
         </div>
 
         <div class="part14 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -516,7 +530,7 @@
     <!-- ------------------------------------------------Getting Ahead--------------------------------------------- -->
     <div class="m-head11 pttt1">
       <div class="head11">
-        <a href="{% url 'career_detail_page' %}"
+        <a href="#"
           ><h5>
             Getting Ahead
             <a
@@ -530,7 +544,7 @@
 
       <div class="g-img1">
         <div class="part11 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -543,7 +557,7 @@
         </div>
 
         <div class="part12 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -556,7 +570,7 @@
         </div>
 
         <div class="part13 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -566,7 +580,7 @@
         </div>
 
         <div class="part14 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -581,7 +595,7 @@
 
     <div class="m-head11">
       <div class="head11">
-        <a href="{% url 'career_detail_page' %}"
+        <a href="#"
           ><h5>
             Workplace
             <a
@@ -595,7 +609,7 @@
 
       <div class="g-img1">
         <div class="part11 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -605,7 +619,7 @@
         </div>
 
         <div class="part12 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -615,7 +629,7 @@
         </div>
 
         <div class="part13 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""
@@ -625,7 +639,7 @@
         </div>
 
         <div class="part14 ptt">
-          <a href="{% url 'career_detail_page' %}">
+          <a href="#">
             <img
               src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
               alt=""

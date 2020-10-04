@@ -153,7 +153,8 @@
             <div class="row">
               <form class="col s12">
                 <div class="row">
-                  <a href="#"> <i class="material-icons">search</i> </a>
+                  <!-- <a href="#"> search </a> -->
+                  <!-- <i class="material-icons"></i> -->
                   <div class="input-field col s3">
                     <input id="input_text" type="text" data-length="10" />
                     <label for="input_text">Search </label>
@@ -166,17 +167,19 @@
       </div>
       <div class="m-headlin">
         <div class="headline">
-          <a class="waves-effect waves-light btn">COVID-19</a>
-          <a class="waves-effect waves-light btn">JOB SEARCH</a>
+          <a class="waves-effect waves-light btn" href="{% url 'blog_update' blog_details.pk %}">Update</a>
+          <a class="waves-effect waves-light btn" href="{% url 'blog_delete' blog_details.pk %}">Delete</a>
           <a class="waves-effect waves-light btn">AMANDAS</a>
-          <h4><span>The Top 10 Fastest-Growing Careers in 2020</span></h4>
+          <h4><span>          {{blog_details.heading}}          </span></h4>
         </div>
 
         <div class="big-img">
+          {% if blog_details.banner %}
           <img
-            src="{% static '/image/sales-resume-skills-compressor.jpg' %}"
+            src="{{ blog_details.banner.url }}"
             alt=""
           />
+          {% endif %}
         </div>
       </div>
     </div>
@@ -184,7 +187,7 @@
     <div class="t-head">
       <div class="text1">
         <h5>
-          When it comes to your career now, you just need to know where to look.
+          {{blog_details.description}}
         </h5>
         <p>
           With every new year comes a new playing field for job seekers to
@@ -258,28 +261,13 @@
         <p><span>Median Salary:</span>$60,220</p>
         <br />
 
-        <h5>Information security analysts</h5>
-        <p>
-          t's the age of hackers and ransomware, and that means that businesses
-          need to keep their networks safe. To do that, they turn to information
-          security analysts. As cyber-attacks increase, so does the demand for
-          this job. You'll need a bachelor's degree in computer science,
-          information assurance, or a related field to get in the door — but
-          it's worth it.
-        </p>
-        <br />
-        <p><span>Outlook:</span> 32% increase by 2028</p>
-        <br />
-        <p><span>Education & Training:</span> Bachelor's degree</p>
-        <br />
-        <p><span>Median Salary:</span>$98,350</p>
         <br />
 
         <div class="related">
           <h5>Related Articles:</h5>
           <div class="g-img1">
             <div class="part11 ptt">
-              <a href="{% url 'career_detail_page' %}">
+              <a href="#">
                 <img
                   src="{% static '/image/marvin-meyer-SYTO3xs06fU-unsplash.jpg' %}"
                   alt=""
@@ -289,14 +277,14 @@
             </div>
 
             <div class="part12 ptt">
-              <a href="{% url 'career_detail_page' %}">
+              <a href="#">
                 <img src="{% static '/image/meeting.jpg' %}" alt="" />
                 <p>Why Women Need to Start Supporting Other Women at Work</p>
               </a>
             </div>
 
             <div class="part13 ptt">
-              <a href="{% url 'career_detail_page' %}">
+              <a href="#">
                 <img
                   src="{% static '/image/scott-graham-5fNmWej4tAA-unsplash.jpg' %}"
                   alt=""
@@ -309,7 +297,7 @@
       </div>
       <div class="img112">
         <img
-          src="{% static '/image/morten-pedersen-Z-bgD8pMv30-unsplash (1).jpg' %}"
+          src="{% static '/image/sidebar.JPG' %}"
           alt=""
         />
       </div>

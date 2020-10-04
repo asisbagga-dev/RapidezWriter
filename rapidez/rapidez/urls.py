@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
+from django.conf.urls import url
 from django.conf.urls.static import static
 from main import views
+from ckeditor_uploader import views as uploader_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,10 +41,20 @@ urlpatterns = [
     path('Testimonials', views.testimonials, name="testimonials"),
 
     #Blog Pages
+    path('create/', views.create_blog, name="create_blog"),
+    path('update/<int:pk>', views.blog_update, name="blog_update"),
+    path('delete/<int:pk>', views.blog_delete, name="blog_delete"),
     path('career-advise-list', views.career_list_page, name="career_list_page"),
-    path('career-advise-detail', views.career_detail_page, name="career_detail_page"),
+    path('career-advise-detail/<int:pk>', views.career_detail_page, name="career_detail_page"),
     path('career-advise-view-all', views.career_view_all_page, name="career_view_all_page"),
-    
+    #CKEditor
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    # url(r'^ckeditor/upload/', uploader_views.upload, name='ckeditor_upload'),
+    # url(r'^ckeditor/browse/', never_cache(uploader_views.browse), name='ckeditor_browse'),
+
+    # url(r'^upload/', staff_member_required(views.upload), name='ckeditor_upload'),
+    # url(r'^browse/', never_cache(staff_member_required(views.browse)), name='ckeditor_browse'),
+
     # Bharath's Work
     path('resumeupload/', include('resumeAnalysis.urls')),
 ]

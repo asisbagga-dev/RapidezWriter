@@ -73,6 +73,12 @@ header.sticky .ser:hover {
   padding-top: 0px;
 }
 
+textarea {
+  width: 100%;
+  height: 10rem;
+  background-color: transparent;
+}
+
 header .logo {
   display: flex;
   position: relative;

@@ -81,8 +81,6 @@
             <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
           </ul>
         </li>
-        <li><a href="#">Resume Analysis</a></li>
-
         <li class="ser">
           <a href="#"
             >About
@@ -255,7 +253,7 @@
             <p>
               <span>Get matched</span>
 
-              with an expert write
+              with an expert writer
             </p>
           </div>
 
@@ -377,7 +375,7 @@
     <!-- -----------------------------------------------------customer raiting------------------------------ -->
     <div class="colo1" style="background: #f8f8f8">
       <div class="headline container" style="padding-bottom: 10px">
-        <h4>One Customers Love Us </h4>
+        <h4>Our Customers Love Us </h4>
         <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
       </div>
 
@@ -501,8 +499,11 @@
         <a href="#"><p>Careers</p></a>
         <a href="{% url 'about' %}"><p>About Us</p></a>
         <a href="{% url 'contactUs' %}"><p>Contact Us</p></a>
+        {% if user.is_authenticated %}
+        <a href="http://127.0.0.1:8000/admin/"> <p> Logout </p></a>
+        {% else %}
         <a href="http://127.0.0.1:8000/admin/"> <p> Login </p></a>
-
+        {% endif %}
       </div>
 
       <div class="branded">

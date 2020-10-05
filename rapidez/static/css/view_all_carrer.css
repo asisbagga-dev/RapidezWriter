@@ -282,7 +282,7 @@ header.sticky ul li a {
 }
 
 .m-opt ul {
-  width: 230px;
+  width: 206px;
 }
 
 .row a i {
@@ -347,6 +347,7 @@ header.sticky ul li a {
 
 /* --------------------------------------------------------dropdown career------------------------------------ */
 /* --------------------------------------------------------dropdown career------------------------------------ */
+/* --------------------------------------------------------dropdown career------------------------------------ */
 .opt ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -360,7 +361,7 @@ header.sticky ul li a {
   display: none;
   top: 100%;
   left: 0%;
-  width: 283px;
+  width: 183px;
   overflow: hidden;
   /* margin-left: -80px; */
   background: #f8f8f8;
@@ -372,8 +373,8 @@ header.sticky ul li a {
   /* text-align: center; */
   /* padding: 0 10px; */
   border-radius: 5px;
-  width: 283px;
-  background: #f8f8f8;
+  width: 215px;
+  background: #edf0f5;
   border: 1px #dbe0eb solid;
 }
 .opt ul li:hover > ul li:hover {
@@ -387,6 +388,9 @@ header.sticky ul li a {
   padding: 5px 0;
   margin: 0;
   width: 100%;
+  font-size: 15px;
+  padding: 8px 0;
+  text-transform: uppercase;
 }
 
 .opt ul ul li:hover {
@@ -394,7 +398,7 @@ header.sticky ul li a {
 }
 
 .opt ul ul li {
-  padding-left: 25px;
+  padding-left: 20px;
 }
 
 .opt ul ul li:first-child {
@@ -416,7 +420,7 @@ header.sticky ul li a {
 
 .opt ul .ser12 {
   width: 240px;
-  margin-left: -110px;
+  margin-left: -83px;
 }
 .box1111 {
   width: 10px;
@@ -435,12 +439,13 @@ header.sticky ul li a {
 
 .opt ul i {
   padding-left: 10px;
-  padding-right: 110px;
+  padding-right: 90px;
 }
 .opt ul ul {
   border: none;
   width: 283px;
   z-index: 55;
+  /* margin-left: 100px; */
 }
 .opt ul {
   border: 1px solid #333;

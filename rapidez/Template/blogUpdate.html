@@ -101,20 +101,18 @@
     </header>
     <!-- navbar-end -->
 
-
+    {% block extrahead %}
+    <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+    <script>window.CKEDITOR_BASEPATH = '{% static "ckeditor/ckeditor/ckeditor" %}';</script>
+    {% endblock %}
     <div class="container" style="margin: 200px;" style="">
         <h2>Update Blog</h2>
-        <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <label class="labelInFields">Blog Heading</label>
-            {{forms.heading}}
-            <label class="labelInFields">Blog Content</label>
-            {{forms.description}}
-            <br>
-            {{form.banner}} 
-            <br><br>
-                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Update</button>
-        </form>
+        <form action="" method="post" enctype="multipart/form-data" >
+          {% csrf_token %}
+        {% bootstrap_form forms %}
+          <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
+      </form>
     </div>
 
     <!-- -----------------------------------------------------------------footer--------------------------- -->

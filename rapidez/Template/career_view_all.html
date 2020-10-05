@@ -117,9 +117,9 @@
       <div class="m-opt">
         <div class="opt">
           <ul>
-            <li>
+            <li class="no-lin">
               <a href="#"
-                >Resume Services
+                >Topics
                 <i
                   class="fa fa-chevron-down"
                   style="
@@ -132,18 +132,11 @@
                 ></i
               ></a>
               <ul class="ser1 ser12" style="left: 38%">
-                <div class="box1111"></div>
-                <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-                <a href="{% url 'resumeMakeover' %}"
-                  ><li>Resume template makeover</li></a
+                {% for i in category %}
+                <a href="{% url 'view_category_wise' i.category %}"
+                  ><li>{{i}}</li></a
                 >
-                <a href="{% url 'linkedIn' %}"
-                  ><li>Linkedin profile branding</li></a
-                >
-                <a href="{% url 'resumeVideo' %}"
-                  ><li>Video Resume Building</li></a
-                >
-                <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
+                {% endfor %}
               </ul>
             </li>
           </ul>
@@ -153,7 +146,8 @@
             <div class="row">
               <form class="col s12">
                 <div class="row">
-                  <a href="#"> <i class="material-icons">search</i> </a>
+                  <!-- <a href="#"> search </a> -->
+                  <!-- <i class="material-icons"></i> -->
                   <div class="input-field col s3">
                     <input id="input_text" type="text" data-length="10" />
                     <label for="input_text">Search </label>
@@ -176,14 +170,9 @@
         <div class="part11 ptt">
           <a href="{% url 'career_detail_page' i.pk %}">
             {% if i.banner %}
-            <img
-              src="{{ i.banner.url }}"
-              alt=""
-            />
+            <img src="{{ i.banner.url }}" alt="" />
             {% endif %}
-            <p>
-              {{i.heading}}
-            </p>
+            <p>{{i.heading}}</p>
           </a>
         </div>
         {% endfor %}

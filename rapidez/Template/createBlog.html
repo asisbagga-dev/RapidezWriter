@@ -49,7 +49,7 @@
     <header class="drop">
       <a href="{% url 'home' %}" class="logo">
         <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
       </a>
       <ul>
         <li><a href="#">Resume Analysis</a></li>
@@ -67,16 +67,19 @@
               aria-hidden="true"
             ></i
           ></a>
-          <ul class="ser1 ser12" style="left: 38%;">
+          <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"><li>Resume template makeover</li></a>
-            <a href="{% url 'linkedIn' %}"><li>Linkedin profile branding</li></a>
+            <a href="{% url 'resumeMakeover' %}"
+              ><li>Resume template makeover</li></a
+            >
+            <a href="{% url 'linkedIn' %}"
+              ><li>Linkedin profile branding</li></a
+            >
             <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
             <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
           </ul>
         </li>
-
         <li class="ser">
           <a href="#"
             >About
@@ -91,7 +94,7 @@
               aria-hidden="true"
             ></i
           ></a>
-          <ul class="ser1 ser11" style="left: -30%;">
+          <ul class="ser1 ser11" style="left: -30%">
             <div class="box111"></div>
             <a href="{% url 'about' %}"><li>About Us</li></a>
             <a href="#"><li>FAQ</li></a>
@@ -99,11 +102,36 @@
         </li>
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
         <li><a href="#">Quiz</a></li>
-        <li><a href="#">Career Advice</a></li>    
+
+        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
+
         <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
+        {% if user.is_authenticated %}
+        <li>
+          <a href="#"
+            >Accounts
+            <i
+              class="fa fa-chevron-down"
+              style="
+                font-size: 10px;
+                position: relative;
+                bottom: 1px;
+                opacity: 0.3;
+              "
+              aria-hidden="true"
+            ></i
+          ></a>
+          <ul class="ser1 ser12" style="left: 38%">
+            <div class="box111"></div>
+            <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
+            <a href="{% url 'add_category' %}"><li>Create Category</li></a>
+            <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+        {% endif %}
+          </ul>
+        </li>
       </ul>
     </header>
-    <!-- navbar-end -->
+    <!-- navbar-end -->    <!-- navbar-end -->
 {% block extrahead %}
 <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
 <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>

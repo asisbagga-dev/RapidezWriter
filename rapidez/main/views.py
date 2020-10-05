@@ -109,6 +109,7 @@ def delete_category(request, pk):
     return render(request, 'blogDeleteCategory.html', {"obj":obj})
 
 def view_category_wise(request, filter):
+    category = Category.objects.all()
     filter = get_object_or_404(Category, category=filter)
     filter_op = Database.objects.filter(category=filter)
-    return render(request, 'career_view_all.html', {'filter_op':filter_op, "filter":filter})
+    return render(request, 'career_view_all.html', {'filter_op':filter_op, "filter":filter, "category":category})

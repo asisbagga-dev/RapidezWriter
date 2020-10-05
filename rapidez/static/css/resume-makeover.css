@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  
 }
 body {
   /* background: #000;
@@ -27,7 +26,7 @@ header {
   /* overflow: hidden; */
   /* z-index: 888; */
 }
-header h5{
+header h5 {
   font-weight: 600 !important;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 
@@ -35,7 +34,7 @@ header h5{
   padding-top: 15px;
 }
 
-header.sticky h5{
+header.sticky h5 {
   padding-top: 0px;
 }
 
@@ -59,7 +58,11 @@ header.sticky {
 header.sticky a {
   padding-bottom: 0px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  padding-bottom: 20px;
+}
 
+header.sticky .logo {
+  padding-top: 15px;
 }
 
 header.sticky ul li:hover > ul {
@@ -84,7 +87,7 @@ header.sticky .ser:hover {
 header .logo {
   display: flex;
   position: relative;
-  
+
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
@@ -135,7 +138,6 @@ header.sticky ul li a {
 .drop ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 .drop ul ul {
   position: absolute;
@@ -204,7 +206,6 @@ header.sticky ul li a {
 
 /* ------------------------------------------------------navbar end----------------------------------------- */
 
-
 .headline {
   text-align: center;
   /* border-bottom: 2px solid rgba(226, 215, 215, 0.274); */
@@ -262,7 +263,7 @@ header.sticky ul li a {
   line-height: 30px;
 }
 
-.btn90{
+.btn90 {
   border-radius: 5px;
   font-weight: 600;
   text-transform: none;
@@ -422,13 +423,17 @@ header.sticky ul li a {
   display: grid;
   grid-template-columns: repeat(3, 250px) 1fr;
   height: 273px;
-    /* margin-top: 80px; */
+  /* margin-top: 80px; */
   /* border-top: 2px solid #a7b2d8; */
   padding: 9px 60px;
   background: #09143b;
   color: #6275b975;
   margin-top: 40px;
-  background-image: linear-gradient(174deg, rgba(59,11,72,0) 32%, rgba(59,11,72,0.5));
+  background-image: linear-gradient(
+    174deg,
+    rgba(59, 11, 72, 0) 32%,
+    rgba(59, 11, 72, 0.5)
+  );
   position: relative;
   bottom: 0;
   left: 0;

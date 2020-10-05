@@ -22,7 +22,7 @@ header {
   /* overflow: hidden; */
   /* z-index: 888; */
 }
-header h5{
+header h5 {
   font-weight: 600 !important;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 
@@ -30,7 +30,7 @@ header h5{
   padding-top: 15px;
 }
 
-header.sticky h5{
+header.sticky h5 {
   padding-top: 0px;
 }
 
@@ -53,7 +53,11 @@ header.sticky {
 header.sticky a {
   padding-bottom: 0px;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  padding-bottom: 20px;
+}
 
+header.sticky .logo {
+  padding-top: 15px;
 }
 
 header.sticky ul li:hover > ul {
@@ -78,7 +82,7 @@ header.sticky .ser:hover {
 header .logo {
   display: flex;
   position: relative;
-  
+
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
@@ -129,7 +133,6 @@ header.sticky ul li a {
 .drop ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 .drop ul ul {
   position: absolute;
@@ -296,17 +299,17 @@ header.sticky ul li a {
   float: right;
 }
 
-.btn0{
-  width:40%;
+.btn0 {
+  width: 40%;
   background: #223c99;
 }
 
-.btn:hover{
+.btn:hover {
   background: #223c99;
   opacity: 0.9;
 }
 
-.btn-large{
+.btn-large {
   text-transform: none;
   font-size: 20px;
   font-weight: 600;
@@ -319,13 +322,17 @@ header.sticky ul li a {
   display: grid;
   grid-template-columns: repeat(3, 250px) 1fr;
   height: 273px;
-    /* margin-top: 80px; */
+  /* margin-top: 80px; */
   /* border-top: 2px solid #a7b2d8; */
   padding: 9px 60px;
   background: #09143b;
   color: #6275b975;
   margin-top: 40px;
-  background-image: linear-gradient(174deg, rgba(59,11,72,0) 32%, rgba(59,11,72,0.5));
+  background-image: linear-gradient(
+    174deg,
+    rgba(59, 11, 72, 0) 32%,
+    rgba(59, 11, 72, 0.5)
+  );
   position: relative;
   bottom: 0;
   left: 0;
@@ -373,14 +380,13 @@ header.sticky ul li a {
   font-size: 1.5rem;
 }
 
-.btn-large{
+.btn-large {
   text-transform: none;
   font-size: 20px;
   font-weight: 600;
 }
 
 /* Banner - video in the background */
-
 
 .over {
   position: relative;
@@ -418,20 +424,20 @@ header.sticky ul li a {
   /* padding: 0; */
 }
 
-.headtex h4{
+.headtex h4 {
   margin: 0;
   padding-top: 200px;
   text-align: center;
   font-weight: 600;
   font-size: 3rem;
 }
-.headtex h6{
+.headtex h6 {
   text-align: center;
   line-height: 1.5;
   font-size: 1.35rem;
 }
 
-.headtex a{
+.headtex a {
   margin-left: 45%;
 }
 
@@ -441,155 +447,153 @@ header.sticky ul li a {
   /* margin-left: 230px; */
 }
 
-.btn:hover{
+.btn:hover {
   background: #00aaff;
 }
 
 /* Cards for Video templates */
 
-    /* Grid */
-    .video_list{
-      justify-content: space-evenly;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      padding: 2em;
-      margin-top: 25px;
-  }
+/* Grid */
+.video_list {
+  justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  margin-top: 25px;
+}
 
-  .video_li{
-      flex: 0 0 29%;
-      text-align: center;
-      height: 450px !important;
-      /* margin: 1em; */
-  }
+.video_li {
+  flex: 0 0 29%;
+  text-align: center;
+  height: 450px !important;
+  /* margin: 1em; */
+}
 
-  figure{
-    margin: 0;
-    padding: 0;
-  }
+figure {
+  margin: 0;
+  padding: 0;
+}
 
-  .card-img-top{
-      height: 14em;
-      width: 100%;
-  }
+.card-img-top {
+  height: 14em;
+  width: 100%;
+}
 
-  .card-title{
-    font-size: 20px !important;
-  }
+.card-title {
+  font-size: 20px !important;
+}
 
-  .card-subtitle{
-    font-size: 14px !important;
-    line-height: 22px;
-    padding: 10px !important;
-  }
+.card-subtitle {
+  font-size: 14px !important;
+  line-height: 22px;
+  padding: 10px !important;
+}
 
-  .order_now{
-      /* width: 100%; */
-      background: #0da1ec;
-      border-radius: 5px;
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      border-left-color: #008000;
-      margin-bottom: 20px;
-  }
+.order_now {
+  /* width: 100%; */
+  background: #0da1ec;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-left-color: #008000;
+  margin-bottom: 20px;
+}
 
-  .order_now:hover{
-      background: #00aaff;
-  }
+.order_now:hover {
+  background: #00aaff;
+}
 
-  /* What-Why */
+/* What-Why */
 
-  .what-is-video-resume{
-    text-align: justify;
-    padding-left: 10em;
-    padding-right: 10em;
-    
-    /* -webkit-box-shadow:0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+.what-is-video-resume {
+  text-align: justify;
+  padding-left: 10em;
+  padding-right: 10em;
+
+  /* -webkit-box-shadow:0 1px 4px #0000004d, 0 0 40px #0000001a inset;
     -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
     box-shadow:0 1px 4px #0000004d, 0 0 40px #0000001a inset; */
-  }
+}
 
-  .what-is-video-resume h5{
-    line-height: 1.5;
-    color: #666666 !important;
-    font-weight: 500;
-  }
+.what-is-video-resume h5 {
+  line-height: 1.5;
+  color: #666666 !important;
+  font-weight: 500;
+}
 
-  .why-video-resume{
-    text-align: justify;
-    padding-left: 10em;
-    padding-right: 10em;  
-    margin-top: 4em !important;
+.why-video-resume {
+  text-align: justify;
+  padding-left: 10em;
+  padding-right: 10em;
+  margin-top: 4em !important;
 
-    -webkit-box-shadow:0 1px 4px #0000004d, 0 0 40px #0000001a inset;
-    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
-    box-shadow:0 1px 4px #0000004d, 0 0 40px #0000001a inset;
-  }
+  -webkit-box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
+  box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+}
 
-  .why-video-resume h5{
-    line-height: 1.5;
-    color: #666666 !important;
-    font-weight: 500;
-  }
+.why-video-resume h5 {
+  line-height: 1.5;
+  color: #666666 !important;
+  font-weight: 500;
+}
 
-  /* Open doors */
+/* Open doors */
 
-  .open-doors{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #09143b;
-    color: #fff;
-    height: 25em;   
-    justify-content: center;
-    align-items: center;
-  }
+.open-doors {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #09143b;
+  color: #fff;
+  height: 25em;
+  justify-content: center;
+  align-items: center;
+}
 
-  .open-doors h2{
-    flex: 0 0 auto;
-    font-weight: 600;
-    text-align: center;
-    margin: 3.9rem 0 1.424rem 0;
-  }
+.open-doors h2 {
+  flex: 0 0 auto;
+  font-weight: 600;
+  text-align: center;
+  margin: 3.9rem 0 1.424rem 0;
+}
 
-  .open-doors a {
-    flex: 0 0 10em;
-    margin-top: -10em !important;
-  }
+.open-doors a {
+  flex: 0 0 10em;
+  margin-top: -10em !important;
+}
 
-  .open-doors .break {
-    flex-basis: 100%;
-    height: 0;
-  }
+.open-doors .break {
+  flex-basis: 100%;
+  height: 0;
+}
 
+/* Tips for video resume */
 
-  /* Tips for video resume */
+.tips {
+  display: flex;
+}
 
-  .tips{
-    display: flex;
-  }
+.tips-h3 {
+  text-align: center;
+  margin: 1em !important;
+  font-weight: 300;
+}
 
-  .tips-h3{
-    text-align: center;
-    margin: 1em !important;
-    font-weight: 300;
-    
-  }
+.tips .content {
+  /* flex: 0 0 45%; */
+  padding-left: 3em;
+  padding-right: 1em;
+  color: #666666 !important;
+}
 
-  .tips .content{
-    /* flex: 0 0 45%; */
-    padding-left: 3em;
-    padding-right: 1em;
-    color: #666666 !important;
-  }
+.tips .video {
+  flex: 0 0 45%;
+  padding-right: 3em;
+}
 
-  .tips .video{
-    flex: 0 0 45%;
-    padding-right: 3em;
-  }
-
-  .tips .card-img-bottom{
-    height: 22em;
-    width: 40em;
-  }
+.tips .card-img-bottom {
+  height: 22em;
+  width: 40em;
+}

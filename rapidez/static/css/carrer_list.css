@@ -52,7 +52,13 @@ header.sticky {
 }
 
 header.sticky a {
-  padding-bottom: 0px;
+  /* padding-bottom: 0px; */
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  padding-bottom: 20px;
+}
+
+header.sticky .logo {
+  padding-top: 15px;
 }
 
 header.sticky ul li:hover > ul {

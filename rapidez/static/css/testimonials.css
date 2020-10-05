@@ -22,31 +22,29 @@ header {
   /* overflow: hidden; */
   /* z-index: 888; */
 }
-header h5{
+header h5 {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight: 600 !important;
   font-size: 26px;
-  padding-top: 8px;  
-  color:black;
+  padding-top: 8px;
+  color: black;
 }
 
-header.sticky h5{
+header.sticky h5 {
   padding-top: 0px;
   padding-bottom: 4px;
 }
-
 
 header a {
   width: 183px;
   padding-bottom: 20px;
   font-weight: 500;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 
 header.sticky {
   padding: 5px 40px;
-  background:#fff;
+  background: #fff;
   height: 50px;
   align-items: center;
   z-index: 999;
@@ -55,6 +53,12 @@ header.sticky {
 
 header.sticky a {
   padding-bottom: 0px;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  padding-bottom: 20px;
+}
+
+header.sticky .logo {
+  padding-top: 15px;
 }
 
 header.sticky ul li:hover > ul {
@@ -79,7 +83,7 @@ header.sticky .ser:hover {
 header .logo {
   display: flex;
   position: relative;
-  
+
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
@@ -108,7 +112,6 @@ header ul li {
   position: relative;
   list-style: none;
   font-size: 16px;
-
 }
 
 header ul li a {
@@ -120,7 +123,6 @@ header ul li a {
   /* font-weight: 500px; */
   transition: 0.6s;
   font-size: 17.5px;
-
 }
 
 header.sticky .logo,
@@ -133,7 +135,6 @@ header.sticky ul li a {
 .drop ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 .drop ul ul {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -151,7 +152,6 @@ header.sticky ul li a {
   /* text-align: center; */
   /* padding: 0 10px; */
   border-radius: 5px;
-  
 }
 .drop ul li:hover > ul li:hover {
   background: #d4effc;
@@ -202,21 +202,17 @@ header.sticky ul li a {
 
 /* ------------------------------------------------------navbar end----------------------------------------- */
 
-
-
-
-
 /* <!-- ---------------------------------------------------analysis detail--------------------------------------- --> */
 
-.container{
+.container {
   margin-top: 126px;
 }
 
-.heading{
+.heading {
   text-align: center;
 }
 .heading h2 {
-  font-size: 3.0rem;
+  font-size: 3rem;
   line-height: 110%;
   margin: 2.3733333333rem 0 1.424rem 0;
 }
@@ -306,15 +302,15 @@ header.sticky ul li a {
 }
 
 .post-slider .post-wrapper .post {
-     /* width: 300px !important; */
-     height: 300px;
-     display: inline-block;
-     /* background: lightblue; */
-     border: 1px solid rgb(226, 215, 215);
-     box-shadow: 5px 15px 10px #f4f4f4;
-     background: #fff;
-     margin: 0 10px;
-     padding: 20px;
+  /* width: 300px !important; */
+  height: 300px;
+  display: inline-block;
+  /* background: lightblue; */
+  border: 1px solid rgb(226, 215, 215);
+  box-shadow: 5px 15px 10px #f4f4f4;
+  background: #fff;
+  margin: 0 10px;
+  padding: 20px;
 }
 
 .post-slider .next {
@@ -359,7 +355,6 @@ header.sticky ul li a {
   color: #223c9973;
 }
 
-
 .headline {
   text-align: center;
 }
@@ -383,20 +378,20 @@ header.sticky ul li a {
   justify-content: space-between;
 }
 
-.border{
+.border {
   /* border-top: 2px solid #e0e0e0;  */
   margin-top: 50px;
   padding: 0 50px;
   /* border-bottom: 2px solid #e0e0e0;*/
 }
 
-.cornerLeft{
+.cornerLeft {
   padding-left: 22pc;
   padding-top: 20px;
   /* padding-right: 10pc; */
   /* padding-top: 30px; */
 }
-.gray{
+.gray {
   height: 270px;
   /* background: #f8f8f8; */
   padding-top: 10px;
@@ -405,15 +400,16 @@ header.sticky ul li a {
   margin-top: 30px;
 }
 
-.designation{
+.designation {
   margin-left: 60px;
   font-weight: 400;
 }
-.ourContainer{
-    border-top: 60px solid #f2f2f2;
-    border-left: 250px solid #f2f2f2;
-    border-right: 250px solid #f2f2f2;
-    border-bottom: 60px solid #f2f2f2;}
+.ourContainer {
+  border-top: 60px solid #f2f2f2;
+  border-left: 250px solid #f2f2f2;
+  border-right: 250px solid #f2f2f2;
+  border-bottom: 60px solid #f2f2f2;
+}
 
 /* -------------------------------------------------------footer--------------------------------- */
 
@@ -424,13 +420,17 @@ header.sticky ul li a {
   display: grid;
   grid-template-columns: repeat(3, 250px) 1fr;
   height: 273px;
-    /* margin-top: 80px; */
+  /* margin-top: 80px; */
   /* border-top: 2px solid #a7b2d8; */
   padding: 9px 60px;
   background: #09143b;
   color: #6275b975;
   margin-top: 40px;
-  background-image: linear-gradient(174deg, rgba(59,11,72,0) 32%, rgba(59,11,72,0.5));
+  background-image: linear-gradient(
+    174deg,
+    rgba(59, 11, 72, 0) 32%,
+    rgba(59, 11, 72, 0.5)
+  );
   position: relative;
   bottom: 0;
   left: 0;

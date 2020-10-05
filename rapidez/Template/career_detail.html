@@ -78,13 +78,10 @@
               <a href="{% url 'linkedIn' %}"
                 ><li>Linkedin profile branding</li></a
               >
-              <a href="{% url 'resumeVideo' %}"
-                ><li>Video Resume Building</li></a
-              >
+              <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
               <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
             </ul>
           </li>
-
           <li class="ser">
             <a href="#"
               >About
@@ -107,13 +104,38 @@
           </li>
           <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
           <li><a href="#">Quiz</a></li>
-
-          <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>
-
+  
+          <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
+  
           <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
+          {% if user.is_authenticated %}
+          <li>
+            <a href="#"
+              >Accounts
+              <i
+                class="fa fa-chevron-down"
+                style="
+                  font-size: 10px;
+                  position: relative;
+                  bottom: 1px;
+                  opacity: 0.3;
+                "
+                aria-hidden="true"
+              ></i
+            ></a>
+            <ul class="ser1 ser12" style="left: 38%">
+              <div class="box111"></div>
+              <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
+              <a href="{% url 'add_category' %}"><li>Create Category</li></a>
+              <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+          {% endif %}
+            </ul>
+          </li>
         </ul>
       </header>
-      <!------------------------------------------------- navbar-end --------------------------------------------------->
+      <script src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js" async></script>
+
+      <!-- navbar-end -->
       <div class="m-opt">
         <div class="opt">
           <ul>
@@ -160,6 +182,7 @@
       </div>
       <div class="m-headlin">
         <div class="headline">
+          {% if user.is_authenticated %}
           <a
             class="waves-effect waves-light btn"
             href="{% url 'blog_update' blog_details.pk %}"
@@ -170,10 +193,11 @@
             href="{% url 'blog_delete' blog_details.pk %}"
             >Delete</a
           >
+          {% endif %}
           {% for i in blog_details.category.all %}
           <a
             class="waves-effect waves-light btn"
-            href="{% url 'blog_delete' blog_details.pk %}"
+            href="{% url 'view_category_wise' i.category %}"
             >{{i}}</a
           >
           {% endfor %}
@@ -299,7 +323,7 @@
         </div>
       </div>
       <div class="img112">
-        <img src="{% static '/image/sidebar.JPG' %}" alt="" />
+        <a href="#NeedToGoToCareerAnalysisPage"><img src="{% static '/image/sidebar.JPG' %}" alt="" /></a>
       </div>
     </div>
     <!-- --------------------------------------------------footer----------------------------- -->

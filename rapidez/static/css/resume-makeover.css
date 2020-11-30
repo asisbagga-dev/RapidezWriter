@@ -421,8 +421,8 @@ header.sticky ul li a {
 
 .a1 a {
   width: 30%;
-  margin-top: 30px;
-  margin-left: 0px;
+  /* margin-top: 30px; */
+  margin-left: 27px;
 }
 
 .update0 {
@@ -523,8 +523,9 @@ header.sticky ul li a {
   /* float: left; */
 }
 .image16 > div {
-  width: 50%;
+  width: 40%;
   height: 400px;
+  margin-left: 5%;
   /* float: left; */
 }
 .a1 {

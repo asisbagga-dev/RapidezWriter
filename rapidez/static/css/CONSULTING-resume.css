@@ -211,145 +211,165 @@ header.sticky ul li a {
 
 
 /* <!-- ---------------------------------------------------main head--------------------------------------- --> */
-.headline {
-  text-align: center;
-  /* border-bottom: 2px solid rgba(226, 215, 215, 0.274); */
-  /* background: black; */
-  margin-top: 80px;
-}
 
-.headline p {
-  font-size: 13px;
-}
-.image12 img {
-  width: 100%;
-  height: 450px;
-}
-
-.image12 {
-  margin-top: 30px;
-  margin-left: 0px;
-}
-
-.image12 > div {
-  width: 60%;
-  height: 450px;
-}
-
-.headlines {
-  text-align: center;
-  border-bottom: 2px solid rgb(226, 215, 215);
-  margin-top: 50px;
-}
-.headlines h5 {
-  font-weight: bold;
-}
-
-.contents {
-  position: absolute;
-  top: 205px;
-  right: 90px;
-  width: 45%;
-  height: 400px;
-  /* border: 1px solid red; */
-  background: #fff;
-}
-
-.contents p {
-  padding: 30px;
-  line-height: 40px;
-}
-
-.contents1 {
+.text-p {
   /* text-align: center; */
-  padding: 65px;
-  width: 50%;
-  height: 400px;
 }
-.headlines1 h5 {
-  margin-top: 50px;
+
+.text-p h6 {
+  font-size: 20px;
+  line-height: 25px;
+  padding-right: 50px;
+  font-weight: 600;
+  /* position: absolute; */
+}
+
+.text-p ul li{
+  list-style: disc;
+  margin-top: 20px;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+.text-p h3 {
+  margin-top: 20px;
+  margin-bottom: 30px;
   font-weight: bold;
+  padding-right: 50px;
+  color: #0da1ec;
 }
 
-.contents1 p {
-  line-height: 40px;
-  /* height: 400px; */
-  /* margin-top: 100px; */
-}
 
-.image16 {
-  margin-top: 50px;
-  position: relative;
-}
-.image16 img {
-  width: 100%;
-  height: 400px;
-  /* float: left; */
-}
-.image16 > div {
-  width: 50%;
-  height: 400px;
-  /* float: left; */
-}
-.a1 {
-  float: right;
-}
-
-.image15 {
+.grids {
   margin-top: 70px;
-  position: relative;
-}
-.image15 img {
-  width: 100%;
-  height: 400px;
-  float: right;
-}
-.image15 > div {
-  width: 50%;
-  height: 400px;
-  float: right;
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  padding: 80px;
+  /* align-items: center; */
 }
 
-.head-img {
-  background: url(../image/meeting.jpg) no-repeat center center/cover fixed;
-  margin-top: 30px;
-  height: 450px;
-  width: 100%;
+.btn {
+  background: #223c99;
 }
 
-.t-img {
-  width: 50%;
-  height: 450px;
-  background: rgb(34 59 150 / 75%);
-  position: relative;
-  float: right;
+.btn:hover {
+  background-color: #223c99;
+  opacity: 0.9;
 }
-.u-img {
-  position: absolute;
-  right: 0;
-  /* top: 0; */
-  width: 50%;
-  float: right;
-  color: #fff;
-  padding: 40px;
-  text-align: center;
-  height: 450px;
-  overflow: hidden;
+
+
+
+/* ----------------------------------------------------step2------------------------------------------ */
+.bac{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
 }
-.u-img h5 {
-  line-height: 35px;
-  font-weight: bold;
+
+.bac1{
+  padding: 50px;
+}
+
+.bac2{
+  padding: 50px;
+}
+
+.bac h6{
+  font-weight: 700;
+}
+
+.m-bac{
+ background: #f6f7fa;
+ margin-top: 20px;
+}
+
+.bac h4{
+  color: #99a1b0;
+  font-weight: 700;
   margin-top: 40px;
 }
-
-.u-img p {
-  /* height: 400px; */
-  align-items: center;
-  justify-content: center;
-  line-height: 30px;
+.bac ul li{
+  
+    list-style: disc;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 16px;
+  
 }
 
 
+/* ---------------------------------------------step3------------------------------------------------------ */
+.b-lin span{
+  color: #cc0258;
+
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 30px;
+  
+  
+}
+
+.b-lin h5{
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.b-lin h6{
+ padding-top: 60px;
+}
+
+
+
+
+
+.b-lin{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.lin1{
+  width: 250px;
+
+  height: 400px;
+  text-align: center;
+  /* background: darkgray; */
+  margin-left: 50%;
+  
+}
+
+.lin1 p{
+  padding: 10px;
+}
+
+.lin2{
+  width: 250px;
+
+  height: 400px;
+  text-align: center;
+  /* background: darkgray; */
+  margin-left: 10%;
+}
+
+.lin2 p{
+  padding: 10px;
+}
+
+.b-lin{
+  margin-top: 50px;
+}
+
+.m-lin{
+  margin-top: 70px;
+}
+
+.m-lin h4{
+  font-weight: 600;
+  line-height: 50px;
+  padding-left: 80px;
+  padding-right: 80px;
+  text-align: center;
+}
 /* -------------------------------------------------------footer--------------------------------- */
 
 .footer {

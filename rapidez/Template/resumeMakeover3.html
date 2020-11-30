@@ -138,14 +138,13 @@
     ></script>
 
     <!-- navbar-end -->
+
     <!-- --------------------------------------------update------------------------------------------------- -->
 
     <div class="update"></div>
 
     <div class="update0">
-      <div class="update1">
-        <img src="{% static '/image/landing.png' %}" alt="" />
-      </div>
+      <div class="update1"></div>
     </div>
 
     <div class="main-class">
@@ -209,17 +208,12 @@
         </div>
       </div>
     </div>
-
     <!-- ------------------------------------------------head--------------------------------------------------- -->
+
     <div class="cata container">
       <div>
-        <p style="border-bottom: 2px solid #3983fa">
-          <a
-            href="{% url 'resumeMakeover' %}"
-            style="color: #3983fa; font-weight: 700"
-          >
-            Infographic resume
-          </a>
+        <p>
+          <a href="{% url 'resumeMakeover' %}">Infographic resume </a>
         </p>
       </div>
       <div>
@@ -234,8 +228,12 @@
       </div>
 
       <div>
-        <p>
-          <a href="{% url 'resumeMakeover3' %}">Cover Letter </a>
+        <p style="border-bottom: 2px solid #3983fa">
+          <a
+            href="{% url 'resumeMakeover3' %}"
+            style="color: #3983fa; font-weight: 700"
+            >Cover Letter
+          </a>
         </p>
       </div>
     </div>
@@ -652,7 +650,6 @@
         $(".modal").modal();
       });
     </script>
-
     <script>
       var elem = document.querySelector(".collapsible.expandable");
       var instance = M.Collapsible.init(elem, {

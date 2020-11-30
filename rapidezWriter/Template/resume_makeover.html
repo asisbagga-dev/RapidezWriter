@@ -28,11 +28,17 @@
       media="screen,projection"
     />
     <link rel="stylesheet" href="{% static '/css/resume-makeover.css' %}" />
-    <link rel="stylesheet" href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}"
+    />
 
     <!-- ----------------slick--------------------------- -->
     <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick.css' %}" />
-    <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick-theme.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/slick-1.8.1/slick/slick-theme.css' %}"
+    />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,7 +48,7 @@
     <header class="drop">
       <a href="{% url 'home' %}" class="logo">
         <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
       </a>
       <ul>
         <li><a href="#">Resume Analysis</a></li>
@@ -60,11 +66,15 @@
               aria-hidden="true"
             ></i
           ></a>
-          <ul class="ser1 ser12" style="left: 38%;">
+          <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"><li>Resume template makeover</li></a>
-            <a href="{% url 'linkedIn' %}"><li>Linkedin profile branding</li></a>
+            <a href="{% url 'resumeMakeover' %}"
+              ><li>Resume template makeover</li></a
+            >
+            <a href="{% url 'linkedIn' %}"
+              ><li>Linkedin profile branding</li></a
+            >
             <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
             <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
           </ul>
@@ -84,7 +94,7 @@
               aria-hidden="true"
             ></i
           ></a>
-          <ul class="ser1 ser11" style="left: -30%;">
+          <ul class="ser1 ser11" style="left: -30%">
             <div class="box111"></div>
             <a href="{% url 'about' %}"><li>About Us</li></a>
             <a href="#"><li>FAQ</li></a>
@@ -92,7 +102,7 @@
         </li>
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
         <li><a href="#">Quiz</a></li>
-        <li><a href="#">Career Advice</a></li>    
+        <li><a href="#">Career Advice</a></li>
         <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
       </ul>
     </header>
@@ -100,7 +110,7 @@
 
     <!-- ------------------------------------------------head--------------------------------------------------- -->
 
-    <div class="head-img" style="color:#f8f8f8;">
+    <div class="head-img" style="color: #f8f8f8">
       <div class="t-img"></div>
       <div class="u-img">
         <h4>Cover Letter Templates</h4>
@@ -115,10 +125,10 @@
 
     <div class="cata container">
       <div>
-        <p style="border-bottom: 2px solid #3983fa;">
+        <p style="border-bottom: 2px solid #3983fa">
           <a
             href="{% url 'resumeMakeover' %}"
-            style="color: #3983fa; font-weight: 700;"
+            style="color: #3983fa; font-weight: 700"
             >Resume Templates
           </a>
         </p>
@@ -139,12 +149,16 @@
 
     <!-- --------------------------------------------template1----------------------------------- -->
     <br /><br /><br />
-    <div class="container" style="width: 100%; overflow: hidden;">
+    <div class="container" style="width: 100%; overflow: hidden">
       <div class="top-d">
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal11">
-              <img class="z-depth-2" src="{% static '/image/r1.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r1.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -153,9 +167,7 @@
               Professional cover letter template with a column for contact
               information
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -166,7 +178,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal12">
-              <img class="z-depth-2" src="{% static '/image/r2.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r2.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -175,10 +191,7 @@
               Modern cover letter template with delicate icons for contact
               information.
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
-
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -189,7 +202,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal13">
-              <img class="z-depth-2" src="{% static '/image/r3.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r3.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -198,9 +215,7 @@
               Creative cover letter template with graphic elements and two
               columns
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -210,7 +225,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal14">
-              <img class="z-depth-2" src="{% static '/image/r4.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r4.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -219,9 +238,7 @@
               Perfect cover letter template with a dash of color and a
               structured layout
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -232,7 +249,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal15">
-              <img class="z-depth-2" src="{% static '/image/r5.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r5.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -240,9 +261,7 @@
             <p>
               Sleek cover letter template with a light feel and color accents
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -253,17 +272,17 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal16">
-              <img class="z-depth-2" src="{% static '/image/r1.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r1.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
             <h5>Diamond</h5>
-            <p>
-              Classic cover letter template in a one column layout
-            </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <p>Classic cover letter template in a one column layout</p>
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -274,7 +293,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal17">
-              <img class="z-depth-2" src="{% static '/image/r3.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r3.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -283,9 +306,7 @@
               Two column cover letter template with contact information
               highlighted on the right
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -296,7 +317,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal18">
-              <img class="z-depth-2" src="{% static '/image/r2.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r2.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -305,9 +330,7 @@
               Clean cover letter template with plenty of whitespace and a layout
               that feels complete
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -319,35 +342,51 @@
 
     <!-- Modal Structure -->
     <div id="modal11" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r1.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r1.jpg' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal12" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r2.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r2.jpg' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal13" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r3.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r3.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal14" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r4.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r4.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal15" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r5.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r5.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal16" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r1.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r1.jpg' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal17" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r3.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r3.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal18" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r2.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r2.jpg' %}" alt="" /><br />
+      </div>
     </div>
     <footer class="footer">
       <div class="product">
@@ -377,22 +416,24 @@
 
       <div class="branded">
         <a href="#">
-          <h5 style="color:#fff;"><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+          <h5 style="color: #fff">
+            <span style="color: #0da1ec">Rapidez</span>Writer
+          </h5>
 
-          <a href="#" style="color: #a7b2d8;"
+          <a href="#" style="color: #a7b2d8"
             ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-twitter fa-2x"
-              style="margin-left: 20px;"
+              style="margin-left: 20px"
               aria-hidden="true"
             ></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-linkedin fa-2x"
-              style="margin-left: 20px; margin-right: 7px;"
+              style="margin-left: 20px; margin-right: 7px"
               aria-hidden="true"
             ></i
           ></a>

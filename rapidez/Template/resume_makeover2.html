@@ -28,11 +28,17 @@
       media="screen,projection"
     />
     <link rel="stylesheet" href="{% static '/css/resume-makeover.css' %}" />
-    <link rel="stylesheet" href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}"
+    />
 
     <!-- ----------------slick--------------------------- -->
     <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick.css' %}" />
-    <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick-theme.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/slick-1.8.1/slick/slick-theme.css' %}"
+    />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -96,7 +102,7 @@
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
         <li><a href="#">Quiz</a></li>
 
-        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
+        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>
 
         <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
         {% if user.is_authenticated %}
@@ -118,47 +124,115 @@
             <div class="box111"></div>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
-            <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
-        {% endif %}
+            <a href="{% url 'category_list_page' %}"
+              ><li>Delete Category</li></a
+            >
+            {% endif %}
           </ul>
         </li>
       </ul>
     </header>
-    <script src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js" async></script>
+    <script
+      src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js"
+      async
+    ></script>
 
     <!-- navbar-end -->
-    <!-- ------------------------------------------------head--------------------------------------------------- -->
+    <!-- --------------------------------------------update------------------------------------------------- -->
 
-    <div class="head-img" style="color:#f8f8f8;">
-      <div class="t-img"></div>
-      <div class="u-img">
-        <h4>Cover Letter Templates</h4>
-        <p>
-          Click on a cover letter template, fill it online, and download in
-          seconds. Build a professional cover letter in a few clicks. Just pick
-          one of 18+ cover letter templates below, add ready-made content, and
-          get the job.
+    <div class="update"></div>
+
+    <div class="update0">
+      <div class="update1"></div>
+    </div>
+
+    <div class="main-class">
+      <div class="contents1 a1">
+        <div class="headlines1">
+          <h5>Visual Resume</h5>
+        </div>
+        <p class="">
+          Visual Resume makes the personality of a candidate out of the box. It
+          defines the individuality, through pictographic representations that
+          showcase the key fact of your resume. In visual resume, you can easily
+          modify the font style by highlighting the key points in bold or
+          underline
         </p>
+        <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
+          >Order Now</a
+        >
+      </div>
+      <div class="image16">
+        <div class="z-depth-3">
+          <img
+            src="{% static '/image/scott-graham-5fNmWej4tAA-unsplash.jpg' %}"
+            alt=""
+          />
+        </div>
       </div>
     </div>
 
+    <div class="update2">
+      <div class="h-upd">
+        <h3>Not your typical QMS</h3>
+      </div>
+      <div class="m-upd">
+        <div class="upd">
+          <div class="upd1 upa z-depth-3">
+            <img src="{% static '/image/font1.PNG' %}" alt="" />
+
+            <h5>40 easy-to-use applications</h5>
+            <p>
+              A mighty engine with the agility to adapt to your business, now
+              and in the future
+            </p>
+          </div>
+
+          <div class="upd2 upa z-depth-3">
+            <img src="{% static '/image/font2.PNG' %}" alt="" />
+
+            <h5>An agile platform</h5>
+            <p>
+              An award-winning and streamlined user experience for all quality
+              processes
+            </p>
+          </div>
+
+          <div class="upd3 upa z-depth-3">
+            <img src="{% static '/image/font3.PNG' %}" alt="" />
+
+            <h5>Cloud-based SaaS</h5>
+            <p>Access securely anytime and anywhere</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------------------------------------head--------------------------------------------------- -->
+
     <div class="cata container">
       <div>
-        <p >
+        <p>
+          <a href="{% url 'resumeMakeover' %}">Infographic resume </a>
+        </p>
+      </div>
+      <div>
+        <p>
+          <a href="{% url 'resumeMakeover1' %}">Visual CVs</a>
+        </p>
+      </div>
+      <div>
+        <p style="border-bottom: 2px solid #3983fa">
           <a
-            href="{% url 'resumeMakeover' %}"
-            >Resume Templates
+            href="{% url 'resumeMakeover2' %}"
+            style="color: #3983fa; font-weight: 700"
+            >ATS resumes
           </a>
         </p>
       </div>
+
       <div>
-        <p >
-          <a href="{% url 'resumeMakeover1' %}">Cover Letter Templates</a>
-        </p>
-      </div>
-      <div>
-        <p style="border-bottom: 2px solid #3983fa;">
-          <a href="{% url 'resumeMakeover2' %}" style="color: #3983fa; font-weight: 700;">CV Templates </a>
+        <p>
+          <a href="{% url 'resumeMakeover3' %}">Cover Letter </a>
         </p>
       </div>
     </div>
@@ -167,12 +241,16 @@
 
     <!-- --------------------------------------------template1----------------------------------- -->
     <br /><br /><br />
-    <div class="container" style="width: 100%; overflow: hidden;">
+    <div class="container" style="width: 100%; overflow: hidden">
       <div class="top-d">
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal11">
-              <img class="z-depth-2" src="{% static '/image/r1.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r1.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -181,9 +259,7 @@
               Professional cover letter template with a column for contact
               information
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -194,7 +270,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal12">
-              <img class="z-depth-2" src="{% static '/image/r2.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r2.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -203,10 +283,7 @@
               Modern cover letter template with delicate icons for contact
               information.
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
-
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -217,7 +294,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal13">
-              <img class="z-depth-2" src="{% static '/image/r3.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r3.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -226,9 +307,7 @@
               Creative cover letter template with graphic elements and two
               columns
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -238,7 +317,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal14">
-              <img class="z-depth-2" src="{% static '/image/r4.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r4.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -247,9 +330,7 @@
               Perfect cover letter template with a dash of color and a
               structured layout
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -260,7 +341,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal15">
-              <img class="z-depth-2" src="{% static '/image/r5.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r5.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -268,9 +353,7 @@
             <p>
               Sleek cover letter template with a light feel and color accents
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -281,17 +364,17 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal16">
-              <img class="z-depth-2" src="{% static '/image/r1.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r1.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
             <h5>Diamond</h5>
-            <p>
-              Classic cover letter template in a one column layout
-            </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <p>Classic cover letter template in a one column layout</p>
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -302,7 +385,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal17">
-              <img class="z-depth-2" src="{% static '/image/r3.png' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r3.png' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -311,9 +398,7 @@
               Two column cover letter template with contact information
               highlighted on the right
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -324,7 +409,11 @@
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal18">
-              <img class="z-depth-2" src="{% static '/image/r2.jpg' %}" alt="" />
+              <img
+                class="z-depth-2"
+                src="{% static '/image/r2.jpg' %}"
+                alt=""
+              />
             </a>
           </div>
           <div class="m-text">
@@ -333,9 +422,7 @@
               Clean cover letter template with plenty of whitespace and a layout
               that feels complete
             </p>
-            <a
-              data-aos="zoom-in"
-              class="waves-effect waves-light btn btn90"
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
             <br />
@@ -347,36 +434,138 @@
 
     <!-- Modal Structure -->
     <div id="modal11" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r1.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r1.jpg' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal12" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r2.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r2.jpg' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal13" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r3.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r3.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal14" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r4.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r4.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal15" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r5.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r5.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal16" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r1.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r1.jpg' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal17" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r3.png' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r3.png' %}" alt="" /><br />
+      </div>
     </div>
 
     <div id="modal18" class="modal">
-      <div class="modal-content"><img src="{% static '/image/r2.jpg' %}" alt="" /><br /></div>
+      <div class="modal-content">
+        <img src="{% static '/image/r2.jpg' %}" alt="" /><br />
+      </div>
     </div>
+
+    <!-- ------------------------------------------------------faq update------------------------------ -->
+    <div class="faq0">
+      <h4>Frequently Asked Questions</h4>
+    </div>
+    <div class="faq1">
+      <ul class="collapsible expandable">
+        <li>
+          <div class="collapsible-header">
+            <h6>What does TopResume do?</h6>
+          </div>
+          <div class="collapsible-body">
+            <span
+              >Rapidez Writer is the world’s largest resume-writing service. Our
+              team of experts have reviewed millions of resumes and helped over
+              300,000 professionals land more interviews and get hired faster.
+              We are committed to helping professionals identify and best
+              articulate their personal brands. We offer resume-writing services
+              and expert career advice that helps our clients stand out in
+              today’s crowded job market.</span
+            >
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h6>What’s Rapidez writers relationship with job boards?</h6>
+          </div>
+          <div class="collapsible-body">
+            <span
+              >We are the preferred resume-writing partners for many major and
+              niche job boards, thanks to our history of client satisfaction and
+              success. Our focus is on the job seeker. We hone our strategies
+              based on recruiter, hiring manager and other industry feedback,
+              ensuring that each job seeker has the best resume for their job
+              search.</span
+            >
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h6>What do your customers and clients have to say?</h6>
+          </div>
+          <div class="collapsible-body">
+            <span
+              >You can find testimonials from real Rapidez Writer customers
+              here, as well as recent Rapidez Writer clients on TrustPilot and
+              SiteJabber.</span
+            >
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h6>
+              Does every job seeker need professional resume-writing services?
+            </h6>
+          </div>
+          <div class="collapsible-body">
+            <span
+              >No, not everyone needs professional help with their resume.
+              That’s why our resume experts will review your resume; to
+              determine whether it’s formatted correctly and successfully
+              showcases your skills. If your resume is already in good shape, we
+              will be sure to let you know!</span
+            >
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">
+            <h6>
+              Does Rapidez Writer provide resume writing for specialized fields?
+            </h6>
+          </div>
+          <div class="collapsible-body">
+            <span
+              >Yes, our expert writers are certified in over 65 industries,
+              including writing specialized resumes for the military, federal,
+              and academic sectors. They’re well-versed in current best
+              practices and are able to translate experience from one industry
+              to another.</span
+            >
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ---------------------------------------footer----------------------------------------- -->
     <footer class="footer">
       <div class="product">
         <h5>PRODUCTS</h5>
@@ -405,22 +594,24 @@
 
       <div class="branded">
         <a href="#">
-          <h5 style="color:#fff;"><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+          <h5 style="color: #fff">
+            <span style="color: #0da1ec">Rapidez</span>Writer
+          </h5>
 
-          <a href="#" style="color: #a7b2d8;"
+          <a href="#" style="color: #a7b2d8"
             ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-twitter fa-2x"
-              style="margin-left: 20px;"
+              style="margin-left: 20px"
               aria-hidden="true"
             ></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-linkedin fa-2x"
-              style="margin-left: 20px; margin-right: 7px;"
+              style="margin-left: 20px; margin-right: 7px"
               aria-hidden="true"
             ></i
           ></a>
@@ -456,6 +647,12 @@
     <script>
       $(document).ready(function () {
         $(".modal").modal();
+      });
+    </script>
+    <script>
+      var elem = document.querySelector(".collapsible.expandable");
+      var instance = M.Collapsible.init(elem, {
+        accordion: false,
       });
     </script>
   </body>

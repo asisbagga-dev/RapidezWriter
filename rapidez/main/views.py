@@ -35,6 +35,8 @@ def resume_makeover_1(request):
     return render(request,"resume_makeover1.html")
 def resume_makeover_2(request):
     return render(request,"resume_makeover2.html")
+def resume_makeover_3(request):
+    return render(request,"resumeMakeover3.html")
 
 def resume_video(request):
     return render(request,"resume_video.html")

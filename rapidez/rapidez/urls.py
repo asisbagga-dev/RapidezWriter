@@ -32,6 +32,7 @@ urlpatterns = [
     path('Resume-Makeover', views.resume_makeover, name="resumeMakeover"),
     path('Resume-Makeover1', views.resume_makeover_1, name="resumeMakeover1"),
     path('Resume-Makeover2', views.resume_makeover_2, name="resumeMakeover2"),
+    path('Resume-Makeover3', views.resume_makeover_3, name="resumeMakeover3"),
     path('Resume-Video', views.resume_video, name="resumeVideo"),
     path('linkedIn', views.linkedin, name="linkedIn"),
 

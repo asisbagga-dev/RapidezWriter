@@ -24,7 +24,10 @@
       media="screen,projection"
     />
     <link rel="stylesheet" href="{% static '/css/CONSULTING-resume.css' %}" />
-    <link rel="stylesheet" href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}"
+    />
 
     <!-- ----------------slick--------------------------- -->
     <link
@@ -32,7 +35,10 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick.css' %}" />
-    <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick-theme.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static '/slick-1.8.1/slick/slick-theme.css' %}"
+    />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -96,7 +102,7 @@
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
         <li><a href="#">Quiz</a></li>
 
-        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
+        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>
 
         <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
         {% if user.is_authenticated %}
@@ -118,81 +124,136 @@
             <div class="box111"></div>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
-            <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
-        {% endif %}
+            <a href="{% url 'category_list_page' %}"
+              ><li>Delete Category</li></a
+            >
+            {% endif %}
           </ul>
         </li>
       </ul>
     </header>
-    <script src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js" async></script>
+    <script
+      src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js"
+      async
+    ></script>
 
     <!-- navbar-end -->
     <!-- ---------------------------------------------------main head--------------------------------------- -->
-    <div class="headline container">
-      
-      <br>
-      <p>
-      </p>
-    </div>
-    <div class="head-img">
-      <div class="t-img"></div>
-      <div class="u-img">
-        <h4>Personal Consulting Coach</h4>
-        <p>
-          In the consulting world, your resume is even more important. The top
-          three consulting firms — McKinsey, Bain, and BCG — have acceptance
-          rates of less than five percent during any given year. The resume
-          screening step is where most applicants are eliminated. This goes to
-          show just how important it is to write a strong resume when applying
-          to be a consultant.
-        </p>
-        <div
-          class="button"
-          style="width: 100%; text-align: center; margin-top: 20px;"
-        >
-          <a class="waves-effect waves-light btn btn0" style="background: #223c99;" href="{% url 'contactUs' %}"
-            >Call Us</a
-          >
-        </div>
-      </div>
-    </div>
-    <br> <br>
-    <div
-      class="headline container"
-      style="
-        margin-top: 40px;
-        border-bottom: 2px solid rgba(226, 215, 215, 0.274);
-      "
-    >
-      <h4><span style="font-weight: 500;">Free on call consultation </span>for 15 min with our Career coach</h4>
-    </div>
+    <!-- --------------------------contact us------------------------------------------------------------ -->
 
-    <div class="main-class">
-      <div class="image15">
-        <div class="z-depth-3">
-          <img src="{% static '/image/donovan-silva-ygUPa_SaXKw-unsplash.jpg' %}" alt="" />
-        </div>
+    <div class="grids">
+      <div class="text-p">
+        <h3>Affordable outplacement from the leader in career services</h3>
+        <h6>
+          Over 1,000 career experts and a tailored plan to your organization
+        </h6>
+        <ul>
+          <li>1:1 resume writing and job interview preparation</li>
+          <li>Proven service with millions of users</li>
+          <li>Trusted partner of over 400 leading job sites</li>
+          <li>Simple setup and reporting</li>
+        </ul>
       </div>
 
-      <div class="contents1">
-        <div class="headlines1">
-          <h4>Consulting on Career Advice</h4>
-        </div>
-        <p class="">
-          Choose professional, elegant, creative, or modern resume templates.
-          Rapidez Writer resume maker offers 18 templates. You can easily change
-          colors and adapt the layout to any resume format you choose:
-          functional, reverse-chronological, or combination.
-        </p>
-        <div
-          class="button"
-          style="width: 100%; text-align: center; margin-top: 20px;"
-        >
-          <a class="waves-effect waves-light btn btn0" style="background: #223c99; width: 35%;" href="{% url 'contactUs' %}"
-            >Call Now</a
+      <!-- --------------------------------------------------form-------------------------------------------------- -->
+
+      <div class="row" style="margin: 0">
+        <form class="col s12" style="width: 100%">
+          <div class="row" style="width: 100%">
+            <div
+              class="input-field col s12"
+              style="width: 100%; padding: 0; padding-left: 10px"
+            >
+              <textarea id="name" class="materialize-textarea"></textarea>
+              <label for="name" style="margin-left: 12px">Name</label>
+            </div>
+          </div>
+          <div class="row" style="width: 100%">
+            <div class="input-field col s12" style="width: 100%">
+              <input id="email" type="email" class="validate" />
+              <label for="email" style="margin-left: 15px">Email ID</label>
+            </div>
+          </div>
+          <!-- <div class="row" style="width: 100%;">
+            <div
+              class="input-field col s12"
+              style="width: 100%; padding: 0; padding-left: 10px;"
+            >
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1" style="margin-left: 12px;">Subject</label>
+            </div>
+          </div> -->
+
+          <div class="row" style="width: 100%">
+            <div
+              class="input-field col s12"
+              style="width: 100%; padding: 0; padding-left: 10px"
+            >
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1" style="margin-left: 12px">Query</label>
+            </div>
+          </div>
+          <div
+            class="button"
+            style="width: 100%; text-align: center; margin-top: 20px"
           >
+            <a class="waves-effect waves-light btn" style="width: 180px"
+              >Send</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ----------------------------------------------step2------------------------------------------ -->
+    <div class="m-bac">
+      <div class="bac">
+        <div class="bac1">
+          <h6><i class="fa fa-suitcase" aria-hidden="true"></i>   Employer Benefits</h6>
+          <h4>Scalable and Affordable Service.</h4>
+          <ul>
+            <li>High quality and trusted service</li>
+            <li>Over 1,000 career experts to provide 1:1 resume writing and interview preparation</li>
+            <li>Competitive pricing tailored to your organization</li>
+          </ul>
+        </div>
+
+        <div class="bac2">
+          <h6><i class="fa fa-user" aria-hidden="true"></i> Employer Benefits</h6>
+          <h4>Deliver better job outcomes.</h4>
+          <ul>
+            <li>Simple and seamless 1:1 coaching from a career expert</li>
+            <li>Boost employee confidence by giving them a compelling career narrative</li>
+            <li>Future earnings can be potentially 7% higher with a professionally-written resume</li>
+          </ul>
         </div>
       </div>
+    </div>
+
+    <!-- -------------------------------------------------step3------------------------------------- -->
+    <div class="m-lin ">
+      <h4>Train when, where and how you want.
+        Get everyone up and running quickly with 4 types of online courses:</h4>
+
+        <div class="b-lin">
+          <div class="lin1 z-depth-4">
+            <div class="t1-lin">
+              <h6><span>4 to 8 Hour Certifications</span></h6>
+              <h5>Certifications</h5>
+              <p>A course that provides in-depth training. Six certifications are available.</p>
+            </div>
+          </div>
+
+          <div class="lin2  z-depth-4">
+            <div class="t2-lin">
+              <h6><span>4 to 8 Hour Certifications</span></h6>
+              <h5>Certifications</h5>
+              <p>A course that provides in-depth training. Six certifications are available.</p>
+            </div>
+          </div>
+        </div>
+
+
     </div>
     <!-- -----------------------------------------------------------------footer--------------------------- -->
 
@@ -224,22 +285,24 @@
 
       <div class="branded">
         <a href="#">
-          <h5 style="color:#fff;"><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+          <h5 style="color: #fff">
+            <span style="color: #0da1ec">Rapidez</span>Writer
+          </h5>
 
-          <a href="#" style="color: #a7b2d8;"
+          <a href="#" style="color: #a7b2d8"
             ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-twitter fa-2x"
-              style="margin-left: 20px;"
+              style="margin-left: 20px"
               aria-hidden="true"
             ></i
           ></a>
-          <a href="#" style="color: #a7b2d8;">
+          <a href="#" style="color: #a7b2d8">
             <i
               class="fa fa-linkedin fa-2x"
-              style="margin-left: 20px; margin-right: 7px;"
+              style="margin-left: 20px; margin-right: 7px"
               aria-hidden="true"
             ></i
           ></a>
@@ -260,49 +323,6 @@
       window.addEventListener("scroll", function () {
         var header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
-      });
-    </script>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-
-    <script>
-      $(".part1").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        nextArrow: $(".pat00"),
-        prevArrow: $(".pat0"),
-      });
-    </script>
-    <script>
-      $(".part2").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        nextArrow: $(".pat2"),
-        prevArrow: $(".pat1"),
-      });
-    </script>
-
-    <script>
-      $(".part3").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        nextArrow: $(".pat4"),
-        prevArrow: $(".pat3"),
-      });
-    </script>
-
-    <script>
-      $(document).ready(function () {
-        $(".modal").modal();
       });
     </script>
   </body>

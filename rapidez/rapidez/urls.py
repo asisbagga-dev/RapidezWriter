@@ -36,6 +36,7 @@ urlpatterns = [
     path('Resume-Makeover3', views.resume_makeover_3, name="resumeMakeover3"),
     path('Resume-Video', views.resume_video, name="resumeVideo"),
     path('linkedIn', views.linkedin, name="linkedIn"),
+    path('quizes/', views.quizes, name="quizes"),
 
     # About Pages
     path('About', views.about, name="about"),

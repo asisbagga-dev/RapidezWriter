@@ -25,10 +25,8 @@ def testimonials(request):
 # Service Pages
 def resume_consulting(request):
     return render(request,"resume_consulting.html")
-
 def resume_writing(request):
     return render(request,"resume_writing.html")
-
 def resume_makeover(request):
     return render(request,"resume_makeover.html")
 def resume_makeover_1(request):
@@ -37,13 +35,14 @@ def resume_makeover_2(request):
     return render(request,"resume_makeover2.html")
 def resume_makeover_3(request):
     return render(request,"resumeMakeover3.html")
-
 def resume_video(request):
     return render(request,"resume_video.html")
-
 def linkedin(request):
     return render(request,"linkedin.html")
+def quizes(request):
+    return render(request, "quiz.html")
 
+# Blogs CURD Applications
 def create_blog(request):
     forms = Databaseform()
     if request.method == "POST":
@@ -53,8 +52,6 @@ def create_blog(request):
             return HttpResponseRedirect(reverse('home'))
     return render(request, 'createBlog.html', {'form': forms})
 
-
-# Career Advise List Pages
 def career_list_page(request):
     all_objects = Database.objects.all()
     return render(request, 'career_list.html', {"objects": all_objects})
@@ -84,12 +81,10 @@ def blog_delete(request, pk):
         return HttpResponseRedirect(reverse('career_list_page'))
     return render(request, 'blogDelete.html')
 
-
 def career_view_all_page(request):
     return render(request, "career_view_all.html")
 
 # Categories
-
 def add_category(request):
     forms = Categoryform()
     if request.method == "POST":

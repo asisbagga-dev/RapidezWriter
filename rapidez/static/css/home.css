@@ -52,11 +52,12 @@ header a {
 }
 
 header.sticky {
-  padding: 5px 40px;
-  background: #223c99;
-  height: 50px;
+  /* padding: 5px 40px; */
+  background: #ffffff;
+  height: 90px;
   align-items: center;
   z-index: 999;
+  border-bottom: 1px solid #f5f5f5;
   /* color: #333; */
 }
 
@@ -67,7 +68,7 @@ header.sticky a {
 }
 
 header.sticky .logo {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 header.sticky ul li:hover > ul {
@@ -126,18 +127,80 @@ header ul li a {
   position: relative;
   margin: 0 10px;
   text-decoration: none;
-  color: #fff;
+  color: #241e1e;
   /* letter-spacing: 2px; */
   /* font-weight: 500px; */
   transition: 0.6s;
 }
 
-header.sticky .logo,
+/* header.sticky .logo,
 header.sticky ul li a {
   color: #fff;
+} */
+
+.parent {
+  display: flex;
+  margin-left: auto;
+  margin-top: 7% !important;
+  /* margin-bottom: -3em !important; */
+}
+
+.item {
+  width: 50%;
+  padding: 5em;
+  margin-left: 2em !important;
+  color: #000;
+  background: #fff;
+  min-height: 38em !important;
+}
+
+.item h3{
+  font-weight: 500;
+}
+
+.item h5{
+  color: #8d8c8c;
+  font-weight: 300;
+  margin-bottom: 1em !important;
+}
+
+.last {
+  color: #222;
+  /* background: #ccc; */
+  margin-right: 5em;
+}
+
+@media screen and (max-width: 600px){
+  
+  .parent {
+    flex-direction: column-reverse;  
+  }
+  
+  .item {
+    width: auto;
+    min-height: 200px;
+  }
+  
+  .last {
+    background: #ccc;
+  }
+  
 }
 
 /* -----------------------------------------------------Drop-down---------------------------------------- */
+.drop{
+  padding-left: 6%;
+  padding-right: 8%;
+}
+
+.drop img{
+  height: 130px;
+}
+
+.drop h5{
+  margin-left: -48% !important;
+  margin-top: -2px !important;
+}
 
 .drop ul li {
   position: relative;
@@ -211,7 +274,7 @@ header.sticky ul li a {
 /* ------------------------------------------------------navbar end----------------------------------------- */
 
 .over {
-  position: relative;
+  /* position: relative; */
   background: #223c99b8;
   height: 80vh;
   width: 100%;
@@ -266,7 +329,8 @@ header.sticky ul li a {
   text-align: center;
   /* border-bottom: 2px solid rgb(226, 215, 215); */
   /* padding-top: 100px; */
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
 }
 .headline h4 {
@@ -304,6 +368,12 @@ header.sticky ul li a {
 
 .pt p span {
   font-weight: bold;
+}
+
+.image1212 img{
+  width: 60px;
+  height: 60px;
+  margin-top: 1em;  
 }
 
 /* -------------------------------------------how it work------------------------------- */
@@ -367,7 +437,7 @@ header.sticky ul li a {
 }
 
 .boss1 {
-  height: 750px;
+  height: 800px;
   width: 100%;
 }
 
@@ -387,12 +457,79 @@ header.sticky ul li a {
   padding-bottom: 100px !important;
 }
 
-.carousel-item {
+.rtc {
   height: 500px !important;
   width: 300px !important;
 }
 
-/* <!-- -----------------------------------------------------customer raiting------------------------------ --> */
+/* <!-- -----------------------------------------------------how it works------------------------------ --> */
+
+.how-it-works{
+  background: #6bbbe4;
+  background: linear-gradient(180deg, #8bc7e6 3%, #6bbbe4 25%, #36ace7 73%);
+  font-family: Cabin,sans-serif;
+  margin-top: 0 !important;
+}
+
+.how-it-works .carousel-item{
+  margin-top: 5em;
+  padding: 3em;
+}
+
+.how-it-works .carousel-item img{
+  width: 30px;
+  height: 20px;
+}
+
+.how-it-works .carousel-item h5{
+  font-weight: 200;
+  padding-left: 10em;
+  padding-right: 10em;
+  text-align: center;
+  font-size: 21px;
+  margin-bottom: 2% !important;
+}
+
+.how-it-works .carousel-item h4{
+  margin-top: 3% !important;
+}
+
+.carousel .indicators .indicator-item {
+  display: inline-block;
+  height: 5px;
+  width: 32px;
+  margin: 24px 6px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  border-radius: 0% !important;
+}
+
+.hiw-contact-btn{
+  background: #036292 !important;
+  border-radius: 5%;
+  width: 25%;
+  height: 50px;
+}
+
+
+/* <!-- -----------------------------------------------------blog articles------------------------------ --> */
+
+.headline-blog .btn {
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.blog-articles{
+  margin-top: -85px !important;
+  margin-bottom: 55px;
+}
+
+/* <!-- -----------------------------------------------------customer rating------------------------------ --> */
 .page-wrapper {
   margin-top: 30px;
 }

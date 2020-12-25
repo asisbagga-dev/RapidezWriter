@@ -27,6 +27,7 @@ urlpatterns = [
     path('', views.home, name="home"),
 
     #Service Pages
+    path('resumeAnalysis/', include('resumeAnalysis.urls')),
     path('Resume-Consulting', views.resume_consulting, name="resumeConsulting"),
     path('Resume-Writing', views.resume_writing, name="resumeWriting"),
     path('Resume-Makeover', views.resume_makeover, name="resumeMakeover"),
@@ -61,9 +62,6 @@ urlpatterns = [
     path('createCategory/', views.add_category, name="add_category"),
     path('deleteCategory/<int:pk>', views.delete_category, name="delete_category"),
     path('CategoryActions/', views.category_list_page, name="category_list_page"),
-
-    # Bharath's Work
-    path('resumeupload/', include('resumeAnalysis.urls')),
 ]
 
 if settings.DEBUG:

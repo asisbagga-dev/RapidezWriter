@@ -47,70 +47,87 @@
   </head>
 
   <body>
-    <header class="drop logo1">
-      <a href="{% url 'home' %}" class="logo">
-        <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
-      </a>
+    <header class="drop">
+      <!-- <a href="{% url 'home' %}" class="logo"> -->
+        <img src="{% static '/image/logo.png' %}" alt="Rapidez Writer Logo" />
+        <h5>
+          <span style="color: #8c8c8c">Rapidez</span>
+          <span style="color: #0da1ec">Writer</span>
+        </h5>
+      <!-- </a> -->
       <ul>
-        <li><a href="#">Resume Analysis</a></li>
         <li>
-          <a href="#"
-            >Resume Services
-            <i
-              class="fa fa-chevron-down"
+          <a href="#">Services
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
+            <a href="http://127.0.0.1:8080/resumeAnalysis"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"
-              ><li>Resume template makeover</li></a
-            >
-            <a href="{% url 'linkedIn' %}"
-              ><li>Linkedin profile branding</li></a
-            >
-            <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
-            <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
+            <a href="{% url 'resumeMakeover' %}"><li>Premium Templates</li></a>
+            <a href="{% url 'linkedIn' %}"><li>LinkedIn Branding</li></a>
+            <a href="{% url 'resumeVideo' %}"><li>Video Resume</li></a>
+            <a href="{% url 'resumeConsulting' %}"><li>Consultation</li></a>
           </ul>
         </li>
-        <li class="ser">
-          <a href="#"
-            >About
-            <i
-              class="fa fa-chevron-down"
+
+        <li>
+          <a href="#">Resources
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
-          <ul class="ser1 ser11" style="left: -30%">
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
+            <div class="box111"></div>
+            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
+            <a href="#"><li>Quiz</li></a>            
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Company
+            <i class="fa fa-chevron-down"
+              style="
+                font-size: 10px;
+                position: relative;
+                bottom: 1px;
+                opacity: 0.3;
+                color: #0783ca;
+              "
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'about' %}"><li>About Us</li></a>
-            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
+            <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
+            <a href="#"><li>Career</li></a>          
           </ul>
         </li>
+
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
-        <li><a href="#">Quiz</a></li>
 
-        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
-
-        <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
         {% if user.is_authenticated %}
         <li>
-          <a href="#"
-            >Accounts
+          <a href="#">Accounts
             <i
               class="fa fa-chevron-down"
               style="
@@ -119,9 +136,9 @@
                 bottom: 1px;
                 opacity: 0.3;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
@@ -133,7 +150,7 @@
       </ul>
     </header>
     <!-- navbar-end -->
-    <div class="over">
+    <!-- <div class="over">
       <div class="headtex">
         <h4>
           Getting a great job starts
@@ -145,29 +162,49 @@
           >Get a Free Resume Review</a
         >
       </div>
-    </div>
-    <section class="Banner">
+    </div> -->
+    <!-- <section class="Banner">
       <video autoplay loop muted>
         <source
           src="{% static '/video/RapidezWriter-1.mp4' %}"
           type="video/mp4"
         />
       </video>
-    </section>
+    </section> -->
+
+  <!-- Landing page -->
+<div class="parent">
+
+  <div class="item ">
+    <h3>Get your CV | Resume 
+     <br> redefined by professional recruiters
+    </h3>
+    <h5>The  #1 Talent Acquisition and resume writing company,
+      trusted by professionals to land their dream job.
+    </h5>
+    <a class="waves-effect waves-light btn btn-large">Get a Free Resume Review</a>
+  </div>
+
+  <div class="item last" style="background: url({% static 'image/homepage_banner.jpg' %}) center center no-repeat; background-size: contain;"></div>
+  
+</div>
 
     <!-- -----------------------------------------------------------after video----------------------------------- -->
+    <br><br>
+    <div style="background: #fff"> 
+
     <div class="headline container">
-      <h4>What's Preventing You From Your Dream Job?</h4>
+      <h4>What's stopping you from being Hired?</h4>
     </div>
     <div class="boss">
       <div class="maindetail">
         <div class="image1212">
           <br />
-          <img src="{% static '\image\Capture0.PNG' %}" />
+          <img src="{% static '\image\wsh1.png' %}" />
         </div>
         <div class="pt1 pt" data-aos="fade-left" data-aos-duration="1500">
           <p>
-            <span>Cover Letter Builder</span><br />
+            <span>Resume Visibility on Job Portals</span><br />
 
             Write a cover letter using the same templates as your resume.
           </p>
@@ -175,12 +212,12 @@
 
         <div class="image1212">
           <br />
-          <img src="{% static '\image\Capture1.PNG' %}" />
+          <img src="{% static '\image\wsh5.png' %}" />
         </div>
 
         <div class="pt2 pt" data-aos="fade-left" data-aos-duration="2000">
           <p>
-            <span>20+ Best Resume Templates</span><br />
+            <span>Adoption of ATS eco-system</span><br />
 
             Create a morden and professional resume and cover letter
           </p>
@@ -188,12 +225,12 @@
 
         <div class="image1212">
           <br />
-          <img src="{% static '\image\Capture2.PNG' %}" />
+          <img src="{% static '\image\wsh8.png' %}" />
         </div>
 
         <div class="pt3 pt" data-aos="fade-left" data-aos-duration="2500">
           <p>
-            <span>Resume Check</span><br />
+            <span>Vague Content/span><br />
 
             Our builder will give you suggestion how to improve your resume
           </p>
@@ -201,12 +238,12 @@
 
         <div class="image1212">
           <br />
-          <img src="{% static '\image\Capture3.PNG' %}" />
+          <img src="{% static '\image\wsh7.png' %}" />
         </div>
 
         <div class="pt4 pt" data-aos="fade-left" data-aos-duration="1500">
           <p>
-            <span>Fallow Tips From Experts</span><br />
+            <span>Irrelevant Interview calls</span><br />
 
             Our experts tips will show you how to write a Resume.
           </p>
@@ -214,12 +251,12 @@
 
         <div class="image1212">
           <br />
-          <img src="{% static '\image\Capture4.PNG' %}" />
+          <img src="{% static '\image\wsh6.png' %}" />
         </div>
 
         <div class="pt5 pt" data-aos="fade-left" data-aos-duration="2000">
           <p>
-            <span>Its Fast And Easy To Use </span><br />
+            <span>Insignificant keywords</span><br />
 
             Our online resume builder will help you write a perfect resume in
             minutes.
@@ -228,21 +265,22 @@
 
         <div class="image1212">
           <br />
-          <img src="{% static '\image\Capture5.PNG' %}" />
+          <img src="{% static '\image\wsh9.png' %}" />
         </div>
 
         <div class="p6 pt" data-aos="fade-left" data-aos-duration="2500">
           <p>
-            <span>Flexible Text Editor</span><br />
+            <span>Grammatical errors</span><br />
 
             You will have access to the best text editor available
           </p>
         </div>
       </div>
     </div>
+    </div>
 
     <!-- ------------------------------------------------------------how it work ------------------------------------ -->
-    <div class="work">
+    <!-- <div class="work">
       <div class="headline container">
         <h4>How It Works</h4>
       </div>
@@ -280,13 +318,58 @@
       <br />
 
       <br /><br />
+    </div> -->
+
+    <!-- ---------------------------------------------------resume sample---------------------------------- -->
+    <div class="headline container">
+      <h4>Professionally Designed Resumes</h4>
+    </div>
+
+    <div class="image">
+      <div class="carousel">
+        <a
+          class="carousel-item rtc"
+          href="{% static '/image/rt4.png' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/rt4.png' %}"
+        /></a>
+        <a
+          class="carousel-item rtc"
+          href="{% static '/image/rt2.png' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/rt2.png' %}"
+        /></a>
+        <a
+          class="carousel-item rtc"
+          href="{% static '/image/rt3.png' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/rt3.png' %}"
+        /></a>
+        <a
+          class="carousel-item rtc"
+          href="{% static '/image/rt1.png' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/rt1.png' %}"
+        /></a>
+        <a
+          class="carousel-item rtc"
+          href="{% static '/image/rt5.png' %}"
+          data-lightbox="mygallery"
+          ><img src="{% static '/image/rt5.png' %}"
+        /></a>
+      </div>
     </div>
 
     <!-- -------------------------------------------------memorial-design--------------------------------- -->
+    
     <div class="boss1" style="background: #f8f8f8"> 
+
+      <div class="headline container">
+        <h4>Features of our Resume</h4>
+      </div>
       <div class="allb">
         <div class="all1">
-          <img src="{% static '\image\tem2.jpg' %}" />
+          <img src="{% static '\image\rt4.png' %}" />
         </div>
 
         <div class="all2">
@@ -304,78 +387,117 @@
             data-aos-easing="linear"
             data-aos-duration="1500">
               <h5 >
-                <i class="fa fa-rocket" aria-hidden="true"></i> No learning
-                curve
+                <i class="fa fa-pencil" aria-hidden="true"></i> Resume written by Recruiter
               </h5>
-
               <h5>
-                <i class="fa fa-file-text-o" aria-hidden="true"></i></i> Content analyzer
-                
+                <i class="fa fa-file-text-o" aria-hidden="true"></i></i> Job targeted content
               </h5>
-              
               <h5>
-                <i class="fa fa-comments" aria-hidden="true"></i>Improve with feedback 
-                
+                <i class="fa  fa-check-square-o" aria-hidden="true"></i>ATS compliant
               </h5>
-                      <h5>
-                        <i class="fa fa-smile-o" aria-hidden="true"></i>professional, yet personal
-                        
-                      </h5>
-
-                      <h5>
-                        <i class="fa fa-scissors" aria-hidden="true"></i>Tailor your application
-                        
-                      </h5>
+              <h5>
+                <i class="fas fa-user-graduate" aria-hidden="true"></i>Proofreading by career coach
+              </h5>
+              <h5>
+                <i class="fas fa-infinity" aria-hidden="true"></i>Unlimited revisions
+              </h5>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ---------------------------------------------------resume sample---------------------------------- -->
-    <div class="headline container">
-      <h4>Professionally Designed Resumes</h4>
-    </div>
+    <!-- -----------------------------------------------------How it works------------------------------ --> 
 
-    <div class="image">
-      <div class="carousel">
-        <a
-          class="carousel-item"
-          href="{% static '/image/tem2.jpg' %}"
-          data-lightbox="mygallery"
-          ><img src="{% static '/image/tem2.jpg' %}"
-        /></a>
-        <a
-          class="carousel-item"
-          href="{% static '/image/tem1.jpg' %}"
-          data-lightbox="mygallery"
-          ><img src="{% static '/image/tem1.jpg' %}"
-        /></a>
-        <a
-          class="carousel-item"
-          href="{% static '/image/tem3.jpg' %}"
-          data-lightbox="mygallery"
-          ><img src="{% static '/image/tem3.jpg' %}"
-        /></a>
-        <a
-          class="carousel-item"
-          href="{% static '/image/tem4.jpg' %}"
-          data-lightbox="mygallery"
-          ><img src="{% static '/image/tem4.jpg' %}"
-        /></a>
-        <a
-          class="carousel-item"
-          href="{% static '/image/tem5.png' %}"
-          data-lightbox="mygallery"
-          ><img src="{% static '/image/tem5.png' %}"
-        /></a>
+
+    <div class="carousel carousel-slider center how-it-works">
+      <div class="headline container white-text" >
+        <h4 style="font-size:38px">5 ways we stand apart</h4>
+      </div>
+      <div class="carousel-item white-text" href="#one">
+        <i class="far fa-comment-dots fa-6x"></i>
+        <h4>Career Counsellor</h4>
+        <h5 class="white-text">Our career counsellor will have an in-depth conversation in order to  assist you with your next targeted position by assessing skills and relevant expertise aligned to the job description</h5>
+      </div>
+      <div class="carousel-item white-text" href="#two">
+        <i class="fab fa-searchengin fa-6x"></i>
+        <h4>Research Analyst</h4>
+        <h5 class="white-text">Research analyst will fetch insights on the current position, Keywords, ATS phrases, Trending synonyms</h5>
+      </div>
+      <div class="carousel-item white-text" href="#three">
+        <i class="fas fa-file-contract fa-6x"></i>
+        <h4>Resume Template</h4>
+        <h5 class="white-text">Selecting the Resume template – Visual, Functional, Texted, ATS format</h5>
+      </div>
+      <div class="carousel-item white-text" href="#four">
+        <i class="fas fa-user-graduate fa-6x"></i>
+        <h4>Recruiters</h4>
+        <h5 class="white-text">Recruiters will integrate all the collected data and ameliorate the content to meet the deadlines</h5>
+      </div>
+      <div class="carousel-item white-text" href="#five">
+        <i class="fas fa-user-tie fa-6x"></i>
+        <h4>Hiring Specialist</h4>
+        <h5 class="white-text">Continuous connection with the hiring specialist will improve intensive comprehensiveness of your profile</h5>
+      </div>
+      <div class="carousel-fixed-item center">
+        <a href="{% url 'contactUs' %}" class="btn waves-effect btn-large hiw-contact-btn">Create my Resume</a>
       </div>
     </div>
 
-    <!-- -----------------------------------------------------customer raiting------------------------------ -->
+    <!-- -----------------------------------------------------Blog articles------------------------------ -->
+    <div class="headline container" >
+      <h4>Our Latest Blogs</h4>
+    </div>
+
+    <div class="carousel carousel-slider center blog-articles">
+      <div class="carousel-fixed-item center"></div>
+      <div class="carousel-item " id="caro-one" href="#one">
+        <div class="parent">
+          <div class="item " style="background: url({% static 'image/interview.jpg' %}); background-size: contain;"></div>
+          <div class="item last">
+            <div class="headline-blog">
+              <a class="waves-effect waves-light btn" href="">Covid 19</a>
+              <a class="waves-effect waves-light btn" href="">LinkedIn</a>
+              {% for i in blog_details.category.all %}
+              <a class="waves-effect waves-light btn" href="">Relevant Tags from backend</a>
+              {% endfor %}
+              <a class="waves-effect waves-light btn">Tags</a>
+            </div>
+            <h4>This is blog heading 1</h4>
+            <h5 style="text-align: justify; font-size: large">
+              Description of blog 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem, officiis illo harum soluta quod, voluptatem neque, mollitia accusamus delectus nam ab. Maxime iusto delectus numquam odio quia doloremque praesentium?
+              Description of blog 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem, officiis illo harum soluta quod, voluptatem neque, mollitia accusamus delectus nam ab. Maxime iusto delectus numquam odio quia doloremque praesentium?
+            </h5>
+          </div>
+        </div>
+      </div>
+   
+      <div class="carousel-item " id="caro-two" href="#two">
+        <div class="parent">
+          <div class="item " style="background: url({% static 'image/video-r.jpg' %}); background-size: contain;"></div>
+          <div class="item last">
+            <div class="headline-blog">
+              <a class="waves-effect waves-light btn" href="">Resume</a>
+              <a class="waves-effect waves-light btn" href="">Covid 19</a>
+              {% for i in blog_details.category.all %}
+              <a class="waves-effect waves-light btn" href="">Relevant Tags from backend</a>
+              {% endfor %}
+              <a class="waves-effect waves-light btn">Tags</a>
+            </div>
+            <h4>This is blog heading 2</h4>
+            <h5 style="text-align: justify; font-size: large">
+              Description of blog 2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maxime minus quisquam at minima, culpa deserunt earum totam vitae, impedit laboriosam amet nemo ipsa eum. At amet ducimus ipsam esse?
+              Description of blog 2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maxime minus quisquam at minima, culpa deserunt earum totam vitae, impedit laboriosam amet nemo ipsa eum. At amet ducimus ipsam esse?
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------------------------------------------customer rating------------------------------ -->
     <div class="colo1" style="background: #f8f8f8">
       <div class="headline container" style="padding-bottom: 10px">
-        <h4>Our Customers Love Us </h4>
+        <h4>What customers say about us </h4>
         <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
       </div>
 
@@ -478,7 +600,7 @@
     <footer class="footer">
       <div class="product">
         <h5>PRODUCTS</h5>
-        <a href="#"><p>Resume Analysis</p></a>
+        <a href="http://127.0.0.1:8080/resumeAnalysis"><p>Resume Analysis</p></a>
         <a href="{% url 'resumeWriting' %}"><p>Resume Writing</p></a>
         <a href="{% url 'resumeMakeover' %}"><p>Resume Template Makeover</p></a>
         <a href="{% url 'linkedIn' %}"><p>Linkedin Profile Branding</p></a>
@@ -509,8 +631,10 @@
       <div class="branded">
         <a href="#">
           <h5 style="color: #fff">
-            <span style="color: #0da1ec">Rapidez</span>Writer
+            <span style="color: #241e1e">Rapidez</span>
+            <span style="color: #0da1ec">Writer</span>
           </h5>
+          
 
           <a href="#" style="color: #a7b2d8"
             ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
@@ -556,6 +680,10 @@
     <script>
       $(document).ready(function () {
         $(".carousel").carousel();
+        $(".carousel.how-it-works").carousel({
+          fullWidth: true,
+          indicators: true
+        });
       });
     </script>
 

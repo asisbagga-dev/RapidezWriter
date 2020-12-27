@@ -1,0 +1,432 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis</title>
+
+    <!-- -----------------fontawesome------------------------------ -->
+    <link rel="stylesheet" href="{% static '/fontawesome-free-5.14.0-web/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static '/fontawesome-free-5.14.0-web/css/fontawesome.min.css' %}" />
+    <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href= "{% static '/materialize/css/materialize.min.css' %}" media="screen,projection"/>
+    <link rel="stylesheet" href="{% static '/lightbox2-dev/dist/css/lightbox.min.css' %}" />
+
+    <!-- ----------------slick--------------------------- -->
+    <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick.css' %}" />
+    <link rel="stylesheet" href="{% static '/slick-1.8.1/slick/slick-theme.css' %}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="{% static '/css/resume_analysis.css' %}">
+
+</head>
+
+
+<body>
+
+    <header class="drop">
+        <a href="Rapidez_Writer_home.html" class="logo">
+          <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
+          <h5><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+        </a>
+        <ul>
+          <li><a href="#">Resume Analysis</a></li>
+          <li>
+            <a href="#"
+              >Resume Services
+              <i
+                class="fa fa-chevron-down"
+                style="
+                  font-size: 10px;
+                  position: relative;
+                  bottom: 1px;
+                  opacity: 0.3;
+                "
+                aria-hidden="true"
+              ></i
+            ></a>
+            <ul class="ser1 ser12 z-depth-3" style="left: 38%;">
+              <div class="box111"></div>
+              <a href=".\service--resumewrite.html"><li>Resume Writing</li></a>
+              <a href=".\resume-makeover.html"><li>Resume template makeover</li></a>
+              <a href=".\linkedin.html"><li>Linkedin profile branding</li></a>
+              <a href=".\video-resume.html"><li>Video Resume Building</li></a>
+              <a href=".\CONSULTING-resume.html"><li>Consulting</li></a>
+            </ul>
+          </li>
+  
+          <li class="ser">
+            <a href="#"
+              >About
+              <i
+                class="fa fa-chevron-down"
+                style="
+                  font-size: 10px;
+                  position: relative;
+                  bottom: 1px;
+                  opacity: 0.3;
+                "
+                aria-hidden="true"
+              ></i
+            ></a>
+            <ul class="ser1 ser11 z-depth-3" style="left: -30%;">
+              <div class="box111"></div>
+              <a href=".\about.html"><li>About Us</li></a>
+              <a href="#"><li>FAQ</li></a>
+            </ul>
+          </li>
+          <li><a href=".\Testimonials.html">Testimonials</a></li>
+          <li><a href="#">Quiz</a></li>
+          <li><a href="#">Career Advice</a></li>    
+          <li><a href=".\contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <div class="over">
+      <div class="headtex">
+        <h1>
+          How strong is your resume?
+        </h1>
+        <h5>Get a free, confidential review from a resume expert</h5>
+
+            <br /> 
+            <a href="{% url 'resumeAnalysis:resumeUpload' %}" class="waves-effect waves-light btn btn-top btn-large">
+              Get a Free Resume Review
+            </a> 
+            
+<!--   
+        <div class="upload_resume_top">
+          <h4>Upload your resume today!</h4>
+          <img src="{% static '\image\uimage.PNG' %}" />
+          <a href="{% url 'resumeAnalysis:resumeUpload' %}" class="waves-effect waves-light btn btn-large">
+            Get a Free Resume Review
+          </a>          
+        </div> -->
+
+    </div>
+    </div>
+    <section class="Banner">
+      <img src="{% static '/image/resumeAnalysis.png' %}" alt="">
+      <!-- <video autoplay loop muted> -->
+        <!-- <source src="./Rapidez Writer-1.mp4" type="video/mp4" /> -->
+        <!-- <source src="{% static '/video/RapidezWriter-2.mp4' %}" type="video/mp4" /> -->
+        
+      <!-- </video> -->
+    </section>
+
+    <!-- ------------------------------------------------------------how it works ------------------------------------ -->
+    <div class="work">
+      <div class="headline">
+        <h4>How It Works</h4>
+      </div>
+      <div class="container">
+        <div class="gworkm pt ptt1">
+          <div class="hits">
+            <img src="{% static '\image\hiwr1.PNG' %}" />
+            <h4 class="hith">Show us your resume</h4>
+            <p>
+              Upload your resume to be reviewed — just a few basic details and we are good to go
+            </p>
+          </div>
+
+          <div class="hits">
+            <img src="{% static '\image\hiwr2.PNG' %}" />
+            <h4 class="hith">Wait while we analyse</h4>
+            <p>
+              It takes up to 48 hours for us to review your resume and provide personalized and actionable feedback
+            </p>
+          </div>
+
+          <div class="hits">
+            <img src="{% static '\image\hiwr3.PNG' %}" />
+            <h4 class="hith">View your results</h4>
+            <p>
+              When the results land in your inbox, find out what you’re doing right and what you could improve upon
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- ------------------------------------------------------------what to expect ------------------------------------ -->
+    <div class="wte">
+      <div class="headline">
+        <br>
+        <h4>What to expect from your resume review</h4>
+      </div>
+      <div class="container">
+        <div class="gworkm pt ptt1">
+          <div class="wtes">
+            <img src="{% static '\image\wte1.PNG' %}" />
+            <h4>Style & organization</h4>
+              <li>Is your resume neat and clearly organized?</li>
+              <li>Does the format of your resume effectively show the impact of your achievements?</li>
+              <li>Have you included a professional summary to introduce your candidacy?</li>
+          </div>
+
+          <div class="wtes"> 
+            <img src="{% static '\image\wte2.PNG' %}" />
+            <h4>Writing & mechanics</h4>
+              <li>Does your resume's writing position you as a professional who will add value to an organization?</li>
+              <li>Is the writing clear, easy to understand and free of mistakes?</li>
+              <li>Do you have consistent grammatical tense, tone, and punctuations?</li>
+          </div>
+
+          <div class="wtes">
+            <img src="{% static '\image\wte3.PNG' %}" />
+            <h4>ATS analysis</h4>
+              <li>Will the ATS be able to read your resume?</li>
+              <li>How does the ATS interpret your experience and skills?</li>
+              <li>What industries do you have expertise in?</li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------memorial-design--------------------------------- -->
+    <div class="boss1"> 
+      <div class="allb">
+        <div class="all1">
+          <img src="{% static '\image\wdas.png' %}" />
+        </div>
+
+        <div class="all2">
+          <div class="mtex">
+            <div class="tex1">
+              <h2>What does the ATS see?</h2>
+              <h3> <span style="font-weight: 600;"> 75 percent </span> of job applications are rejected before they are seen by human eyes.</h3>
+              <p>
+                Before your resume reaches the hands of a hiring manager, it often must satisfy an ATS — applicant tracking system. An ATS is a type of software used by recruiters and employers to collect, sort, scan, and rank the job applications they receive for open positions. If a resume is not written with an ATS in mind, a qualified candidate can be easily passed over.
+                Upload your resume for free and find out what an applicant tracking system will think. <span style="font-weight: 600;"> Your dream job could depend on it!</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- -----------------------------------------------------customer raiting------------------------------ -->
+    <div class="colo1" style="background: #f8f8f8">
+    <div class="headline container" style="padding-bottom: 10px">
+      <h4>Our Customers Love Us </h4>
+      <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="post-slider">
+        <i class="fas fa-chevron-left fa-3x prev"></i>
+        <i class="fas fa-chevron-right fa-3x next"></i>
+        <div class="post-wrapper">
+          <div class="post z-depth-3">
+            <p class="b">
+              Rose Birdsell Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              I utilized Zety’s builder app to the fullest, applying
+              everything I learned, and even added some unique touches the
+              resume software offered. Now, instead of stressing over what
+              keyword or language to use on my resume, I can focus on which
+              job offer to accept.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Denise P. Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              I went from fired to hired in less than 3 weeks. I was let go
+              from my old job due to downsizing. With Zety, I was able to
+              build custom resumes tailored to the jobs I was applying to
+              quickly and easily. My last day was 3/9/18 and I had several
+              offers by 3/25/18. Accepted an excellent job on 3/27/18.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Jeanne Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              Zety is what will make you stand out. In less than a month and a
+              half, I got contacted by six employers and went in for three
+              interviews. They’ve all commented on how my résumé caught their
+              eye, and how “visually pleasant” it is.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Rania Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              Zety is what will make you stand out. In less than a month and a
+              half, I got contacted by six employers and went in for three
+              interviews. They’ve all commented on how my résumé caught their
+              eye, and how “visually pleasant” it is.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Olivia William <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              Zety is what will make you stand out. In less than a month and a
+              half, I got contacted by six employers and went in for three
+              interviews. They’ve all commented on how my résumé caught their
+              eye, and how “visually pleasant” it is.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- -------------------------------------------------memorial-design--------------------------------- -->
+    <div class="boss2"> 
+      <div class="allb">
+        <div class="all3">
+          <img src="{% static '\image\dtic2.png' %}" />
+
+          <div class="upload_resume">
+            <h4>Upload your resume today!</h4>
+            <!-- <img src="{% static '\image\uimage.PNG' %}" /> -->
+            <a href="{% url 'resumeAnalysis:resumeUpload' %}" class="waves-effect waves-light btn btn-large">
+              Get a Free Resume Review
+            </a>          
+          </div>
+        </div>
+
+        <div class="all4">
+          <div class="mtex1">
+            <div class="tex1">
+              <h4>Don't leave your next opportunity to chance!</h4>
+              <!-- <h3> <span style="font-weight: 600;"> 75 percent </span> of job applications are rejected before they are seen by human eyes.</h3> -->
+              <br>
+              <p>
+                At Rapidez Writer, we’ve helped over one million job-seekers change careers — and we want to help you, too. Getting a second opinion on your resume might make the difference between getting the job and getting rejected. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="{% url 'resumeAnalysis:test' %}">Test</a>
+    
+  <!-- -----------------------------------------------------------------footer--------------------------- -->
+
+  <footer class="footer">
+    <div class="product">
+      <h5>PRODUCTS</h5>
+      <a href="#"><p>Resume Analysis</p></a>
+      <a><p>Resume Writing</p></a>
+      <a><p>Resume Template Makeover</p></a>
+      <a><p>Linkedin Profile Branding</p></a>
+      <a><p>Video Resume Building</p></a>
+      <a><p>Consulting</p></a>
+    </div>
+
+    <div class="learn">
+      <h5>LEARN MORE</h5>
+      <a>FAQs</p></a>
+      <a><p>Quiz</p></a>
+      <a><p>Testimonials</p></a>
+      <a><p>Carrer Advice</p></a>
+    </div>
+
+    <div class="company">
+      <h5>COMPANY</h5>
+      <a><p>Careers</p></a>
+      <a><p>About Us</p></a>
+      <a><p>Contact Us</p></a>
+      <a><p> Login </p></a>
+
+    </div>
+
+    <div class="branded">
+      <a href="#">
+        <h5 style="color: #fff">
+          <span style="color: #0da1ec">Rapidez</span>Writer
+        </h5>
+
+        <a href="#" style="color: #a7b2d8"
+          ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
+        ></a>
+        <a href="#" style="color: #a7b2d8">
+          <i
+            class="fa fa-twitter fa-2x"
+            style="margin-left: 20px"
+            aria-hidden="true"
+          ></i
+        ></a>
+        <a href="#" style="color: #a7b2d8">
+          <i
+            class="fa fa-linkedin fa-2x"
+            style="margin-left: 20px; margin-right: 7px"
+            aria-hidden="true"
+          ></i
+        ></a>
+      </a>
+    </div>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="{% static '/lightbox2-dev/dist/js/lightbox.js' %}"></script>
+
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="{% static '/materialize/js/materialize.min.js' %}"
+  ></script>
+
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".carousel").carousel();
+    });
+  </script>
+
+  <script>
+    $(".post-wrapper").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      nextArrow: $(".next"),
+      prevArrow: $(".prev"),
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+    });
+  </script>
+  <script src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js" async></script>
+</body>
+</html>

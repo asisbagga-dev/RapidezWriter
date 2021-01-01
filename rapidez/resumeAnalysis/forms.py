@@ -4,4 +4,4 @@ from resumeAnalysis.models import Resume
 class ResumeForm(forms.ModelForm):
     class Meta:
         model = Resume
-        fields = ('resume',)
+        fields = ('name', 'phone', 'email', 'resume',)

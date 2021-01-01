@@ -155,9 +155,11 @@ CELERY_TASK_SERIALIZER = 'json'
 # EMAIL_HOST_USER = 'apikey'
 # EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 
-EMAIL_BACKEND = 'django_mailjet.backends.MailjetBackend'
-MAILJET_API_KEY = '26cd0d4c6f29ff9e8813a6442cb92fd7'
-MAILJET_API_SECRET = '2ec2b0c82ea473fa68372c521a7db460'
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = str(os.path.join(BASE_DIR,  'sent_emails'))
+# EMAIL_BACKEND = 'django_mailjet.backends.MailjetBackend'
+# MAILJET_API_KEY = '26cd0d4c6f29ff9e8813a6442cb92fd7'
+# MAILJET_API_SECRET = '2ec2b0c82ea473fa68372c521a7db460'
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
@@ -182,3 +184,6 @@ CKEDITOR_CONFIGS = {
         'allowedContent' : True,
     },
 }
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

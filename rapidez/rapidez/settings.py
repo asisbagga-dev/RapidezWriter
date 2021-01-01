@@ -148,12 +148,15 @@ CELERY_TASK_SERIALIZER = 'json'
 # SENDGRID_API_KEY = os.environ['SENDGRID_API_KEY']
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_ADMIN = 'dev@s-hybrid.com'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587 #use 587, 25 or 465
-EMAIL_HOST_USER = 'apikey'
+# EMAIL_ADMIN = 'dev@s-hybrid.com'
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587 #use 587, 25 or 465
+# EMAIL_HOST_USER = 'apikey'
 # EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = str(os.path.join(BASE_DIR,  'sent_emails'))
 
 CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
 
@@ -178,3 +181,6 @@ CKEDITOR_CONFIGS = {
         'allowedContent' : True,
     },
 }
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

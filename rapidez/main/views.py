@@ -1,26 +1,41 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse_lazy, reverse
 from django.shortcuts import get_object_or_404
 
-from .models import Database, Category
-from .forms import Databaseform, Categoryform
+from .models import Database, Category, Testimonials
+from .forms import Databaseform, Categoryform, SignUpForm, Testimonialform
 from django.db.models import Q
 
-# Home Page
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 
+# SignUp Page
+def signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('home')
+    else:
+        form = SignUpForm()
+    return render(request, 'signup.html', {'form': form})
+
+
+
+# General Page
 def home(request):
     return render(request,"home.html")
-
-# About the company Pages
 def about(request):
     return render(request,"about.html")
-
 def contact_us(request):
     return render(request,"contact.html")
-
-def testimonials(request):
-    return render(request,"testimonials.html")
 
 # Service Pages
 def resume_consulting(request):
@@ -42,7 +57,7 @@ def linkedin(request):
 def quizes(request):
     return render(request, "quiz.html")
 
-# Blogs CURD Applications
+# Create Blog
 def create_blog(request):
     forms = Databaseform()
     if request.method == "POST":
@@ -51,17 +66,16 @@ def create_blog(request):
             forms.save()
             return HttpResponseRedirect(reverse('home'))
     return render(request, 'createBlog.html', {'form': forms})
-
+# Blog Listings
 def career_list_page(request):
     all_objects = Database.objects.all()
     return render(request, 'career_list.html', {"objects": all_objects})
-
+# Blog Page details
 def career_detail_page(request, pk):
     category = Category.objects.all()
     blog = get_object_or_404(Database, pk=pk)
     return render(request, "career_detail.html",  {"blog_details":blog, "category":category})
-
-
+# Update Blog
 def blog_update(request, pk):
     blog = get_object_or_404(Database, pk=pk)
     forms = Databaseform(request.POST or None, instance = blog)
@@ -72,7 +86,6 @@ def blog_update(request, pk):
         else:
             print(forms.errors.as_data())
     return render(request, "blogUpdate.html", {"forms":forms})  
-
 # Delete a Blog
 def blog_delete(request, pk):
     obj = get_object_or_404(Database, pk=pk)
@@ -80,7 +93,7 @@ def blog_delete(request, pk):
         obj.delete()
         return HttpResponseRedirect(reverse('career_list_page'))
     return render(request, 'blogDelete.html')
-
+#
 def career_view_all_page(request):
     return render(request, "career_view_all.html")
 
@@ -93,20 +106,52 @@ def add_category(request):
             forms.save()
             return HttpResponseRedirect(reverse('home'))
     return render(request, 'createBlogCategory.html', {'form': forms})
-
+# Categories List Page
 def category_list_page(request):
     all_objects = Category.objects.all()
     return render(request, 'category_list.html', {"objects": all_objects})
-
+# Delete Category
 def delete_category(request, pk):
     obj = get_object_or_404(Category, pk=pk)
     if request.method == "POST":
         obj.delete()
         return HttpResponseRedirect(reverse('career_list_page'))
     return render(request, 'blogDeleteCategory.html', {"obj":obj})
-
+# View Blog Category wise
 def view_category_wise(request, filter):
     category = Category.objects.all()
     filter = get_object_or_404(Category, category=filter)
     filter_op = Database.objects.filter(category=filter)
     return render(request, 'career_view_all.html', {'filter_op':filter_op, "filter":filter, "category":category})
+
+# Testimonials CRUD
+def testimonials(request):
+    all_objects = Testimonials.objects.all()
+    return render(request,"testimonials.html", {'objects':all_objects})
+
+def create_testimonial(request):
+    forms = Testimonialform()
+    if request.method == "POST":
+        forms = Testimonialform(request.POST, request.FILES)
+        if forms.is_valid():
+            forms.save()
+            return HttpResponseRedirect(reverse('testimonials'))
+    return render(request, 'createTestimonial.html', {'form': forms})
+
+def testimonial_update(request, pk):
+    blog = get_object_or_404(Testimonials, pk=pk)
+    forms = Testimonialform(request.POST or None, instance = blog)
+    if request.method == "POST":
+        if forms.is_valid():
+            forms.save()
+            return HttpResponseRedirect(reverse('testimonials'))
+        else:
+            print(forms.errors.as_data())
+    return render(request, "testimonialUpdate.html", {"forms":forms}) 
+
+def testimonial_delete(request, pk):
+    obj = get_object_or_404(Testimonials, pk=pk)
+    if request.method == "POST":
+        obj.delete()
+        return HttpResponseRedirect(reverse('testimonials'))
+    return render(request, 'testimonialDelete.html')

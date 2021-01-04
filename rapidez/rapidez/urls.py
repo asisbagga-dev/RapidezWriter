@@ -26,6 +26,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
 
+    path('signup/', views.signup, name='signup'),
+    path('accounts/',include('django.contrib.auth.urls')),
+
+
     #Service Pages
     path('resumeAnalysis/', include('resumeAnalysis.urls')),
     path('Resume-Consulting', views.resume_consulting, name="resumeConsulting"),
@@ -36,11 +40,17 @@ urlpatterns = [
     path('Resume-Makeover3', views.resume_makeover_3, name="resumeMakeover3"),
     path('Resume-Video', views.resume_video, name="resumeVideo"),
     path('linkedIn', views.linkedin, name="linkedIn"),
+    path('quizes/', views.quizes, name="quizes"),
 
     # About Pages
     path('About', views.about, name="about"),
     path('Contact-Us', views.contact_us, name="contactUs"),
+
+    #Testimonials
     path('Testimonials', views.testimonials, name="testimonials"),
+    path('create-testimonial/', views.create_testimonial, name="create_testimonial"),
+    path('update-testimonial/<int:pk>', views.testimonial_update, name="testimonial_update"),
+    path('delete-testimonial/<int:pk>', views.testimonial_delete, name="testimonial_delete"),
 
     #Blog Pages
     path('create/', views.create_blog, name="create_blog"),

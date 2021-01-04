@@ -189,7 +189,59 @@
   
 </div>
 
-    <!-- -----------------------------------------------------------after video----------------------------------- -->
+<!-- -----------------------------------------------------------About Us----------------------------------- -->
+
+<div class="parent-aboutus">
+
+  <div class="aboutus-img">
+    <img
+      src="{% static '/image/prashanth.jpg' %}"
+      alt=""
+    />
+  </div>
+
+  <div class="aboutus-desc">
+    <h3 style="text-align: center;">Prashanth Mudaliar</h3>
+    <br>
+    <h5>
+      Talent leader with 15 years of experience in building and scaling businesses through strategic business operations, 
+      talent acquisition, HR transformation, marketing and branding.
+    </h5>
+    <h5> 
+      A First Generation Serial Entrepreneur inclined towards Executive talent, Resume Writing, Leadership Coaching, 
+      Psychometric Assessments &  a part of multiple Human Resource Forums...<a href="{% url 'about' %}#aboutFounder"> (Read more)</a>
+    </h5>
+
+    <h5 style="text-align:center">Follow me on :  
+      <a href="https://www.facebook.com/RapidezWriter/" style="color: #1877F2">
+        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/prashanthmudaliar/?originalSubdomain=in" style="color: #1666C5">
+        <i class="fa fa-linkedin fa-2x" style="margin-left: 20px; margin-right: 7px" aria-hidden="true"></i>
+      </a>
+    </h5>
+  </div>
+  
+</div>
+
+    <!-- -------------------------------Resumes have been shortlisted by--------------------------- -->
+
+    <div class="headline container" style="padding-bottom: 0px;">
+      <h4>Trusted by professionals from</h4>
+    </div>
+    <br>
+
+    <div class="image1" style="padding: 0 150px;">
+      <img src="{% static '/image/adobe.png' %}" alt="" />
+      <img src="{% static '/image/amazon.png' %}" alt="" />
+
+      <img src="{% static '/image/microsoft.png' %}" alt="" />
+      <img src="{% static '/image/goldmansachs.png' %}" alt="" />
+      <img src="{% static '/image/cisco.png' %}" alt="" />
+    </div>
+
+
+    <!-- -----------------------------------------------------------What's stopping you from being Hired?----------------------------------- -->
     <br><br>
     <div style="background: #fff"> 
 
@@ -212,7 +264,7 @@
 
         <div class="image1212">
           <br />
-          <img src="{% static '\image\wsh5.png' %}" />
+          <img src="{% static '\image\wsh2.png' %}" />
         </div>
 
         <div class="pt2 pt" data-aos="fade-left" data-aos-duration="2000">
@@ -230,7 +282,7 @@
 
         <div class="pt3 pt" data-aos="fade-left" data-aos-duration="2500">
           <p>
-            <span>Vague Content/span><br />
+            <span>Vague Content</span><br />
 
             Our builder will give you suggestion how to improve your resume
           </p>
@@ -329,9 +381,9 @@
       <div class="carousel">
         <a
           class="carousel-item rtc"
-          href="{% static '/image/rt4.png' %}"
+          href="{% static '/image/rt1.png' %}"
           data-lightbox="mygallery"
-          ><img src="{% static '/image/rt4.png' %}"
+          ><img src="{% static '/image/rt1.png' %}"
         /></a>
         <a
           class="carousel-item rtc"
@@ -347,9 +399,9 @@
         /></a>
         <a
           class="carousel-item rtc"
-          href="{% static '/image/rt1.png' %}"
+          href="{% static '/image/rt4.png' %}"
           data-lightbox="mygallery"
-          ><img src="{% static '/image/rt1.png' %}"
+          ><img src="{% static '/image/rt4.png' %}"
         /></a>
         <a
           class="carousel-item rtc"
@@ -362,14 +414,16 @@
 
     <!-- -------------------------------------------------memorial-design--------------------------------- -->
     
-    <div class="boss1" style="background: #f8f8f8"> 
-
+    <div class="boss1" 
+      style="background: #f8f8f8"
+    >
+    <!-- style="background: #f8f8f8" -->
       <div class="headline container">
         <h4>Features of our Resume</h4>
       </div>
       <div class="allb">
         <div class="all1">
-          <img src="{% static '\image\rt4.png' %}" />
+          <img src="{% static '\image\rt1.png' %}" />
         </div>
 
         <div class="all2">
@@ -408,12 +462,20 @@
     </div>
 
     <!-- -----------------------------------------------------How it works------------------------------ --> 
-
-
-    <div class="carousel carousel-slider center how-it-works">
+    <section id="home-s-how">
+      <div class="hdec-hd first">
+        <div id="how-bg-white-space">
+          <div id="hhow-tr-1"></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- <div class="carousel carousel-slider center how-it-works">
       <div class="headline container white-text" >
         <h4 style="font-size:38px">5 ways we stand apart</h4>
       </div>
+
+
       <div class="carousel-item white-text" href="#one">
         <i class="far fa-comment-dots fa-6x"></i>
         <h4>Career Counsellor</h4>
@@ -442,7 +504,64 @@
       <div class="carousel-fixed-item center">
         <a href="{% url 'contactUs' %}" class="btn waves-effect btn-large hiw-contact-btn">Create my Resume</a>
       </div>
+    </div> -->
+
+
+      <!-- <div class="hdec-hd first">
+        <div id="hhow-tr-1"></div>
+      </div> -->
+
+    <div class="headline how-it-works" >
+      <h4>5 ways we stand apart</h4>
     </div>
+    
+    <div class="fwwsa">
+
+      <div class="fwwsa1" style="display: block !important">
+        <i class="far fa-comment-dots fa-6x"></i>
+        <h4>Career Counsellor</h4>
+        <h6 class="white-text">Our career counsellor will have an in-depth conversation in order to  assist you with your next targeted position by assessing skills and relevant expertise aligned to the job description</h6>
+      </div>
+      
+      <div class="fwwsa2">
+        <i class="fab fa-searchengin fa-6x"></i>
+        <h4>Research Analyst</h4>
+        <h6 class="white-text">Research analyst will fetch insights on the current position, Keywords, ATS phrases, Trending synonyms</h6>
+      </div>
+
+      <div class="fwwsa3">
+        <i class="fas fa-user-graduate fa-6x"></i>
+        <h4>Recruiters</h4>
+        <h6 class="white-text">Recruiters will integrate all the collected data and ameliorate the content to meet the deadlines</h6>
+      </div>
+      
+      <div class="fwwsa4">
+        <i class="fas fa-user-tie fa-6x"></i>
+        <h4>Hiring Specialist</h4>
+        <h6 class="white-text">Continuous connection with the hiring specialist will improve intensive comprehensiveness of your profile</h6>
+     </div>
+
+     <div class="fwwsa-buttons-hide" >
+      <button class="cc"><h3 style="font-size: 3em !important">1</h3></button>
+      <button class="ra"><h3>2</h3></button>
+      <button class="re"><h3>3</h3></button>
+      <button class="hs"><h3>4</h3></button>
+     </div>
+     
+     <div class="fwwsa-buttons" >
+      <button class="cc btn"></button>
+      <button class="ra btn"></button>
+      <button class="re btn"></button>
+      <button class="hs btn"></button>
+     </div>
+
+
+
+     <a href="{% url 'contactUs' %}" class="btn btn-large hiw-contact-btn">Create my Resume</a>
+    
+    </div>
+  
+
 
     <!-- -----------------------------------------------------Blog articles------------------------------ -->
     <div class="headline container" >
@@ -452,7 +571,7 @@
     <div class="carousel carousel-slider center blog-articles">
       <div class="carousel-fixed-item center"></div>
       <div class="carousel-item " id="caro-one" href="#one">
-        <div class="parent">
+        <div class="parent-blog">
           <div class="item " style="background: url({% static 'image/interview.jpg' %}); background-size: contain;"></div>
           <div class="item last">
             <div class="headline-blog">
@@ -473,7 +592,7 @@
       </div>
    
       <div class="carousel-item " id="caro-two" href="#two">
-        <div class="parent">
+        <div class="parent-blog">
           <div class="item " style="background: url({% static 'image/video-r.jpg' %}); background-size: contain;"></div>
           <div class="item last">
             <div class="headline-blog">
@@ -578,22 +697,6 @@
       </div>
     </div>
 
-    <!-- -------------------------------Resumes have been shortlisted by--------------------------- -->
-
-    <div class="headline container" style="padding-bottom: 0px;">
-      <h4>Resumes Have Been Shortlisted By</h4>
-    </div>
-
-
-    <div class="image1" style="padding: 0 150px;">
-      <img src="{% static '/image/logo8.png' %}" alt="" />
-      <img src="{% static '/image/logo2.png' %}" alt="" />
-
-      <img src="{% static '/image/logo8.png' %}" alt="" />
-      <img src="{% static '/image/logo9.png' %}" alt="" />
-      <img src="{% static '/image/logo8.png' %}" alt="" />
-    </div>
-
     <!-- --------------------------------------------------footer----------------------------- -->
     <!-- -----------------------------------------------------------------footer--------------------------- -->
 
@@ -684,6 +787,54 @@
           fullWidth: true,
           indicators: true
         });
+      });
+    </script>
+
+    <script>
+      $(".cc").click(function(){
+        $(".fwwsa1").fadeIn(800);
+        $(".fwwsa2").hide()
+        $(".fwwsa3").hide()
+        $(".fwwsa4").hide()
+        
+        $(".cc h3").css("font-size", "3em")
+        $(".ra h3").css("font-size", "2em")
+        $(".re h3").css("font-size", "2em")
+        $(".hs h3").css("font-size", "2em")
+      });
+      $(".ra").click(function(){
+        $(".fwwsa1").hide()
+        $(".fwwsa2").fadeIn(800);
+        $(".fwwsa3").hide()
+        $(".fwwsa4").hide()
+
+        $(".cc h3").css("font-size", "2em")
+        $(".ra h3").css("font-size", "3em")
+        $(".re h3").css("font-size", "2em")
+        $(".hs h3").css("font-size", "2em")
+      });
+      $(".re").click(function(){
+        $(".fwwsa1").hide()
+        $(".fwwsa2").hide()
+        $(".fwwsa3").fadeIn(800);
+        $(".fwwsa4").hide()
+
+        
+        $(".cc h3").css("font-size", "2em")
+        $(".ra h3").css("font-size", "2em")
+        $(".re h3").css("font-size", "3em")
+        $(".hs h3").css("font-size", "2em")
+      });
+      $(".hs").click(function(){
+        $(".fwwsa1").hide()
+        $(".fwwsa2").hide()
+        $(".fwwsa3").hide()
+        $(".fwwsa4").fadeIn(800);
+
+        $(".cc h3").css("font-size", "2em")
+        $(".ra h3").css("font-size", "2em")
+        $(".re h3").css("font-size", "2em")
+        $(".hs h3").css("font-size", "3em")
       });
     </script>
 

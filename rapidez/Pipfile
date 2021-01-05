@@ -17,6 +17,7 @@ django-mailjet = "*"
 django-ckeditor = "*"
 pillow = "*"
 django-bootstrap4 = "*"
+razorpay = "*"
 
 [requires]
 python_version = "3.8"

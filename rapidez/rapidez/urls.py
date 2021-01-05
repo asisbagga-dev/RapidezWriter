@@ -72,6 +72,10 @@ urlpatterns = [
     path('createCategory/', views.add_category, name="add_category"),
     path('deleteCategory/<int:pk>', views.delete_category, name="delete_category"),
     path('CategoryActions/', views.category_list_page, name="category_list_page"),
+
+    # Payment Gateway Integration
+    path('payment/', views.payment, name='payment'),
+    path('payment_success/', views.payment_success, name='payment_success'),
 ]
 
 if settings.DEBUG:

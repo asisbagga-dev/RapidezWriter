@@ -262,9 +262,27 @@
               Professional cover letter template with a column for contact
               information
             </p>
-            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
-              >Order Now</a
-            >
+
+            <form class="text-center border border-light p-5" action="payment_success" method="POST">
+              {% csrf_token %}
+              <a href="% url 'payment' %" data-aos="zoom-in" class="waves-effect waves-light btn btn90">Order Now</a>
+              
+                <!-- RAZORPAY INTEGRATION HERE -->
+                <script 
+                    src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_live_nQOflfXhoAJfEG"
+                    data-amount="100"
+                    data-currency="INR"
+                    data-order_id="{{payment.id}}"
+                    data-buttontext="Order Now"
+                    data-name="Rapidez Writer"
+                    data-description="Resume Template"
+                    data-image="{% static '/image/logo.png' %}"
+                    data-prefill.name=""
+                    data-prefill.email=""
+                    data-theme.color="#F37254">
+                </script>
+            </form>
             <br />
           </div>
         </div>

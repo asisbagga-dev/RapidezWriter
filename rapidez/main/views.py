@@ -12,6 +12,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
+import razorpay
+
 # SignUp Page
 def signup(request):
     if request.method == 'POST':
@@ -155,3 +157,16 @@ def testimonial_delete(request, pk):
         obj.delete()
         return HttpResponseRedirect(reverse('testimonials'))
     return render(request, 'testimonialDelete.html')
+
+#Payment Gateway integration
+def payment(request):
+    if request.method == "POST":
+        amount = 1
+
+        client = razorpay.Client(auth=("rzp_live_nQOflfXhoAJfEG", "rpKTqVpjezaNxt8SWXHjqQUg"))
+        payment = client.order.create({'amount': amount, 'currency': 'INR', 'payment_capture': '1'})
+
+    return render(request, 'resume_makeover.html')
+
+def payment_success(request):
+    return render(request, "payment_success.html")

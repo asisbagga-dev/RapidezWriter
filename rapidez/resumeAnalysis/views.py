@@ -16,7 +16,7 @@ from django.core.mail import send_mail
 import docx
 
 # Resume parser
-from pyresparser import ResumeParser
+# from pyresparser import ResumeParser
 
 import json
 
@@ -53,7 +53,7 @@ def resume_parser(resumePath):
     #     print(i.resume.url)
     # doc = docx.Document(resume_file)
 
-    data = ResumeParser(resumePath).get_extracted_data()
+    # data = ResumeParser(resumePath).get_extracted_data()
     print("\n")
     pretty_data = json.dumps(data, sort_keys=True, indent=4)
     print(pretty_data)
@@ -141,7 +141,7 @@ def test(request):
     # print(len(all_paras))
     # return redirect('resumeAnalysis:thankyou')
 
-    data = ResumeParser(r"C:\Users\bharath878\Downloads\b-suryanarayanan-cv-2020.pdf").get_extracted_data()
+    # data = ResumeParser(r"C:\Users\bharath878\Downloads\b-suryanarayanan-cv-2020.pdf").get_extracted_data()
     print("\n")
     pretty_data = json.dumps(data, sort_keys=True, indent=4)
     print(pretty_data)

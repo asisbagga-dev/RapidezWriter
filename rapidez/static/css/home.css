@@ -206,13 +206,13 @@ header.sticky ul li a {
   color: #8d8c8c;
   font-weight: 300;
   margin-bottom: 1em !important;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .aboutus-desc {
   color: #222;
   /* background: #ccc; */
-  padding: 2em;
+  padding: 2em 11em;
 }
 
 

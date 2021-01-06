@@ -350,6 +350,7 @@ header.sticky ul li a {
   /* margin-left: 100px; */
   font-weight: 500;
   margin-top: 50px;
+  margin-right: 5%;
 }
 
 .cata p {
@@ -447,12 +448,13 @@ header.sticky ul li a {
 }
 
 .update2 {
-  background: #f4f7f8;
+  /* background: #f4f7f8; */
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 .upd {
+  margin: 0 10%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;

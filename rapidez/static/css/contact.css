@@ -212,6 +212,16 @@ header ul li a {
   margin-left: 45%;
 }
 
+.cust-form{
+  -webkit-box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
+  box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  width: 100%;
+}
+
 /* ------------------------------------------------------navbar end----------------------------------------- */
 
 /* <!-- ---------------------------------------------------main head--------------------------------------- --> */
@@ -309,4 +319,30 @@ header ul li a {
 }
 .fa-2x {
   font-size: 1.5rem;
+}
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+  .grids{
+    display: block;
+  }
+
+  .font{
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .text-p{
+    text-align: center;
+  }
+
+  .text-p p {
+    font-size: 14px;
+    line-height: 25px;
+    padding-right: 0;
+  }
+
+
 }

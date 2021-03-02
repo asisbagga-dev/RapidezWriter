@@ -3,14 +3,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  /* background: #000;
-  min-height: 200vh; */
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
+p,
+li {
+  font-size: 16px;
+}
 /* ------------------------------------------------------navbar start----------------------------------------- */
+
+
+/* New navbar changes */
+.drop .mobile_logo{
+  display: none;
+}
+
+.drop .desk_logo{
+  display: block;
+}
+
+.drop .menu-icon {
+  display: none;
+}
+
+.footer .desk_logo{
+  height: 30%;
+  width: 62%;
+  margin-right: -6em;
+}
+/* end of new navbar changes */
+
 
 header {
   position: fixed;
@@ -44,6 +66,7 @@ header.sticky h5 {
 header a {
   width: 183px;
   padding-bottom: 20px;
+  padding-top: 20px;
   font-size: 18px;
   font-weight: 500;
 }
@@ -137,7 +160,7 @@ header ul li a {
 }
 
 .drop img{
-  height: 130px;
+  height: 80px;
   margin-right: 6%;
 }
 
@@ -149,6 +172,7 @@ header ul li a {
 .drop ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  cursor: pointer;
 }
 .drop ul ul {
   position: absolute;
@@ -217,6 +241,7 @@ header ul li a {
 }
 
 /* ------------------------------------------------------navbar end----------------------------------------- */
+
 
 .headline {
   text-align: center;
@@ -426,9 +451,21 @@ header ul li a {
   /* margin-left: auto; */
 }
 
+
+/* quote */
+
+.rw-quote{
+  padding: 2em 6em;
+  text-align: center;
+}
+
+.rw-quote h4{
+  font-weight: 200;
+}
+
 /* --------------------------------------------------------------update---------------------------- */
 .update {
-  height: 70px;
+  height: 80px;
   width: 100%;
 }
 
@@ -460,8 +497,6 @@ header ul li a {
 }
 
 .update2 {
-  /* background: #f4f7f8; */
-  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -473,8 +508,7 @@ header ul li a {
 }
 .upa {
   background: #fff;
-  width: 75%;
-  height: 380px;
+  width: 80%;
   border-radius: 20px;
   text-align: center;
   margin-top: 80px;
@@ -510,10 +544,9 @@ header ul li a {
 }
 
 .contents1 {
-  /* text-align: center; */
   padding: 65px;
   width: 50%;
-  height: 400px;
+  height: auto;
 }
 .headlines1 h5 {
   margin-top: 00px;

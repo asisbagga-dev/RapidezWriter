@@ -46,16 +46,16 @@
 
   <body>
     <header class="drop">
-      <!-- <a href="{% url 'home' %}" class="logo"> -->
-        <img src="{% static '/image/logo.png' %}" alt="Rapidez Writer Logo" />
-        <h5>
-          <span style="color: #8c8c8c">Rapidez</span>
-          <span style="color: #0da1ec">Writer</span>
-        </h5>
-      <!-- </a> -->
-      <ul>
+
+      <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo.png' %}" alt="Rapidez Writer Logo" /></a>
+      <a href="{% url 'home' %}"><img class="mobile_logo" src="{% static '/image/logo-removebg.png' %}" alt="Rapidez Writer Logo" /></a>
+      
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      
+      <ul class="menu">
         <li>
-          <a href="#">Services
+          <a class="services">Services
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -67,7 +67,7 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
+          <ul class="ser1 ser12 serv" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
@@ -79,7 +79,7 @@
         </li>
 
         <li>
-          <a href="#">Resources
+          <a class="resources">Resources
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -91,16 +91,16 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+          <ul class="ser1 ser12 rscs" style="left: 38%">
+            <!-- <div class="box111"></div> -->
             <a href="#"><li>FAQ</li></a>
             <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
-            <!-- <a href="{% url 'quizes' %}"><li>Quiz</li></a>             -->
+            <a href="{% url 'quizes' %}"><li>Quiz</li></a>
           </ul>
         </li>
 
         <li>
-          <a href="#">Company
+          <a class="comp">Company
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -112,8 +112,8 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+          <ul class="ser1 ser12 cmpy" style="left: 38%">
+            <!-- <div class="box111"></div> -->
             <a href="{% url 'about' %}"><li>About Us</li></a>
             <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
             <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
@@ -121,7 +121,7 @@
           </ul>
         </li>
 
-        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+        <li><a href="{% url 'testimonials' %}" class="testimonials">Testimonials</a></li>
 
         {% if user.is_authenticated %}
         <li>
@@ -138,7 +138,8 @@
             </i>
           </a>
           <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+            <!-- <div class="box111"></div> -->
+            <hr>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
             <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
@@ -146,11 +147,13 @@
             <a href="{% url 'signup' %}"> <li> Register User </li></a>
           {% endif %}
             <a href="{% url 'logout' %}"> <li> Logout </li></a>
+            <hr>
         {% endif %}
           </ul>
         </li>
       </ul>
     </header>
+    <!-- navbar-end -->
     
     <script
       src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js"
@@ -194,16 +197,41 @@
       </div>
     </div> -->
 
+    <!-- ------------------ Quote ----------------- -->
+    <div class="rw-quote">
+      <h4><span style="font-size: 3rem;">&#8220;</span>Recruiters spend <b> less than 6 seconds</b> deciding whether your resume or CV is worth a second look.<span style="font-size: 3rem;">&#8221;</span></h4>
+    </div>
+    
+
+       <!-- Resume makeover description -->
+
+  <div class="main-class">
+    <div class="image15">
+      <div>
+        <img src="{% static '/image/rmdesc.png' %}" alt="" style="width: 68%; margin-right: 15%; margin-top: -4em;"/>
+      </div>
+    </div>
+
+    <div class="contents1">
+      <div class="headlines1">
+        <h5 style="font-weight: 400; text-align: center; margin-bottom: 1em;">Do you think buying a Template is enough?</h5>
+      </div>
+      <p style="font-weight: 300; font-size: 20px; text-align: justify;">
+      Resume Makeover is a unique service offered by Rapidez Writers, wherein the customer will have to share their content with our team. Our designer will work on the aesthetic as well as the  technical aspect of the resume layout which eventually would highlight your brand value.
+      </p>
+    </div>
+  </div>
+
     <div class="update2">
       <div class="h-upd">
-        <h3>Not your typical QMS</h3>
+        <h3>How it Works</h3>
       </div>
       <div class="m-upd">
         <div class="upd">
           <div class="upd1 upa z-depth-3">
             <img src="{% static '/image/font1.PNG' %}" alt="" />
 
-            <h5>40 easy-to-use applications</h5>
+            <h5>Buy A Template</h5>
             <p>
               A mighty engine with the agility to adapt to your business, now
               and in the future
@@ -213,7 +241,7 @@
           <div class="upd2 upa z-depth-3">
             <img src="{% static '/image/font2.PNG' %}" alt="" />
 
-            <h5>An agile platform</h5>
+            <h5>Connect with our designers and share your content</h5>
             <p>
               An award-winning and streamlined user experience for all quality
               processes
@@ -223,7 +251,7 @@
           <div class="upd3 upa z-depth-3">
             <img src="{% static '/image/font3.PNG' %}" alt="" />
 
-            <h5>Cloud-based SaaS</h5>
+            <h5>Get your transformed resume delivered to your inbox</h5>
             <p>Access securely anytime and anywhere</p>
           </div>
         </div>

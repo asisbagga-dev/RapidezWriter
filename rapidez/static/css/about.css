@@ -213,6 +213,48 @@ header ul li a {
 
 /* ------------------------------------------------------navbar end----------------------------------------- */
 
+
+/* --------------------------------------------------------------update---------------------------- */
+.update {
+  height: 70px;
+  width: 100%;
+}
+
+.a1 a {
+  width: 30%;
+  /* margin-top: 30px; */
+  margin-left: 27px;
+}
+
+.update0 {
+  height: 400px;
+  overflow: hidden;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.main-class {
+  padding-bottom: 50px;
+}
+.update1 {
+  /* margin-top: 50px; */
+  height: 600px;
+  width: 100%;
+  margin-right: 20px;
+}
+
+
+/* quote */
+
+.rw-quote{
+  padding: 2em 6em;
+  text-align: center;
+}
+
+.rw-quote h4{
+  font-weight: 200;
+}
+
 /* <!-- ---------------------------------------------------main head--------------------------------------- --> */
 
 .image12 img {
@@ -317,7 +359,7 @@ header ul li a {
 }
 
 .contents1 p {
-  line-height: 40px;
+  line-height: 2.2;
   /* height: 400px; */
   /* margin-top: 100px; */
 }
@@ -459,4 +501,84 @@ header ul li a {
 }
 .fa-2x {
   font-size: 1.5rem;
+}
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+  .image15 img {
+    width: 100%;
+    height: 22em;
+    float: none;
+  }
+
+  .image15 > div {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+
+  .a1 {
+    float: none;
+  }
+
+  .image16 img {
+    width: 100%;
+    height: 22em;
+    float: none;
+  }
+
+  .image16 > div {
+    width: 100%;
+    height: 22em;
+    float: none;
+  }
+
+  .waves {
+    position: relative;
+  }
+
+  .u-wave {
+    position: relative;
+    top: 4em;
+    margin-left: 2.5em;
+    margin-right: 0;
+    float: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: black;
+    z-index: 3;
+  }
+
+  .waves .wvs {
+    display: none;
+  }
+
+  .contents1 {
+    padding: 10px 50px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .contents22 {
+    margin-top: 8.5em;
+    height: auto;
+    width: 100%;
+    -webkit-box-shadow: 0 8px 17px 2px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+    box-shadow: 0 8px 17px 2px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+  }
+
+  .commen {
+    position: relative;
+    top: 2em;
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    padding: 10px 50px;
+    height: 28em;
+  }
+
 }

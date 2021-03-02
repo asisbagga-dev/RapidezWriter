@@ -447,3 +447,71 @@ header ul li a {
   font-size: 20px;
   font-weight: 600;
 }
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+  .all-m{
+    margin: 0;
+  }
+  .headline{
+    margin-left: 0;
+  }
+
+  .headline h3{
+    font-size: 28px;
+    margin-left: 1.33em;
+  }
+
+  .headline h5{
+    font-size: 18px;
+    margin-left: 2em;
+  }
+
+  .m-owner{
+    display: block;
+    text-align: justify;
+  }
+
+  .owner {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 2em 4em;
+  }
+
+  .topread{
+    display: block;
+    margin: 0;
+  }
+
+  .topread p{
+    text-align: center;
+    font-weight: 300;
+  }
+
+  .head11{
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .head11{
+    margin-left: 0 !important;
+    padding: 10px;
+  }
+
+  .g-img1{
+    display: block;
+  }
+
+  .g-img1 p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 17px;
+  }
+
+  .m-head11{
+    height: auto;
+  }
+
+}

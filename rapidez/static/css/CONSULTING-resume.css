@@ -250,7 +250,16 @@ header ul li a {
   display: grid;
   grid-template-columns: 1fr 450px;
   padding: 80px;
-  /* align-items: center; */
+}
+
+.cust-form{
+  -webkit-box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
+  box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  width: 100%;
 }
 
 .btn {
@@ -335,12 +344,10 @@ header ul li a {
 
 .lin1{
   width: 250px;
-
   height: 400px;
   text-align: center;
-  /* background: darkgray; */
   margin-left: 50%;
-  
+  border-radius: 1em;
 }
 
 .lin1 p{
@@ -349,11 +356,10 @@ header ul li a {
 
 .lin2{
   width: 250px;
-
   height: 400px;
   text-align: center;
-  /* background: darkgray; */
   margin-left: 10%;
+  border-radius: 1em;
 }
 
 .lin2 p{
@@ -374,6 +380,24 @@ header ul li a {
   padding-left: 80px;
   padding-right: 80px;
   text-align: center;
+}
+
+.order-now-btn{
+  border-radius: 5px;
+  height: 50px;
+  padding-top: 5px;
+  font-weight: 600;
+  text-transform: none;
+  background: #0da1ec;
+  margin-top: 30px;
+  width: 25%;
+  margin-left: 37%;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.order-now-btn:hover{
+  background: #0da1ec;
 }
 /* -------------------------------------------------------footer--------------------------------- */
 
@@ -434,3 +458,36 @@ header ul li a {
 }
 .fa-2x {
   font-size: 1.5rem;
+}
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+  .grids{
+    display: block;
+    padding: 2em;
+  }
+  
+  .bac{
+    display: block;
+    padding: 0em;
+  }
+
+  .b-lin{
+    display: block;
+  }
+
+  .lin1{
+    width: 100%;
+    margin-left: 0;
+    padding: 1em;
+  }
+  
+  .lin2{
+    width: 100%;
+    margin-left: 0;
+    padding: 1em;
+  }
+
+
+}

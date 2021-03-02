@@ -610,3 +610,102 @@ figure {
   height: 22em;
   width: 40em;
 }
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  
+  .headtex{
+    text-align: center;
+  }
+
+  .headtex h4 {
+    margin-top: 2em;
+    padding-top: 200px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  .headtex a {
+    margin-left: 0;
+  }
+
+  .headtex .vh2{
+    display: none;
+  }
+
+  .video_list{
+    display: block;
+  }
+
+  .what-is-video-resume {
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .what-is-video-resume h2{
+    font-size: 3em !important;
+    text-align: center;
+  }
+
+  .what-is-video-resume h5{
+    font-size: 1.5em !important;
+  }
+
+  .why-video-resume {
+    text-align: justify;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-top: 4em !important;
+    -webkit-box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
+    box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  }
+
+  .why-video-resume h2{
+    font-size: 3em !important;
+    text-align: center;
+  }
+
+  .why-video-resume h5{
+    font-size: 1.5em !important;
+  }
+
+  .open-doors{
+    display: block;
+    text-align: center;
+  }
+
+  .open-doors a{
+    margin-top: 2em !important;
+  }
+
+  .open-doors h2{
+    padding-top: 0.5em;
+    font-weight: 400;
+  }
+
+  .tips{
+    display: block;
+  }
+
+  .tips .content{
+    padding: 2em;
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .tips .video{
+    width: 100%;
+    padding: 1em;
+  }
+
+  .tips .card-img-bottom {
+    height: 20em;
+    width: 100%;
+  }
+
+}
+

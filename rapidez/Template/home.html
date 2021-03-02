@@ -48,16 +48,16 @@
 
   <body>
     <header class="drop">
-      <!-- <a href="{% url 'home' %}" class="logo"> -->
-        <img src="{% static '/image/logo.png' %}" alt="Rapidez Writer Logo" />
-        <h5>
-          <span style="color: #8c8c8c">Rapidez</span>
-          <span style="color: #0da1ec">Writer</span>
-        </h5>
-      <!-- </a> -->
-      <ul>
+
+      <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo.png' %}" alt="Rapidez Writer Logo" /></a>
+      <a href="{% url 'home' %}"><img class="mobile_logo" src="{% static '/image/logo-removebg.png' %}" alt="Rapidez Writer Logo" /></a>
+      
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      
+      <ul class="menu">
         <li>
-          <a href="#">Services
+          <a class="services">Services
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -69,7 +69,7 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
+          <ul class="ser1 ser12 serv" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
@@ -81,7 +81,7 @@
         </li>
 
         <li>
-          <a href="#">Resources
+          <a class="resources">Resources
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -93,16 +93,16 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+          <ul class="ser1 ser12 rscs" style="left: 38%">
+            <!-- <div class="box111"></div> -->
             <a href="#"><li>FAQ</li></a>
             <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
-            <!-- <a href="{% url 'quizes' %}"><li>Quiz</li></a>             -->
+            <a href="{% url 'quizes' %}"><li>Quiz</li></a>
           </ul>
         </li>
 
         <li>
-          <a href="#">Company
+          <a class="comp">Company
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -114,8 +114,8 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+          <ul class="ser1 ser12 cmpy" style="left: 38%">
+            <!-- <div class="box111"></div> -->
             <a href="{% url 'about' %}"><li>About Us</li></a>
             <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
             <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
@@ -123,7 +123,7 @@
           </ul>
         </li>
 
-        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+        <li><a href="{% url 'testimonials' %}" class="testimonials">Testimonials</a></li>
 
         {% if user.is_authenticated %}
         <li>
@@ -140,7 +140,8 @@
             </i>
           </a>
           <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+            <!-- <div class="box111"></div> -->
+            <hr>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
             <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
@@ -148,49 +149,46 @@
             <a href="{% url 'signup' %}"> <li> Register User </li></a>
           {% endif %}
             <a href="{% url 'logout' %}"> <li> Logout </li></a>
+            <hr>
         {% endif %}
           </ul>
         </li>
       </ul>
     </header>
     <!-- navbar-end -->
-    <!-- <div class="over">
-      <div class="headtex">
-        <h4>
-          Getting a great job starts
-          <div class="sp" style="margin: 11px"></div>
-          with a great resume.
-        </h4>
-        <br />
-        <a class="waves-effect waves-light btn btn-large"
-          >Get a Free Resume Review</a
-        >
-      </div>
-    </div> -->
-    <!-- <section class="Banner">
-      <video autoplay loop muted>
-        <source
-          src="{% static '/video/RapidezWriter-1.mp4' %}"
-          type="video/mp4"
-        />
-      </video>
-    </section> -->
 
   <!-- Landing page -->
-<div class="parent" style="height: 100vh;">
+<div class="parent" >
 
   <div class="item ">
-    <h3>Get your CV | Resume 
-     <br> redefined by professional recruiters
+    <h3>Get your <span style=" color: #38b6ff"> Resume </span> redefined
+     <br>  by professional recruiters.
     </h3>
-    <h5>The  #1 Talent Acquisition and resume writing company,
-      trusted by professionals to land their dream job.
+    <h5>The  #1 Talent Acquisition and Resume Writing Company,
+      Trusted by Professionals.
     </h5>
-    <a class="waves-effect waves-light btn btn-large">Get a Free Resume Review</a>
+    <a class="waves-effect waves-light btn btn-large resume-review-button">Get a Free Resume Review</a>
   </div>
 
   <div class="item last" style="background: url({% static 'image/homepage_banner.jpg' %}) center center no-repeat; background-size: contain;"></div>
   
+</div>
+
+    <!-- -------------------------------Resumes have been shortlisted by--------------------------- -->
+<div class="trustedby">
+    <div class="headline container ">
+      <h4>Trusted by professionals from</h4>
+    </div>
+    <br>
+
+    <div class="image1">
+      <img src="{% static '/image/microsoft.png' %}" style="height: 60px; " alt="" />
+      <img src="{% static '/image/ola.svg' %}" alt="" style="margin-top:40px; height: 40px;" />
+      <img src="{% static '/image/amazon.png' %}" alt="" />
+      <img src="{% static '/image/goldman_sachs.png' %}" alt="" />
+      <img src="{% static '/image/adobe.png' %}" alt="" />
+      <img src="{% static '/image/cisco.png' %}" alt="" />
+    </div>
 </div>
 
 <!-- -----------------------------------------------------------About Us----------------------------------- -->
@@ -217,172 +215,105 @@
       font-weight: 500;"> Read more</a>
     </h5>
 
-    <h5 style="">Follow me: 
-      <a href="https://www.facebook.com/RapidezWriter/" style="color: #1877F2">
-        <i class="fa fa-facebook fa-1x" aria-hidden="true"></i>
+      <a href="https://www.linkedin.com/in/prashanthmudaliar/?originalSubdomain=in" target="blank">
+        <!-- <i class="fa fa-linkedin fa-1x" style="margin-left: 5px; margin-right: 2px" aria-hidden="true"></i> -->
+        <img 
+          class="linkedin-follow"  
+          src="{% static '/image/linkedin-follow.png' %}"
+          alt="">
       </a>
-      <a href="https://www.linkedin.com/in/prashanthmudaliar/?originalSubdomain=in" style="color: #1666C5">
-        <i class="fa fa-linkedin fa-1x" style="margin-left: 5px; margin-right: 2px" aria-hidden="true"></i>
-      </a>
-    </h5>
+    
   </div>
   
 </div>
 
-    <!-- -------------------------------Resumes have been shortlisted by--------------------------- -->
-
-    <div class="headline container" style="padding-bottom: 0px;">
-      <h4>Trusted by professionals from</h4>
-    </div>
-    <br>
-
-    <div class="image1" style="padding: 0 150px;">
-      <img src="{% static '/image/adobe.png' %}" alt="" />
-      <img src="{% static '/image/amazon.png' %}" alt="" />
-
-      <img src="{% static '/image/microsoft.png' %}" alt="" />
-      <img src="{% static '/image/goldmansachs.png' %}" alt="" />
-      <img src="{% static '/image/cisco.png' %}" alt="" />
-    </div>
-
-
     <!-- -----------------------------------------------------------What's stopping you from being Hired?----------------------------------- -->
     <br><br>
-    <div style="background: #fff"> 
+    <div class="hired"> 
 
     <div class="headline container">
-      <h4>What's stopping you from being Hired?</h4>
+      <h4>What's preventing you from being Hired?</h4>
+      <h5>Everything you need to know to make your next career move.</h5>
     </div>
     <div class="boss">
       <div class="maindetail">
         <div class="image1212">
-          <br />
           <img src="{% static '\image\wsh1.png' %}" />
         </div>
-        <div class="pt1 pt" data-aos="fade-left" data-aos-duration="1500">
-          <p>
-            <span>Resume Visibility on Job Portals</span><br />
-
-            Write a cover letter using the same templates as your resume.
-          </p>
+        <div class="pt1 pt" data-aos="fade-left" data-aos-duration="2500">
+          <h5>
+            <span>Resume Visibility on Job Portals</span>
+          </h5>
         </div>
 
         <div class="image1212">
-          <br />
+          
           <img src="{% static '\image\wsh2.png' %}" />
         </div>
 
-        <div class="pt2 pt" data-aos="fade-left" data-aos-duration="2000">
-          <p>
-            <span>Adoption of ATS eco-system</span><br />
-
-            Create a morden and professional resume and cover letter
-          </p>
+        <div class="pt2 pt" data-aos="fade-left" data-aos-duration="3000">
+          <h5>
+            <span>Adoption of ATS eco-system</span>
+          </h5>
         </div>
 
         <div class="image1212">
-          <br />
+          
           <img src="{% static '\image\wsh8.png' %}" />
         </div>
 
-        <div class="pt3 pt" data-aos="fade-left" data-aos-duration="2500">
-          <p>
-            <span>Vague Content</span><br />
-
-            Our builder will give you suggestion how to improve your resume
-          </p>
+        <div class="pt3 pt" data-aos="fade-left" data-aos-duration="3500">
+          <h5>
+            <span>Vague Content</span>
+          </h5>
         </div>
 
         <div class="image1212">
-          <br />
+          
           <img src="{% static '\image\wsh7.png' %}" />
         </div>
 
-        <div class="pt4 pt" data-aos="fade-left" data-aos-duration="1500">
-          <p>
-            <span>Irrelevant Interview calls</span><br />
-
-            Our experts tips will show you how to write a Resume.
-          </p>
+        <div class="pt4 pt" data-aos="fade-left" data-aos-duration="4500">
+          <h5>
+            <span>Irrelevant Interview calls</span>
+          </h5>
         </div>
 
         <div class="image1212">
-          <br />
+          
           <img src="{% static '\image\wsh6.png' %}" />
         </div>
 
-        <div class="pt5 pt" data-aos="fade-left" data-aos-duration="2000">
-          <p>
-            <span>Insignificant keywords</span><br />
-
-            Our online resume builder will help you write a perfect resume in
-            minutes.
-          </p>
+        <div class="pt5 pt" data-aos="fade-left" data-aos-duration="5000">
+          <h5>
+            <span>Insignificant keywords</span>
+          </h5>
         </div>
 
         <div class="image1212">
-          <br />
+          
           <img src="{% static '\image\wsh9.png' %}" />
         </div>
 
-        <div class="p6 pt" data-aos="fade-left" data-aos-duration="2500">
-          <p>
-            <span>Grammatical errors</span><br />
-
-            You will have access to the best text editor available
-          </p>
+        <div class="p6 pt" data-aos="fade-left" data-aos-duration="5500">
+          <h5>
+            <span>Grammatical errors</span>
+          </h5>
         </div>
       </div>
     </div>
     </div>
 
-    <!-- ------------------------------------------------------------how it work ------------------------------------ -->
-    <!-- <div class="work">
-      <div class="headline container">
-        <h4>How It Works</h4>
-      </div>
-      <div class="container">
-        <div class="gworkm pt ptt1">
-          <div class="pat1">
-            <img src="{% static '\image\hiw1.PNG' %}" />
-            <p>
-              <span>Get matched</span>
-
-              with an expert writer
-            </p>
-          </div>
-
-          <div class="pat2">
-            <img src="{% static '\image\hiw2.PNG' %}" />
-            <p>
-              <span>Work one-on-one </span>
-
-              to craft your career story
-            </p>
-          </div>
-
-          <div class="pat3">
-            <img src="{% static '\image\hiw3.PNG' %}" />
-            <p>
-              <span>Receive a resume</span>
-
-              tailored to your goals
-            </p>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-
-      <br /><br />
-    </div> -->
 
     <!-- ---------------------------------------------------resume sample---------------------------------- -->
+    
+    <div class="resume-templates">
     <div class="headline container">
-      <h4>Professionally Designed Resumes</h4>
+      <h4>Customized Resume templates for the job</h4>
+      <h5>Fresh Graduates, Engineers, Managers, CEOs, Freelancers and every job in between</h5>
     </div>
 
-    <div class="image">
+    <div class="rtc-image">
       <div class="carousel">
         <a
           class="carousel-item rtc"
@@ -417,6 +348,9 @@
       </div>
     </div>
 
+    <div class="button-wrap"><a href="{% url 'resumeMakeover' %}" class="waves-effect waves-light btn btn-large explore-all">Explore all Templates</a></div>
+    </div>
+
     <!-- -------------------------------------------------memorial-design--------------------------------- -->
     
     <div class="boss1" 
@@ -434,113 +368,84 @@
         <div class="all2">
           <div class="mtex">
             <div class="tex1 z-depth-1">
-              <h5>
-                <i class="fa fa-magic" aria-hidden="true"></i> Memorable Design
-              </h5>
-              <p>
-                Create a sophisticated modern desigh with 1000s of combinations
-                of backgrounds, colors, section, icons, and templates.
-              </p>
+
+              <table cellspacing="0" cellpadding="0" class="features-table-t1">
+                <tr>
+                  <th class="features-images"><img src="{% static '\image\f1.png' %}" /></th>
+                  <th>Resume written by Recruiter</th>
+                </tr>
+                <tr>
+                  <td colspan="2">Our Resume content is crafted by our Talent Acquisition Team with diverse industry experience and not mere content developers</td>
+                </tr>
             </div>
-            <div class="tex2" data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500">
-              <h5 >
-                <i class="fa fa-pencil" aria-hidden="true"></i> Resume written by Recruiter
-              </h5>
-              <h5>
-                <i class="fa fa-file-text-o" aria-hidden="true"></i></i> Job targeted content
-              </h5>
-              <h5>
-                <i class="fa  fa-check-square-o" aria-hidden="true"></i>ATS compliant
-              </h5>
-              <h5>
-                <i class="fas fa-user-graduate" aria-hidden="true"></i>Proofreading by career coach
-              </h5>
-              <h5>
-                <i class="fas fa-infinity" aria-hidden="true"></i>Unlimited revisions
-              </h5>
+            <div 
+              class="tex2" 
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500">
+
+              <table class="features-table">
+                <tr>
+                  <th class="features-images"><img src="{% static '\image\f2.png' %}" /></th>
+                  <td>Optimized Keywords</td>
+                </tr>
+                <tr>
+                  <th class="features-images"><img src="{% static '\image\f3.png' %}" /></th>
+                  <td>Job targeted content</td>
+                </tr>
+                <tr>
+                  <th class="features-images"><img src="{% static '\image\f4.png' %}" /></th>
+                  <td>ATS compliant</td>
+                </tr>
+                <tr>
+                  <th class="features-images"><img src="{% static '\image\f5.png' %}" /></th>
+                  <td>Proofreading by career coach</td>
+                </tr>
+                <tr>
+                  <th class="features-images"><img src="{% static '\image\f6.png' %}" /></th>
+                  <td>Unlimited revisions</td>
+                </tr>
+              </table>
+
             </div>
+
           </div>
         </div>
       </div>
     </div>
 
     <!-- -----------------------------------------------------How it works------------------------------ --> 
-    <section id="home-s-how">
-      <div class="hdec-hd first">
-        <div id="how-bg-white-space">
-          <div id="hhow-tr-1"></div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- <div class="carousel carousel-slider center how-it-works">
-      <div class="headline container white-text" >
-        <h4 style="font-size:38px">5 ways we stand apart</h4>
-      </div>
 
-
-      <div class="carousel-item white-text" href="#one">
-        <i class="far fa-comment-dots fa-6x"></i>
-        <h4>Career Counsellor</h4>
-        <h5 class="white-text">Our career counsellor will have an in-depth conversation in order to  assist you with your next targeted position by assessing skills and relevant expertise aligned to the job description</h5>
-      </div>
-      <div class="carousel-item white-text" href="#two">
-        <i class="fab fa-searchengin fa-6x"></i>
-        <h4>Research Analyst</h4>
-        <h5 class="white-text">Research analyst will fetch insights on the current position, Keywords, ATS phrases, Trending synonyms</h5>
-      </div>
-      <div class="carousel-item white-text" href="#three">
-        <i class="fas fa-file-contract fa-6x"></i>
-        <h4>Resume Template</h4>
-        <h5 class="white-text">Selecting the Resume template – Visual, Functional, Texted, ATS format</h5>
-      </div>
-      <div class="carousel-item white-text" href="#four">
-        <i class="fas fa-user-graduate fa-6x"></i>
-        <h4>Recruiters</h4>
-        <h5 class="white-text">Recruiters will integrate all the collected data and ameliorate the content to meet the deadlines</h5>
-      </div>
-      <div class="carousel-item white-text" href="#five">
-        <i class="fas fa-user-tie fa-6x"></i>
-        <h4>Hiring Specialist</h4>
-        <h5 class="white-text">Continuous connection with the hiring specialist will improve intensive comprehensiveness of your profile</h5>
-      </div>
-      <div class="carousel-fixed-item center">
-        <a href="{% url 'contactUs' %}" class="btn waves-effect btn-large hiw-contact-btn">Create my Resume</a>
-      </div>
-    </div> -->
-
-
-      <!-- <div class="hdec-hd first">
-        <div id="hhow-tr-1"></div>
-      </div> -->
-
-    <div class="headline how-it-works" >
-      <h4>5 ways we stand apart</h4>
-    </div>
     
     <div class="fwwsa">
-
+      <div class="headline" >
+        <h4>Why RapidezWriter</h4>
+        <h5>The biggest challenge always is to decide on what to do next. And we’re ready with the plan for you.</h5>
+      </div>
       <div class="fwwsa1" style="display: block !important">
         <i class="far fa-comment-dots fa-6x"></i>
         <h4>Career Counsellor</h4>
         <h6 class="white-text">Our career counsellor will have an in-depth conversation in order to  assist you with your next targeted position by assessing skills and relevant expertise aligned to the job description</h6>
       </div>
-      
+
       <div class="fwwsa2">
-        <i class="fab fa-searchengin fa-6x"></i>
-        <h4>Research Analyst</h4>
-        <h6 class="white-text">Research analyst will fetch insights on the current position, Keywords, ATS phrases, Trending synonyms</h6>
+        <i class="far fa-comment-dots fa-6x"></i>
+        <h4>Research analyst</h4>
+        <h6 class="white-text">Research analyst will fetch insights on the Current positions, Job Targeted  Keywords, ATS guidelines, competitor analysis</h6>
+      </div>
+      <div class="fwwsa3">
+        <i class="fas fa-newspaper fa-6x"></i>
+        <h4>Resume template</h4>
+        <h6 class="white-text">Selecting the Resume template – Visual Resume, Functional Resume , Texted Resume, ATS Resume</h6>
       </div>
 
-      <div class="fwwsa3">
+      <div class="fwwsa4">
         <i class="fas fa-user-graduate fa-6x"></i>
         <h4>Recruiters</h4>
         <h6 class="white-text">Recruiters will integrate all the collected data and ameliorate the content to meet the deadlines</h6>
       </div>
       
-      <div class="fwwsa4">
+      <div class="fwwsa5">
         <i class="fas fa-user-tie fa-6x"></i>
         <h4>Hiring Specialist</h4>
         <h6 class="white-text">Continuous connection with the hiring specialist will improve intensive comprehensiveness of your profile</h6>
@@ -549,13 +454,15 @@
      <div class="fwwsa-buttons-hide" >
       <button class="cc"><h3 style="font-size: 3em !important">1</h3></button>
       <button class="ra"><h3>2</h3></button>
-      <button class="re"><h3>3</h3></button>
-      <button class="hs"><h3>4</h3></button>
+      <button class="rt"><h3>3</h3></button>
+      <button class="re"><h3>4</h3></button>
+      <button class="hs"><h3>5</h3></button>
      </div>
      
      <div class="fwwsa-buttons" >
       <button class="cc btn"></button>
       <button class="ra btn"></button>
+      <button class="rt btn"></button>
       <button class="re btn"></button>
       <button class="hs btn"></button>
      </div>
@@ -569,23 +476,24 @@
 
 
     <!-- -----------------------------------------------------Blog articles------------------------------ -->
-    <div class="headline container" >
-      <h4>Our Latest Blogs</h4>
-    </div>
 
     <div class="carousel carousel-slider center blog-articles">
+      <div class="headline" style="margin-top: -4em;">
+        <h4>Our Latest Blogs</h4>
+      </div>
+  
       <div class="carousel-fixed-item center"></div>
       <div class="carousel-item " id="caro-one" href="#one">
         <div class="parent-blog">
-          <div class="item " style="background: url({% static 'image/interview.jpg' %}); background-size: contain;"></div>
-          <div class="item last">
+          <div class="blog-photo" style="background: url({% static 'image/interview.jpg' %}) no-repeat; background-size: contain;"></div>
+          <div class="blog-photo blog-text">
             <div class="headline-blog">
               <a class="waves-effect waves-light btn" href="">Covid 19</a>
               <a class="waves-effect waves-light btn" href="">LinkedIn</a>
+              <a class="waves-effect waves-light btn">Tags</a>
               {% for i in blog_details.category.all %}
               <a class="waves-effect waves-light btn" href="">Relevant Tags from backend</a>
               {% endfor %}
-              <a class="waves-effect waves-light btn">Tags</a>
             </div>
             <h4>This is blog heading 1</h4>
             <h5 style="text-align: justify; font-size: large">
@@ -598,8 +506,8 @@
    
       <div class="carousel-item " id="caro-two" href="#two">
         <div class="parent-blog">
-          <div class="item " style="background: url({% static 'image/video-r.jpg' %}); background-size: contain;"></div>
-          <div class="item last">
+          <div class="blog-photo " style="background: url({% static 'image/video-r.jpg' %}) no-repeat; background-size: contain;"></div>
+          <div class="blog-photo blog-text">
             <div class="headline-blog">
               <a class="waves-effect waves-light btn" href="">Resume</a>
               <a class="waves-effect waves-light btn" href="">Covid 19</a>
@@ -708,7 +616,7 @@
     <footer class="footer">
       <div class="product">
         <h5>PRODUCTS</h5>
-        <a href="http://127.0.0.1:8080/resumeAnalysis"><p>Resume Analysis</p></a>
+        <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><p>Resume Analysis</p></a>
         <a href="{% url 'resumeWriting' %}"><p>Resume Writing</p></a>
         <a href="{% url 'resumeMakeover' %}"><p>Resume Template Makeover</p></a>
         <a href="{% url 'linkedIn' %}"><p>Linkedin Profile Branding</p></a>
@@ -719,7 +627,7 @@
       <div class="learn">
         <h5>LEARN MORE</h5>
         <a href="#"><p>FAQs</p></a>
-        <!-- <a href="{% url 'quizes' %}"><p>Quiz</p></a> -->
+        <a href="{% url 'quizes' %}"><p>Quiz</p></a>
         <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
         <a href="#"><p>Carrer Advice</p></a>
       </div>
@@ -737,24 +645,23 @@
       </div>
 
       <div class="branded">
-        <a href="#">
-          <h5 style="color: #fff">
-            <span style="color: #241e1e">Rapidez</span>
-            <span style="color: #0da1ec">Writer</span>
-          </h5>
-          
-
-          <a href="#" style="color: #a7b2d8"
-            ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
-          ></a>
-          <a href="#" style="color: #a7b2d8">
-            <i
-              class="fa fa-twitter fa-2x"
-              style="margin-left: 20px"
-              aria-hidden="true"
-            ></i
-          ></a>
-          <a href="#" style="color: #a7b2d8">
+        <a href="{% url 'home' %}">
+        <img 
+        class="desk_logo" 
+        src="{% static '/image/homepage_logo-removebg.png' %}" 
+        alt="Rapidez Writer Logo" 
+        style="margin-bottom: 1.5em" />
+       
+          <a 
+            href="https://www.facebook.com/RapidezWriter/" 
+            style="color: #dbe0f2"
+            target="blank">
+            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          </a> 
+          <a 
+            href="https://www.linkedin.com/company/rapidezwriters/" 
+            style="color: #dbe0f2"
+            target="blank">
             <i
               class="fa fa-linkedin fa-2x"
               style="margin-left: 20px; margin-right: 7px"
@@ -801,9 +708,11 @@
         $(".fwwsa2").hide()
         $(".fwwsa3").hide()
         $(".fwwsa4").hide()
+        $(".fwwsa5").hide()
         
         $(".cc h3").css("font-size", "3em")
         $(".ra h3").css("font-size", "2em")
+        $(".rt h3").css("font-size", "2em")
         $(".re h3").css("font-size", "2em")
         $(".hs h3").css("font-size", "2em")
       });
@@ -812,21 +721,37 @@
         $(".fwwsa2").fadeIn(800);
         $(".fwwsa3").hide()
         $(".fwwsa4").hide()
+        $(".fwwsa5").hide()
 
         $(".cc h3").css("font-size", "2em")
         $(".ra h3").css("font-size", "3em")
+        $(".rt h3").css("font-size", "2em")
+        $(".re h3").css("font-size", "2em")
+        $(".hs h3").css("font-size", "2em")
+      });
+      $(".rt").click(function(){
+        $(".fwwsa1").hide()
+        $(".fwwsa2").hide()
+        $(".fwwsa3").fadeIn(800);
+        $(".fwwsa4").hide()
+        $(".fwwsa5").hide()
+        
+        $(".cc h3").css("font-size", "2em")
+        $(".ra h3").css("font-size", "2em")
+        $(".rt h3").css("font-size", "3em")
         $(".re h3").css("font-size", "2em")
         $(".hs h3").css("font-size", "2em")
       });
       $(".re").click(function(){
         $(".fwwsa1").hide()
         $(".fwwsa2").hide()
-        $(".fwwsa3").fadeIn(800);
-        $(".fwwsa4").hide()
+        $(".fwwsa3").hide()
+        $(".fwwsa4").fadeIn(800);
+        $(".fwwsa5").hide()
 
-        
         $(".cc h3").css("font-size", "2em")
         $(".ra h3").css("font-size", "2em")
+        $(".rt h3").css("font-size", "2em")
         $(".re h3").css("font-size", "3em")
         $(".hs h3").css("font-size", "2em")
       });
@@ -834,13 +759,51 @@
         $(".fwwsa1").hide()
         $(".fwwsa2").hide()
         $(".fwwsa3").hide()
-        $(".fwwsa4").fadeIn(800);
+        $(".fwwsa4").hide()
+        $(".fwwsa5").fadeIn(800);
 
         $(".cc h3").css("font-size", "2em")
         $(".ra h3").css("font-size", "2em")
+        $(".rt h3").css("font-size", "2em")
         $(".re h3").css("font-size", "2em")
         $(".hs h3").css("font-size", "3em")
       });
+
+
+      if($(window).width() <= 480){
+  
+        // For the sub-menu
+        //Services
+        $(".services").click(function(){
+          $('.rscs').hide();
+          $('.cmpy').hide();
+          $('.serv').slideToggle('normal');
+          $('.serv').css("position", "relative");
+        });
+
+        //Resources
+        $(".resources").click(function(){
+          $('.serv').hide();
+          $('.cmpy').hide();
+          $('.rscs').slideToggle('normal');
+          $('.rscs').css("position", "relative");
+        });
+
+        //Company
+        $(".comp").click(function(){
+          $('.serv').hide();
+          $('.rscs').hide();
+          $('.cmpy').slideToggle('normal');
+          $('.cmpy').css("position", "relative");
+        });
+
+      }
+
+    </script>
+
+
+    <script>
+
     </script>
 
     <script>

@@ -239,6 +239,24 @@ header ul li a {
   line-height: 35px;
 }
 
+.order-now-btn{
+  border-radius: 5px;
+  height: 50px;
+  padding-top: 5px;
+  font-weight: 600;
+  text-transform: none;
+  background: #0da1ec;
+  margin-top: 30px;
+  width: 25%;
+  margin-left: 37%;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.order-now-btn:hover{
+  background: #0da1ec;
+}
+
 .btn:hover {
   box-shadow: 5px 5px 10px #223c99;
 }
@@ -342,15 +360,16 @@ header ul li a {
   padding: 0px 6%;
 }
 .text-1 {
-  width: 62%;
+  width: 60%;
   float: right;
+  margin-top: 16em;
+  padding-left: 2em;
 }
 .mob-img {
   padding-left: 33px;
   padding-top: 64px;
   float: left;
-  width: 35%;
-  height: 750px;
+  height: auto;
 }
 
 .text-1 .light {
@@ -726,4 +745,235 @@ header ul li a {
 .branded {
   text-align: right;
   margin-right: 50px;
+}
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+  .img1{
+    display: none;
+  }
+  
+  .img2{
+    display: none;
+  }
+  
+  .img3{
+    display: none;
+  }
+
+  .content{
+    width: 100%;
+    margin-top: -4em;
+    height: 0;
+    padding: 1.5em;
+  }
+
+  .m-head .m-back{
+    height: 45em;
+  }
+
+  .m-head .content h1 {
+    color: #fff;
+    margin-top: 8px;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .m-head .content h5 {
+    font-weight: 300;
+  }
+  
+  .order-now-btn{
+    border-radius: 5px;
+    height: 50px;
+    padding-top: 5px;
+    font-weight: 500;
+    text-transform: none;
+    background: #0da1ec;
+    margin-top: 30px;
+    width: 75%;
+    font-size: 20px;
+  }
+
+  .m-size{
+    display: block; 
+    height: auto;
+  }
+
+  .p1 h4 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .p1 h5 {
+    color: #8992a4;
+    font-size: 17px;
+  }
+
+  .m-mobile{
+    height: auto;
+    padding: 0;
+  }
+
+  .mob-img {
+    padding-left: 0;
+    padding-top: 4em;
+    float: none;
+    height: auto;
+  }
+
+  .mob-img img{
+    width: 350px;
+  }
+
+  .text-1 {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+
+  .text-1 h3{
+    margin-left: 0 !important;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  
+  .light{
+    margin-left: 0 !important;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .light1{
+    margin-left: 0 !important;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .pul-grid{
+    display: inline-flex;
+    margin-left: 14px;
+  }
+
+  .cir{
+    display: none;
+  }
+
+  .line{
+    display: none;
+  }
+
+  .cont .light2 {
+    text-align: justify;
+    font-size: 17px;
+    margin-top: 24px;
+    margin-left: 10px;
+    padding-left: 5px;
+    padding-right: 15px;
+  }
+
+  .main-hiw{
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+
+  .b1{
+    height: auto !important;
+  }
+
+  .main-h1 {
+    padding: 0 20px;
+  }
+
+  .main-pp {
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+  }
+
+  .main-c {
+    position: relative;
+    height: auto;
+  }
+
+  .b3 img{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 1em;
+  }
+
+  .box22 {
+    width: 100%;
+    background: #fff;
+    position: relative;
+    margin-top: -20em;
+    padding: 1em;
+    height: auto;
+  }
+
+  .main-cc {
+    height: auto;
+    width: 100%;
+    background: #f6f7fa;
+  }
+
+  .page-wrapper {
+    margin-top: 0;
+    overflow: auto;
+  }
+
+  .post-slider {   
+    position: relative;
+    height: auto;
+    overflow: auto;
+  }
+
+  .post-slider .post-wrapper {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    overflow: auto;
+  }
+
+  .post-slider .next {
+    right: 10px;
+  }
+  
+  .post-slider .prev {
+    left: 12px;
+  }
+
+  .post-slider .post-wrapper .post{
+    height: auto;
+  }
+  
+  .post p {
+    text-align: center;
+    font-size: 18px;
+    padding: 50px;
+  }
+
+  .fa-3x {
+    font-size: 2em !important;
+  }
+
+  .content121 {
+    height: auto;
+    text-align: center;
+  }
+
+  .content121 p {
+    font-size: 14px;
+  }
+
+  .content121 h2{
+    font-size: 25px;
+    margin-top: -1em;
+    font-weight: 500;
+    margin: 1em;
+  }
+
 }

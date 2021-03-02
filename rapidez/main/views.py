@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse_lazy, reverse
 from django.shortcuts import get_object_or_404
 
-from .models import Database, Category, Testimonials
+from .models import Database, Category, Testimonials, Quiz
 from .forms import Databaseform, Categoryform, SignUpForm, Testimonialform
 from django.db.models import Q
 
@@ -38,6 +38,8 @@ def about(request):
     return render(request,"about.html")
 def contact_us(request):
     return render(request,"contact.html")
+def faq(request):
+    return render(request, "faq.html")
 
 # Service Pages
 def resume_consulting(request):
@@ -56,8 +58,12 @@ def resume_video(request):
     return render(request,"resume_video.html")
 def linkedin(request):
     return render(request,"linkedin.html")
-def quizes(request):
-    return render(request, "quiz.html")
+def quizes(request, pk):
+    quiz = get_object_or_404(Quiz, pk=pk)
+    return render(request, "quiz.html", {"objects": quiz})
+def quizes_list(request):
+    all_objects = Quiz.objects.all()
+    return render(request, "quizListPage.html", {"objects": all_objects})
 
 # Create Blog
 def create_blog(request):
@@ -202,3 +208,8 @@ def payment_status(request):
         return render(request, 'payment_success.html', {'status': 'Payment Successful!'})
     except:
         return render(request, 'payment_failure.html', {'status': 'Payment Failure!'})    
+def payment_success(request):
+    return render(request, "payment_success.html")
+
+def career_page(request):
+    return render(request, "career_page.html")

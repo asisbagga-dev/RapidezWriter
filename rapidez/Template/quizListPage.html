@@ -153,23 +153,90 @@
 <div class="parent">
 
   <div class="item ">
-    <h3>{{objects.heading}}
+    <h3>Should you stay or quit your job?
     </h3>
-    <h5>{{objects.description}}</h5>
+    <h5>Evaluate your current job with our quiz and learn: </h5>
+        <h6><i class="fas fa-check" style=""> </i> What are your main drivers for a potential career change?</h6>
+        <h6><i class="fas fa-check"> </i> Are there big red flags in your relationship with work?</h6>
+        <h6><i class="fas fa-check"> </i> Should you change employers or look for a promotion?</h6>
     <br> <br> 
     <a class="waves-effect waves-light btn btn-large" href="#quiz">Take the Quiz</a>
   </div>
 
-  <div class="item last" style="background: url({{ objects.picture.url }}) center center no-repeat; background-size: contain;"></div>
+  <div class="item last" style="background: url({% static 'image/book.png' %}) center center no-repeat; background-size: contain;"></div>
   
 </div>
 
-<br>
-<br>
-<br>
-<div id="quiz" class="typeform-widget" data-url="https://form.typeform.com/to/fRnkKnTK?typeform-medium=embed-snippet" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+<div class="container" style="text-align: center;">
+  <h3 style="margin: 3.946667rem 0 1.168rem 0;">We’ve created some resources for you</h3>
+  <h5>Get inspired and find out your next step!</h5>
+</div>
 
-<!-- <div class="parent">
+<div class="parent" style="padding: 0px 10%; margin-top: 2% !important;">
+
+  <div class="item">
+    <h5 style="font-size: 2.1rem; color: rgb(6, 19, 43);
+    font-weight: 500; ">Is your resume good enough? </h5>
+    <h6 style="color: #8d8c8c; width: 70%;">Our free and fast resume grade relies on algorithms developed by reading 500,000 resumes. It will give you the answer in just 3 minutes!</h6>
+    <br> <br> 
+    <a class="waves-effect waves-light btn btn-large" href="{% url 'quizes' 1 %}">Take the Quiz</a>
+  </div>
+  <div class="item last" style="background: url({% static 'image/drawkit-grape-pack-illustration-1.png' %}) center center no-repeat; background-size: contain;width: 30%;
+  margin: -10% 0px 0px 10px!important;"></div>
+</div>
+
+
+<div class="parent" style="padding: 0px 10%;
+margin-top: 0% !important;
+padding-left: 20%;
+background: #f4f4f4;;">
+
+  <div class="item last" style="background: url({% static 'image/drawkit-grape-pack-illustration-rapidez2.png' %}) center center no-repeat; background-size: contain;width: 30%;
+  margin: -10% 0px 0px 10px!important;"></div>
+
+  <div class="item" style="margin-left: 8em !important;
+  background: #f4f4f4;">
+    <h5 style="font-size: 2.1rem; color: rgb(6, 19, 43);
+    font-weight: 500; ">Resume Job Assessment Tool </h5>
+    <h6 style="color: #8d8c8c; width: 70%;">We built a fast and free resume keyword checker and assessment tool that scans your resume and suggests optimizations for your job hunt. Give it a try!</h6>
+    <br> <br> 
+    <a class="waves-effect waves-light btn btn-large" href="#quiz">Take the Quiz</a>
+  </div>
+</div>
+
+<div class="parent" style="padding: 0px 10%; margin-top: 2% !important;">
+
+  <div class="item">
+    <h5 style="font-size: 2.1rem; color: rgb(6, 19, 43);
+    font-weight: 500; ">How long does it take to find a job?</h5>
+    <h6 style="color: #8d8c8c; width: 70%;">We can't tell you what's the right next job for you, but we can tell you how much time getting it will take.</h6>
+    <br> <br> 
+    <a class="waves-effect waves-light btn btn-large" href="#quiz">Take the Quiz</a>
+  </div>
+  <div class="item last" style="background: url({% static 'image/drawkit-grape-pack-illustration-rapidez3.png' %}) center center no-repeat; background-size: contain;width: 30%;
+  margin: -10% 0px 0px 10px!important;"></div>
+</div>
+
+<div class="parent" style="padding: 0px 10%;
+margin-top: 0% !important;
+padding-left: 20%;
+background: #f4f4f4;;">
+
+  <div class="item last" style="background: url({% static 'image/drawkit-grape-pack-illustration-rapidez4.png' %}) center center no-repeat; background-size: contain;width: 30%;
+  margin: -10% 0px 0px 10px!important;"></div>
+
+  <div class="item" style="margin-left: 8em !important;
+  background: #f4f4f4;">
+    <h5 style="font-size: 2.1rem; color: rgb(6, 19, 43);
+    font-weight: 500; ">Are You Unhappy at Work?</h5>
+    <h6 style="color: #8d8c8c; width: 70%;">Take our quiz to find out if you’re unhappy at work and what’s the main reason for it. We’ll also give you some ideas and solutions to follow!</h6>
+    <br> <br> 
+    <a class="waves-effect waves-light btn btn-large" href="#quiz">Take the Quiz</a>
+  </div>
+</div>
+<!-- <div id="quiz" class="typeform-widget" data-url="https://form.typeform.com/to/fRnkKnTK?typeform-medium=embed-snippet" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> -->
+
+<div class="parent">
 
     <div class="item ">
       <h3>About the quiz
@@ -181,7 +248,7 @@
   
     <div class="item last" style="background: url({% static 'image/quiz1.png' %}) center center no-repeat; background-size: contain;"></div>
     
-  </div> -->
+  </div>
 
 <!-- --------------------------------------------------footer----------------------------- -->
 

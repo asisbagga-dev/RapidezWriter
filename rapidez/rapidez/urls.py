@@ -40,11 +40,13 @@ urlpatterns = [
     path('Resume-Makeover3', views.resume_makeover_3, name="resumeMakeover3"),
     path('Resume-Video', views.resume_video, name="resumeVideo"),
     path('linkedIn', views.linkedin, name="linkedIn"),
-    path('quizes/', views.quizes, name="quizes"),
+    path('quizes/<int:pk>', views.quizes, name="quizes"),
+    path('quizes_list/', views.quizes_list, name="quizes_list"),
 
     # About Pages
     path('About', views.about, name="about"),
     path('Contact-Us', views.contact_us, name="contactUs"),
+    path('FAQ', views.faq, name="faq"),
 
     #Testimonials
     path('Testimonials', views.testimonials, name="testimonials"),
@@ -76,6 +78,9 @@ urlpatterns = [
     # Payment Gateway Integration
     path('payment/', views.payment, name='payment'),
     path('payment_success/', views.payment_success, name='payment_success'),
+
+    # Career Page
+    path('career/', views.career_page, name="career_page"),
 ]
 
 if settings.DEBUG:

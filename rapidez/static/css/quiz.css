@@ -169,7 +169,7 @@ header.sticky ul li a {
 .last {
   color: #222;
   /* background: #ccc; */
-  margin-right: 5em;
+  margin-right: 10em;
 }
 
 @media screen and (max-width: 600px){
@@ -624,7 +624,6 @@ header.sticky ul li a {
   padding: 9px 60px;
   background: #09143b;
   color: #6275b975;
-  margin-top: 40px;
   background-image: linear-gradient(
     174deg,
     rgba(59, 11, 72, 0) 32%,

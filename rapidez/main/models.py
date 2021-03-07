@@ -11,6 +11,7 @@ class Category(models.Model):
 class Database(models.Model):
     heading = models.CharField(max_length=300)
     description = RichTextUploadingField(blank=True, null=True)
+    pre_description = models.TextField()
     banner = models.ImageField(upload_to='images', blank=True)
     category = models.ManyToManyField(Category)
 

@@ -356,7 +356,8 @@ header ul li a {
 /* <!-- ----------------------------------------------mobile-type-------------------------------------- --> */
 
 .m-mobile {
-  height: 750px;
+  /* height: 750px; */
+  height: auto;
   padding: 0px 6%;
 }
 .text-1 {
@@ -443,13 +444,24 @@ header ul li a {
   font-size: 22px;
 }
 
+  /* quote */
+
+  .rw-quote{
+    padding: 3em 8em;
+    text-align: justify;
+  }
+  
+  .rw-quote h4{
+    font-weight: 200;
+  }
+
 /* -----------------------------------------how it work------------------------------------------ */
 
 .b1 {
-  height: 670px;
   background: #f6f7fa;
   width: 100%;
   overflow: hidden;
+  padding-bottom: 2em;
 }
 
 .text-2 .light2 {

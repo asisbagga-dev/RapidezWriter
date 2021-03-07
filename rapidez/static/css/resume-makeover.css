@@ -380,6 +380,42 @@ header ul li a {
   width: 100%;
 }
 
+.modal .modal-content {
+  padding: 0;
+}
+
+/* Scroll bar style for modal */
+
+.scrollbar
+{
+	overflow-y: scroll;
+}
+
+/*
+ *  STYLE 1
+ */
+
+ .scroll-style::-webkit-scrollbar-track
+ {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   border-radius: 10px;
+   background-color: #F5F5F5;
+ }
+ 
+ .scroll-style::-webkit-scrollbar
+ {
+   width: 12px;
+   background-color: #F5F5F5;
+ }
+ 
+ .scroll-style::-webkit-scrollbar-thumb
+ {
+   border-radius: 10px;
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+   background-color: #797979;
+ }
+ 
+
 .cata {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -410,8 +446,8 @@ header ul li a {
 /* ---------------------------------------------------template------------------------------- */
 
 .small11 img {
-  width: 350px;
-  height: 400px;
+  width: 340px;
+  height: 450px;
 }
 
 .btn:hover {
@@ -425,9 +461,8 @@ header ul li a {
 }
 
 .main-111 {
-  /* width: 400px; */
-  height: 600px;
-  /* margin-left: 25px; */
+  margin-bottom: 2em;
+  margin-top: 2em;
 }
 .m-text {
   /* display: flex; */
@@ -482,14 +517,15 @@ header ul li a {
   margin-right: 20px;
 }
 
-.main-class {
-  padding-bottom: 50px;
-}
 .update1 {
   /* margin-top: 50px; */
   height: 600px;
   width: 100%;
   margin-right: 20px;
+}
+
+.main-class {
+  padding-bottom: 50px;
 }
 
 .h-upd {

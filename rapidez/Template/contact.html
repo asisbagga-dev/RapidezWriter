@@ -90,7 +90,7 @@
             <div class="box111"></div>
             <a href="#"><li>FAQ</li></a>
             <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
-            <!-- <a href="{% url 'quizes' %}"><li>Quiz</li></a>             -->
+            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
           </ul>
         </li>
 
@@ -240,7 +240,7 @@
       <div class="learn">
         <h5>LEARN MORE</h5>
         <a href="#"><p>FAQs</p></a>
-        <a href="#"><p>Quiz</p></a>
+        <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
         <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
         <a href="#"><p>Carrer Advice</p></a>
       </div>

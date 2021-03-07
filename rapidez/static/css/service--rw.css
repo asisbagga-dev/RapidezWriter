@@ -8,7 +8,7 @@
 
 p,
 li {
-  font-size: 16px;
+  font-size: 18px;
 }
 /* ------------------------------------------------------navbar start----------------------------------------- */
 
@@ -453,8 +453,16 @@ header ul li a {
   height: 20em;
 }
 
-.main-class3{
-  height: 30em;
+.main-classx{
+  background: #f8f8f8;
+  height: 650px;
+  padding-top: 1em;
+}
+
+.main-classx{
+  background: #f8f8f8;
+  height: 650px;
+  padding-top: 1em;
 }
 
 .image15 {
@@ -504,7 +512,7 @@ header ul li a {
 
 /* <!-- -----------------------------------------------------customer raiting------------------------------ --> */
 .page-wrapper {
-  margin-top: 70px;
+  margin-top: 6em;
   outline: none;
 }
 
@@ -538,21 +546,21 @@ header ul li a {
 .post-slider .next {
   position: absolute;
   top: 45%;
-  right: 100px;
+  right: 80px;
   cursor: pointer;
 }
 
 .post-slider .prev {
   position: absolute;
   top: 45%;
-  left: 60px;
+  left: 80px;
   cursor: pointer;
 }
 
 .post img {
   position: absolute;
   width: 330px;
-  height: 500px;
+  height: 490px;
   margin-left: 30px;
   border: none !important;
   outline: none !important;
@@ -561,7 +569,7 @@ header ul li a {
 .post img:focus {
   position: absolute;
   width: 330px;
-  height: 500px;
+  height: 490px;
   margin-left: 30px;
   border: none !important;
   outline: none !important;
@@ -594,8 +602,8 @@ header ul li a {
 .back {
   width: 100%;
   height: 400px;
-  background: #3e94e4;
-  margin-top: -20px;
+  background: #38b7ff;
+  
 }
 
 .b-con h4 {
@@ -605,6 +613,56 @@ header ul li a {
   color: #fff;
   margin-top: 2em;
 }
+
+.gig{
+  display: flex;
+  margin-top: 4em;
+}
+
+.gig-item{
+  flex: 1 1 0;
+  text-align: center;
+  color: #fff;
+  padding: 0 6em;
+}
+
+.gig-item img{
+  height: 80px;
+  width: 80px;
+}
+
+.quote{
+  text-align: center;
+  background: #f8f8f8;
+  height: auto;
+  box-shadow: 5px 5px 10px #bdb9b9;
+  margin-top: -4em;
+  padding-top: 2em;
+}
+
+.hiw-contact-btn{
+  background-color: #38b7ff;
+  border-color: #303D46;
+  border-radius: 0.3em;
+  box-shadow: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0 4em;
+  margin: 2em;
+}
+
+.hiw-contact-btn:hover{
+  background-color: #129cec;
+  box-shadow: none;
+}
+
+.hiw-contact-btn:focus{
+  background-color: #129cec;
+  box-shadow: none;
+}
+
+/* FAQ */
 
 .faq1 h6 {
   margin-left: 20px;
@@ -759,10 +817,6 @@ header ul li a {
 
   .image15 .z-depth-3{
     box-shadow: none;
-  }
-
-  .gig-img{
-    width: 100%;
   }
 
   .drop .desk_logo{

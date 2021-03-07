@@ -90,7 +90,7 @@
             <div class="box111"></div>
             <a href="#"><li>FAQ</li></a>
             <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
-            <!-- <a href="{% url 'quizes' %}"><li>Quiz</li></a>             -->
+            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
           </ul>
         </li>
 
@@ -164,31 +164,29 @@
      </div>
 
     <div class="rw-quote">
-      <h4><span style="font-size: 3rem;">&#8220;</span> <b> Rapidez HR Global Services </b> is an entrenched global executive search firm with a glorious 10 years of excellence across the globe<span style="font-size: 3rem;">&#8221;</span></h4>
+      <h4><span style="font-size: 3rem;">&#8220;</span><b>Rapidez HR Global Services </b> is an entrenched global executive search firm with a glorious 10 years of excellence across the globe<span style="font-size: 3rem;">&#8221;</span></h4>
     </div>
     <!-- --------------------------wave------------------------------------------------------------ -->
 
     <!-- ---------------------------------------------------head1--------------------------------------- -->
-    <div class="main-class" style="margin-top: 130px;">
+    <div class="main-class">
       <div class="image15">
-        <div class="z-depth-3">
-          <img src="{% static '/image/rw2.jpg' %}" alt="" />
+        <div>
+          <img src="{% static '/image/aboutus_1.png' %}" alt="" />
         </div>
       </div>
 
-      <div class="contents1">
+      <div class="contents1" style="margin-left: 2em;">
         <div class="headlines1">
-          <h3>Services</h3>
+          <h3>Who we are</h3>
         </div>
         <p class="">
-          Established in 2010, Rapidez HR Global Services is one of the most promising executive hiring firms in India with multiple global allies. We function as a corporate firm through focused practice groups, each led by a global practice team leader. We believe strongly in the ideology of growth.
+          Established in 2010, Rapidez HR Global Services is one of  <b> the most promising executive hiring firms </b> in India with multiple global allies. We function as a corporate firm through focused practice groups, each led by a global practice team leader. We believe strongly in the ideology of growth.
         </p>
         <br>
-        <li>Leadership  & Technical Recruitment </li>
-        <li>Resource Process Outsourcing </li>
-        <li>Permanent & Contract Staffing  </li>
-        <li>International | Expat hiring </li>
-
+        <p>
+          We have effectively <b> selected 1258+ Counting Employees </b> across diverse verticals in India & across the globe. We collaborate with individuals  in furthering and fulfilling their career aspirations, as a continuous process.
+        </p>
       </div>
     </div>
 
@@ -197,28 +195,31 @@
     <div class="main-class" style="margin-top: 0px;">
       <div class="contents1 a1" style="margin-top: 15px;">
         <div class="headlines1" style="margin-top: 0px;">
-          <h3>Who we are</h3>
+          <h3>Services</h3>
         </div>
-        <p class="">
-          Growing up, our CEO Jeff Berger knew the importance of a quality
-          resume. This was thanks to his mother, who ran a resume-writing
-          business out of their home. He saw an opportunity to help struggling
-          job seekers on a larger scale.
+        <li>Leadership  & Technical Recruitment </li>
+        <li>Resource Process Outsourcing </li>
+        <li>Permanent & Contract Staffing  </li>
+        <li>International | Expat hiring </li>
+
+        <br><br>
+        <p>
+          Through our community of skilled writers, Rapidez writes and analyzes more resumes, CVs, and LinkedIn profiles than any other service. Job seekers work directly with professional writers and industry experts to redefine their personal brand and stand out from the crowd during the job-search process.
         </p>
       </div>
       <div class="image16" style="margin-top: 0px;">
-        <div class="z-depth-3">
-          <img src="{% static '/image/scott-graham-5fNmWej4tAA-unsplash.jpg' %}" alt="" />
+        <div class="">
+          <img src="{% static '/image/aboutus_2.png' %}" alt="" />
         </div>
       </div>
     </div>
 
     <div class="waves">
-      <img
+      <!-- <img
         src="{% static '/image/waves-png-hd-border-transparent-waves-hd-border-images-170354.png' %}"
         alt=""
         class="wvs"
-      />
+      /> -->
       <div class="u-wave">
         <img
           src="{% static '/image/prashanth.jpg' %}"
@@ -257,7 +258,7 @@
     <div class="learn">
       <h5>LEARN MORE</h5>
       <a href="#"><p>FAQs</p></a>
-      <a href="#"><p>Quiz</p></a>
+      <a href="{% url 'quizes_list' %}"><p>Quiz</p></a>
       <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
       <a href="#"><p>Carrer Advice</p></a>
     </div>

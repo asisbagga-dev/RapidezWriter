@@ -46,69 +46,86 @@
 
   <body>
     <header class="drop">
-      <a href="{% url 'home' %}" class="logo">
-        <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
-      </a>
-      <ul>
-        <li><a href="#">Resume Analysis</a></li>
+
+      <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo.png' %}" alt="Rapidez Writer Logo" /></a>
+      <a href="{% url 'home' %}"><img class="mobile_logo" src="{% static '/image/logo-removebg.png' %}" alt="Rapidez Writer Logo" /></a>
+      
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      
+      <ul class="menu">
         <li>
-          <a href="#"
-            >Resume Services
-            <i
-              class="fa fa-chevron-down"
+          <a class="services">Services
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
-          <ul class="ser1 ser12" style="left: 38%">
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12 serv" style="left: 38%">
             <div class="box111"></div>
+            <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"
-              ><li>Resume template makeover</li></a
-            >
-            <a href="{% url 'linkedIn' %}"
-              ><li>Linkedin profile branding</li></a
-            >
-            <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
-            <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
+            <a href="{% url 'resumeMakeover' %}"><li>Premium Templates</li></a>
+            <a href="{% url 'linkedIn' %}"><li>LinkedIn Branding</li></a>
+            <a href="{% url 'resumeVideo' %}"><li>Video Resume</li></a>
+            <a href="{% url 'resumeConsulting' %}"><li>Consultation</li></a>
           </ul>
         </li>
-        <li class="ser">
-          <a href="#"
-            >About
-            <i
-              class="fa fa-chevron-down"
+
+        <li>
+          <a class="resources">Resources
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
-          <ul class="ser1 ser11" style="left: -30%">
-            <div class="box111"></div>
-            <a href="{% url 'about' %}"><li>About Us</li></a>
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12 rscs" style="left: 38%">
+            <!-- <div class="box111"></div> -->
             <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
+            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>
           </ul>
         </li>
-        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
-        <li><a href="#">Quiz</a></li>
 
-        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>
+        <li>
+          <a class="comp">Company
+            <i class="fa fa-chevron-down"
+              style="
+                font-size: 10px;
+                position: relative;
+                bottom: 1px;
+                opacity: 0.3;
+                color: #0783ca;
+              "
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12 cmpy" style="left: 38%">
+            <!-- <div class="box111"></div> -->
+            <a href="{% url 'about' %}"><li>About Us</li></a>
+            <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
+            <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
+            <a href="#"><li>Career</li></a>          
+          </ul>
+        </li>
 
-        <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
+        <li><a href="{% url 'testimonials' %}" class="testimonials">Testimonials</a></li>
+
         {% if user.is_authenticated %}
         <li>
-          <a href="#"
-            >Accounts
+          <a href="#">Accounts
             <i
               class="fa fa-chevron-down"
               style="
@@ -117,21 +134,27 @@
                 bottom: 1px;
                 opacity: 0.3;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+            <!-- <div class="box111"></div> -->
+            <hr>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
-            <a href="{% url 'category_list_page' %}"
-              ><li>Delete Category</li></a
-            >
-            {% endif %}
+            <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+          {% if request.user.is_staff %}
+            <a href="{% url 'signup' %}"> <li> Register User </li></a>
+          {% endif %}
+            <a href="{% url 'logout' %}"> <li> Logout </li></a>
+            <hr>
+        {% endif %}
           </ul>
         </li>
       </ul>
     </header>
+    <!-- navbar-end -->
+    
     <script
       src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js"
       async
@@ -149,133 +172,105 @@
       </div>
     </div>
 
-    <!-- <div class="main-class">
-      <div class="contents1 a1">
-        <div class="headlines1">
-          <h5>Visual Resume</h5>
+        <!-- ------------------ Quote ----------------- -->
+        <div class="rw-quote">
+          <h4><span style="font-size: 3rem;">&#8220;</span>Recruiters spend <b> less than 6 seconds</b> deciding whether your resume or CV is worth a second look.<span style="font-size: 3rem;">&#8221;</span></h4>
         </div>
-        <p class="">
-          Visual Resume makes the personality of a candidate out of the box. It
-          defines the individuality, through pictographic representations that
-          showcase the key fact of your resume. In visual resume, you can easily
-          modify the font style by highlighting the key points in bold or
-          underline
-        </p>
-        <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
-          >Order Now</a
-        >
-      </div>
-      <div class="image16">
-        <div class="z-depth-3">
-          <img
-            src="{% static '/image/scott-graham-5fNmWej4tAA-unsplash.jpg' %}"
-            alt=""
-          />
-        </div>
-      </div>
-    </div> -->
-
-    <div class="update2">
-      <div class="h-upd">
-        <h3>Not your typical QMS</h3>
-      </div>
-      <div class="m-upd">
-        <div class="upd">
-          <div class="upd1 upa z-depth-3">
-            <img src="{% static '/image/font1.PNG' %}" alt="" />
-
-            <h5>40 easy-to-use applications</h5>
-            <p>
-              A mighty engine with the agility to adapt to your business, now
-              and in the future
-            </p>
-          </div>
-
-          <div class="upd2 upa z-depth-3">
-            <img src="{% static '/image/font2.PNG' %}" alt="" />
-
-            <h5>An agile platform</h5>
-            <p>
-              An award-winning and streamlined user experience for all quality
-              processes
-            </p>
-          </div>
-
-          <div class="upd3 upa z-depth-3">
-            <img src="{% static '/image/font3.PNG' %}" alt="" />
-
-            <h5>Cloud-based SaaS</h5>
-            <p>Access securely anytime and anywhere</p>
+        
+    
+           <!-- Resume makeover description -->
+    
+      <div class="main-class">
+        <div class="image15">
+          <div>
+            <img src="{% static '/image/rmdesc.png' %}" alt="" style="width: 68%; margin-right: 15%; margin-top: -4em;"/>
           </div>
         </div>
+    
+        <div class="contents1">
+          <div class="headlines1">
+            <h5 style="font-weight: 400; text-align: center; margin-bottom: 1em;">Do you think buying a Template is enough?</h5>
+          </div>
+          <p style="font-weight: 300; font-size: 20px; text-align: justify;">
+          Resume Makeover is a unique service offered by Rapidez Writers, wherein the customer will have to share their content with our team. Our designer will work on the aesthetic as well as the  technical aspect of the resume layout which eventually would highlight your brand value.
+          </p>
+        </div>
       </div>
-    </div>
+    
+        <div class="update2">
+          <div class="h-upd">
+            <h3>How it Works</h3>
+          </div>
+          <div class="m-upd">
+            <div class="upd">
+              <div class="upd1 upa z-depth-3">
+                <img src="{% static '/image/font1.PNG' %}" alt="" />
+    
+                <h5>Buy A Template</h5>
+                <p>
+                  A mighty engine with the agility to adapt to your business, now
+                  and in the future
+                </p>
+              </div>
+    
+              <div class="upd2 upa z-depth-3">
+                <img src="{% static '/image/font2.PNG' %}" alt="" />
+    
+                <h5>Connect with our designers and share your content</h5>
+                <p>
+                  An award-winning and streamlined user experience for all quality
+                  processes
+                </p>
+              </div>
+    
+              <div class="upd3 upa z-depth-3">
+                <img src="{% static '/image/font3.PNG' %}" alt="" />
+    
+                <h5>Get your transformed resume delivered to your inbox</h5>
+                <p>Access securely anytime and anywhere</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+
+  
     <!-- ------------------------------------------------head--------------------------------------------------- -->
 
-    <div class="cata container">
+    <div class="cata container" id="templates_section">
       <div>
         <p>
-          <a href="{% url 'resumeMakeover' %}">Infographic resume </a>
+          <a href="{% url 'resumeMakeover' %}">ATS Resumes</a>
         </p>
       </div>
       <div>
         <p style="border-bottom: 2px solid #3983fa">
           <a
-            href="{% url 'resumeMakeover1' %}"
+            href="{% url 'resumeMakeover1' %}#templates_section"
             style="color: #3983fa; font-weight: 700"
-            >Visual CVs</a
+            >Infographic Resumes</a
           >
         </p>
       </div>
       <div>
         <p>
-          <a href="{% url 'resumeMakeover2' %}">ATS resumes </a>
+          <a href="{% url 'resumeMakeover2' %}">Visual Resumes </a>
         </p>
       </div>
 
-      <!-- <div>
-        <p>
-          <a href="{% url 'resumeMakeover3' %}">Cover Letter </a>
-        </p>
-      </div> -->
     </div>
 
     <!-- --------------------------------------------template1----------------------------------- -->
-
-    <!-- --------------------------------------------template1----------------------------------- -->
-    <br /><br /><br />
+    <br /><br />
     <div class="container" style="width: 100%; overflow: hidden">
       <div class="top-d">
-        <div class="main-111">
-          <div class="small11">
-            <a class="modal-trigger" href="#modal11">
-              <img
-                class="z-depth-2"
-                src="{% static '/image/r1.jpg' %}"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="m-text">
-            <h5>Cascade</h5>
-            <p>
-              Professional cover letter template with a column for contact
-              information
-            </p>
-            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
-              >Order Now</a
-            >
-            <br />
-          </div>
-        </div>
-        <!-- -------------------------------------------------------------- -->
-
+        
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal12">
               <img
                 class="z-depth-2"
-                src="{% static '/image/r2.jpg' %}"
+                src="{% static '/image/RT/Infographic/Temp23.png' %}"
                 alt=""
               />
             </a>
@@ -293,13 +288,12 @@
           </div>
         </div>
 
-        <!-- ---------------------------------------------------- -->
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal13">
               <img
                 class="z-depth-2"
-                src="{% static '/image/r3.png' %}"
+                src="{% static '/image/RT/Infographic/Temp24.png' %}"
                 alt=""
               />
             </a>
@@ -316,13 +310,13 @@
             <br />
           </div>
         </div>
-        <!-- ------------------------------------------------------------ -->
+
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal14">
               <img
                 class="z-depth-2"
-                src="{% static '/image/r4.png' %}"
+                src="{% static '/image/RT/Infographic/Temp25.png' %}"
                 alt=""
               />
             </a>
@@ -340,13 +334,12 @@
           </div>
         </div>
 
-        <!-- ------------------------------------------------------------ -->
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal15">
               <img
                 class="z-depth-2"
-                src="{% static '/image/r5.png' %}"
+                src="{% static '/image/RT/Infographic/Temp26.png' %}"
                 alt=""
               />
             </a>
@@ -363,13 +356,12 @@
           </div>
         </div>
 
-        <!-- ------------------------------------------------------------ -->
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal16">
               <img
                 class="z-depth-2"
-                src="{% static '/image/r1.jpg' %}"
+                src="{% static '/image/RT/Infographic/Temp27.png' %}"
                 alt=""
               />
             </a>
@@ -384,13 +376,12 @@
           </div>
         </div>
 
-        <!-- ------------------------------------------------------------ -->
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal17">
               <img
                 class="z-depth-2"
-                src="{% static '/image/r3.png' %}"
+                src="{% static '/image/RT/Infographic/Temp28.png' %}"
                 alt=""
               />
             </a>
@@ -408,13 +399,12 @@
           </div>
         </div>
 
-        <!-- ------------------------------------------------------------ -->
         <div class="main-111">
           <div class="small11">
             <a class="modal-trigger" href="#modal18">
               <img
                 class="z-depth-2"
-                src="{% static '/image/r2.jpg' %}"
+                src="{% static '/image/RT/Infographic/Temp29.png' %}"
                 alt=""
               />
             </a>
@@ -431,58 +421,169 @@
             <br />
           </div>
         </div>
+     
+        <div class="main-111">
+          <div class="small11">
+            <a class="modal-trigger" href="#modal19">
+              <img
+                class="z-depth-2"
+                src="{% static '/image/RT/Infographic/Temp30.png' %}"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="m-text">
+            <h5>Concept</h5>
+            <p>
+              Modern cover letter template with delicate icons for contact
+              information.
+            </p>
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
+              >Order Now</a
+            >
+            <br />
+          </div>
+        </div>
+
+        <div class="main-111">
+          <div class="small11">
+            <a class="modal-trigger" href="#modal20">
+              <img
+                class="z-depth-2"
+                src="{% static '/image/RT/Infographic/Temp31.png' %}"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="m-text">
+            <h5>Crisp</h5>
+            <p>
+              Creative cover letter template with graphic elements and two
+              columns
+            </p>
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
+              >Order Now</a
+            >
+            <br />
+          </div>
+        </div>
+
+        <div class="main-111">
+          <div class="small11">
+            <a class="modal-trigger" href="#modal21">
+              <img
+                class="z-depth-2"
+                src="{% static '/image/RT/Infographic/Temp32.png' %}"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="m-text">
+            <h5>Cubic</h5>
+            <p>
+              Perfect cover letter template with a dash of color and a
+              structured layout
+            </p>
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
+              >Order Now</a
+            >
+            <br />
+          </div>
+        </div>
+
+        <div class="main-111">
+          <div class="small11">
+            <a class="modal-trigger" href="#modal22">
+              <img
+                class="z-depth-2"
+                src="{% static '/image/RT/Infographic/Temp33.png' %}"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="m-text">
+            <h5>Vibes</h5>
+            <p>
+              Sleek cover letter template with a light feel and color accents
+            </p>
+            <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
+              >Order Now</a
+            >
+            <br />
+          </div>
+        </div>
+      
       </div>
     </div>
     <!-- --------------------------------------------template1 big image----------------------------------- -->
 
     <!-- Modal Structure -->
-    <div id="modal11" class="modal">
+    <div id="modal12" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r1.jpg' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp23.png' %}" alt="" /><br />
       </div>
     </div>
 
-    <div id="modal12" class="modal">
+    <div id="modal13" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r2.jpg' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp24.png' %}" alt="" /><br />
       </div>
     </div>
 
-    <div id="modal13" class="modal">
+    <div id="modal14" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r3.png' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp25.png' %}" alt="" /><br />
       </div>
     </div>
 
-    <div id="modal14" class="modal">
+    <div id="modal15" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r4.png' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp26.png' %}" alt="" /><br />
       </div>
     </div>
 
-    <div id="modal15" class="modal">
+    <div id="modal16" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r5.png' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp27.png' %}" alt="" /><br />
       </div>
     </div>
 
-    <div id="modal16" class="modal">
+    <div id="modal17" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r1.jpg' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp28.png' %}" alt="" /><br />
       </div>
     </div>
 
-    <div id="modal17" class="modal">
+    <div id="modal18" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r3.png' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp29.png' %}" alt="" /><br />
       </div>
     </div>
 
-    <div id="modal18" class="modal">
+    <div id="modal19" class="modal scrollbar scroll-style">
       <div class="modal-content">
-        <img src="{% static '/image/r2.jpg' %}" alt="" /><br />
+        <img src="{% static '/image/RT/Infographic/Temp30.png' %}" alt="" /><br />
       </div>
     </div>
+
+    <div id="modal20" class="modal scrollbar scroll-style">
+      <div class="modal-content">
+        <img src="{% static '/image/RT/Infographic/Temp31.png' %}" alt="" /><br />
+      </div>
+    </div>
+
+    <div id="modal21" class="modal scrollbar scroll-style">
+      <div class="modal-content">
+        <img src="{% static '/image/RT/Infographic/Temp32.png' %}" alt="" /><br />
+      </div>
+    </div>
+
+    <div id="modal22" class="modal scrollbar scroll-style">
+      <div class="modal-content">
+        <img src="{% static '/image/RT/Infographic/Temp33.png' %}" alt="" /><br />
+      </div>
+    </div>
+
 
     <!-- ------------------------------------------------------faq update------------------------------ -->
     <div class="faq0">

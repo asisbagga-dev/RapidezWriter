@@ -46,69 +46,86 @@
 
   <body>
     <header class="drop">
-      <a href="{% url 'home' %}" class="logo">
-        <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
-      </a>
+      <!-- <a href="{% url 'home' %}" class="logo"> -->
+        <img src="{% static '/image/logo.png' %}" alt="Rapidez Writer Logo" />
+        <h5>
+          <span style="color: #8c8c8c">Rapidez</span>
+          <span style="color: #0da1ec">Writer</span>
+        </h5>
+      <!-- </a> -->
       <ul>
-        <li><a href="#">Resume Analysis</a></li>
         <li>
-          <a href="#"
-            >Resume Services
-            <i
-              class="fa fa-chevron-down"
+          <a href="#">Services
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
+            <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"
-              ><li>Resume template makeover</li></a
-            >
-            <a href="{% url 'linkedIn' %}"
-              ><li>Linkedin profile branding</li></a
-            >
-            <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
-            <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
+            <a href="{% url 'resumeMakeover' %}"><li>Premium Templates</li></a>
+            <a href="{% url 'linkedIn' %}"><li>LinkedIn Branding</li></a>
+            <a href="{% url 'resumeVideo' %}"><li>Video Resume</li></a>
+            <a href="{% url 'resumeConsulting' %}"><li>Consultation</li></a>
           </ul>
         </li>
-        <li class="ser">
-          <a href="#"
-            >About
-            <i
-              class="fa fa-chevron-down"
+
+        <li>
+          <a href="#">Resources
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
-          <ul class="ser1 ser11" style="left: -30%">
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
+            <div class="box111"></div>
+            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
+            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Company
+            <i class="fa fa-chevron-down"
+              style="
+                font-size: 10px;
+                position: relative;
+                bottom: 1px;
+                opacity: 0.3;
+                color: #0783ca;
+              "
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'about' %}"><li>About Us</li></a>
-            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
+            <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
+            <a href="#"><li>Career</li></a>          
           </ul>
         </li>
+
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
-        <li><a href="#">Quiz</a></li>
 
-        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>    
-
-        <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
         {% if user.is_authenticated %}
         <li>
-          <a href="#"
-            >Accounts
+          <a href="#">Accounts
             <i
               class="fa fa-chevron-down"
               style="
@@ -117,269 +134,55 @@
                 bottom: 1px;
                 opacity: 0.3;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
             <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+          {% if request.user.is_staff %}
+            <a href="{% url 'signup' %}"> <li> Register User </li></a>
+          {% endif %}
+            <a href="{% url 'logout' %}"> <li> Logout </li></a>
         {% endif %}
           </ul>
         </li>
       </ul>
     </header>
+    
     <script src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js" async></script>
 
     <!-- navbar-end -->
 
-    <!-- Banner with video -->
+<!-- Banner -->
+<div class="update"></div>
 
-    <div class="over">
-      <div class="headtex">
-        <h4>Make a Professional Video Resume</h4>
-        <h6>
-          Create a stunningly professional video resume for your next job and
-        </h6>
-        <h6>let the recruiters know you before they know you!</h6>
-        <br />
-        <a class="waves-effect waves-light btn btn-large">Contact Us</a>
-      </div>
-    </div>
-    <section class="Banner">
-      <video autoplay loop muted>
-        <source
-          src="{% static '/video/RapidezWriter-2.mp4' %}"
-          type="video/mp4"
-        />
-      </video>
-    </section>
-
-    <!-- Cards for video templates -->
-
-    <div class="video_list">
-      <div class="card video_li">
-        <!-- <img class="card-img-top" src="p1.jpg" alt="Card image cap" > -->
-        <iframe
-          class="card-img-top"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/PlvE9BwAoOs"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <div class="card-body">
-          <h5 class="card-title">Graphic Designer Portfolio CV</h5>
-          <h6 class="card-subtitle text-muted">
-            Using a new approach to put your data to work and present your
-            company success story is here from now on. Visually expressed
-            animated scenes of Infographics Animation Pack
-          </h6>
-        </div>
-        <a href="./store_main.html"
-          ><button class="btn order_now">Get Started</button></a
-        >
-      </div>
-
-      <div class="card video_li">
-        <!-- <img class="card-img-top" src="p2.jpg" alt="Card image cap"> -->
-        <iframe
-          class="card-img-top"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/8uMQdURYGMA"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <div class="card-body">
-          <h5 class="card-title">Team Worker CV</h5>
-          <h6 class="card-subtitle text-muted">
-            Creating an animated explainer video has never been this easy.
-            Explainer World Toolkit gives you a great opportunity to build the
-            most colorful, impressive and exciting explainer ever!
-          </h6>
-        </div>
-        <a href="./store_main.html"
-          ><button class="btn order_now">Get Started</button></a
-        >
-      </div>
-
-      <div class="card video_li">
-        <!-- <img class="card-img-top" src="p3.jpg" alt="Card image cap"> -->
-        <iframe
-          class="card-img-top"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Xb2WcARTLkI"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <div class="card-body">
-          <h5 class="card-title">Event Manager CV</h5>
-          <h6 class="card-subtitle text-muted">
-            Using a new approach to put your data to work and present your
-            company success story is here from now on. Visually expressed
-            animated scenes of Infographics Animation Pack
-          </h6>
-        </div>
-        <a href="./store_main.html"
-          ><button class="btn order_now">Get Started</button></a
-        >
-      </div>
-
-      <div class="card video_li">
-        <!-- <img class="card-img-top" src="p4.jpg" alt="Card image cap"> -->
-        <iframe
-          class="card-img-top"
-          width="560"
-          height="315"
-          src="https://player.vimeo.com/video/245334962"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <div class="card-body">
-          <h5 class="card-title">Content Writer CV</h5>
-          <h6 class="card-subtitle text-muted">
-            Boost your conversions and drive leads to your business with an
-            engaging professional video using this toolkit. Business Character
-            Toolkit has over 100 corporate scenes in various categories
-          </h6>
-        </div>
-        <a href="./store_main.html"
-          ><button class="btn order_now">Get Started</button></a
-        >
-      </div>
-
-      <div class="card video_li">
-        <!-- <img class="card-img-top" src="p5.jpg" alt="Card image cap"> -->
-        <iframe
-          class="card-img-top"
-          width="560"
-          height="315"
-          src="https://player.vimeo.com/video/272714956"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <div class="card-body">
-          <h5 class="card-title">Digital Marketing Specialist CV</h5>
-          <h6 class="card-subtitle text-muted">
-            Have you ever stumbled upon line style solutions in animation?
-            Accompanying modern line style animation, large library of scenes
-            and customizable colors the Line-Style
-          </h6>
-        </div>
-        <a href="./store_main.html"
-          ><button class="btn order_now">Get Started</button></a
-        >
-      </div>
-
-      <div class="card video_li">
-        <!-- <img class="card-img-top" src="p5.jpg" alt="Card image cap"> -->
-        <iframe
-          class="card-img-top"
-          width="560"
-          height="315"
-          src="https://player.vimeo.com/video/291090731"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-        <div class="card-body">
-          <h5 class="card-title">Freelance Designer CV</h5>
-          <h6 class="card-subtitle text-muted">
-            Need something new for storytelling? Dive into the world of
-            Whiteboard Animation. More than 450 interactive scenes, animated
-            characters and a huge stock of high-quality music tracks
-          </h6>
-        </div>
-        <a href="./store_main.html"
-          ><button class="btn order_now">Get Started</button></a
-        >
-      </div>
-    </div>
-
-    <!-- What / Why Video Resume section -->
-
-    <section class="what-is-video-resume">
-      <br />
-      <h2>What is a Video Resume?</h2>
-      <h5>
-        A video resume is a tool that you can use to help you get your dream
-        job. It’s more than just transforming your paper resume into a video
-        format. It’s a way for you to showcase your personality, create a great
-        first impression, and emphasise your talent and skills. <br />
-        Just like a paper resume, you need to cover the essentials:
-      </h5>
-      <h5 style="font-weight: bold">Education, Experience & Interests</h5>
-      <h5>
-        And, above all, make sure you answer one simple question:
-        <span style="font-weight: bold">
-          Why should the employer hire you?
-        </span>
-      </h5>
-    </section>
-
-    <section class="why-video-resume">
-      <br />
-      <h2>Why Create a Video Resume?</h2>
-      <h5>
-        As we’ve touched upon above, a video resume can help you stand out in a
-        competitive job market. In a world where attention spans are shrinking,
-        video is the perfect way to get your message across succinctly and
-        effectively. With studies finding that visuals are processed
-        <span style="font-weight: bold"> 60,000x faster than text </span>, a
-        video resume will get your message across straight away and could pique
-        the interest of a recruiter who has been filtering through paper resumes
-        all day.
-      </h5>
-      <br />
-      <h5>
-        In addition to that, a video resume is likely to leave a lasting
-        impression. According to a Wyzowl infographic about the power of visual
-        communication,
-        <span style="font-weight: bold">
-          people remember 10% of what they hear, 20% of what they read, and 80%
-          of what they see and do.
-        </span>
-        So, by watching your resume instead of reading it, recruiters are more
-        likely to remember you when the time comes to hire a candidate.
-      </h5>
-      <br />
-      <h5>
-        If you’re in a creative industry, particularly one that revolves around
-        design and motion graphics, then there’s even more reason for you to
-        create a video resume. By showing potential employers a video that
-        you’ve made, you’re not only presenting them with your resume but also a
-        piece of work that they can use as an example of your talent.
-      </h5>
-      <br />
-    </section>
-
-    <!-- Open doors -->
-    <section class="open-doors">
-      <h2>Create video resumes that open doors</h2>
-      <div class="break"></div>
-      <a class="waves-effect waves-light btn btn-large">Get Started</a>
-    </section>
+<div class="update0">
+  <div class="update1">
+    <!-- <img src="{% static '/image/video_banner.png' %}" alt="" /> -->
+    <video height="540" width="700" autoplay loop muted>
+      <source src="{% static '/video/video_banner.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+  <div class="update1">
+    <h3> <b> Create a rejection-proof video resume </b> to give you the edge over other candidates</h3>
+  </div>
+</div>
 
     <!-- Tips for video resume -->
 
     <h3 class="tips-h3">
-      We have collected tips on how to make a video resume to simplify your
-      video creation process!
+      Give yourself an edge with a video resume
     </h3>
     <section class="tips">
       <div class="content">
         <h5>
-          Presenting your skills and experience is easier with our animated
-          resume maker. Thousands of users worldwide create video CVs online in
-          minutes. Having high quality doesn't necessarily mean being complex.
-          For our video job application creator, it means simplicity and
-          efficiency.
+          A video resume can show employers your ability to enhance their company and fit their business culture before they even pick up your paper resume. It also sets you apart from the other candidates who have no video to support their application.
         </h5>
-        <br />
         <h5>
-          Simply browse our large catalog of video templates and start creating.
+          The best part? <b> 89% of employers </b> say they would watch a video resume. On the other hand, <b> 95% of paper resumes </b> never get read.
         </h5>
         <br />
         <h5>
@@ -389,71 +192,44 @@
       <div class="video">
         <iframe
           class="card-img-bottom"
-          src="https://www.youtube.com/embed/8uMQdURYGMA"
+          src="{% static '/video/video-resume.mp4' %}"
           frameborder="0"
           allowfullscreen
         ></iframe>
       </div>
     </section>
 
-    <!-- ---------------------------------------------------main head--------------------------------------- 
-    <br>
 
-    <div class="headline container">
-      <h4>Video Resume Building </h4>
-    </div>
-    <div class="main-class">
-      <div class="image12">
-        <div class="z-depth-3">
-          <img src="./image/video-r.jpg" alt="" />
-        </div>
-      </div>
-      <div class="contents z-depth-2">
-        <div class="headlines container">
-          <h5>Video Resume</h5>
-        </div>
-        <p>
-          Video resume is a way for job seekers to showcase their abilities beyond the capabilities of a traditional paper resume. The video resume allows prospective employers to see and hear applicants, and get a feel for how applicants present themselves.
-        </p>
-        <div class="button" style="width: 100%; text-align: center;">
-          <a class="waves-effect waves-light btn btn0">buy Now</a>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="headline container"
-      style="
-        margin-top: 50px;
-        margin-top: 90px;
-      "
-    >
+    <section class="why-video-resume">
+      <br />
+      <h2>Step off the page with a video resume</h2>
+      <h5>
+        A video resume commands far more attention than a paper resume. Every job candidate sends a paper resume, but you’ll be the only one with a video too. That’ll instantly separate your application from the slush pile and get your foot in the door.
+       <br /> <br>
+        Just like a paper resume, you need to cover the essentials:
+      <span style="font-weight: bold">Education, Experience & Interests </span> </h5>
     
-    </div>
+      <h4>Build your personal brand with thematic color and motion graphics</h4>
+      <h5>
+        Choose a color scheme and style to create a motion graphic resume that visually represents who you are and builds professional rapport. You can even use a color scheme that matches the colors of the company you’re applying to.
+      </h5>
+      <h5>
+        The Biteable editor offers built-in color schemes and visuals that polish your video till it shines. It’s like adding your personal logo to your animation resume (we also have animated logos if you want to add one for real).
+      </h5>
+    
+      <h4>Go beyond the selfie video</h4>
+      <h5>
+        Even if all you’ve got is your phone camera, your video resume can be more than a simple selfie video. Add stock footage and background music to create a memorable video resume that’s way cooler than plainly answering questions on camera and gets rapt attention from beginning to end.
+      </h5>
+    </section>
 
-    <div class="main-class">
-      <div class="image15">
-        <div class="z-depth-3">
-          <img src="./image/donovan-silva-ygUPa_SaXKw-unsplash.jpg" alt="" />
-        </div>
-      </div>
+    <!-- Open doors -->
+    <section class="open-doors">
+      <h2>Create video resumes that open doors</h2>
+      <div class="break"></div>
+      <a class="waves-effect waves-light btn btn-large">Make a video resume</a>
+    </section>
 
-      <div class="contents1">
-        <div class="headlines1">
-          <h5>Video Resume</h5>
-        </div>
-        <p class="">
-          Video resume is a way for job seekers to showcase their abilities beyond the capabilities of a traditional paper resume. The video resume allows prospective employers to see and hear applicants, and get a feel for how applicants present themselves.
-        </p>
-        <div
-          class="button"
-          style="width: 100%; text-align: center; margin-top: 20px;"
-        >
-          <a class="waves-effect waves-light btn btn0">buy Now</a>
-        </div>
-      </div>
-    </div>
--->
     <!-- -----------------------------------------------------------------footer--------------------------- -->
 
     <footer class="footer">
@@ -470,7 +246,7 @@
       <div class="learn">
         <h5>LEARN MORE</h5>
         <a href="#"><p>FAQs</p></a>
-        <a href="#"><p>Quiz</p></a>
+        <a href="{% url 'quizes_list' %}"><p>Quiz</p></a>
         <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
         <a href="#"><p>Carrer Advice</p></a>
       </div>

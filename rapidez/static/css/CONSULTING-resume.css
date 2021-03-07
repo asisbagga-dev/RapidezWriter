@@ -5,10 +5,12 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+/* ------------------------------------------------------navbar start----------------------------------------- */
+
 header {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  font-style: normal;
   position: fixed;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -22,34 +24,32 @@ header {
   /* overflow: hidden; */
   /* z-index: 888; */
 }
-header h5{
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+header h5 {
   font-weight: 600 !important;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
   font-size: 26px;
-  padding-top: 8px;  
-  color:black;
+  padding-top: 15px;
 }
 
-header.sticky h5{
+header.sticky h5 {
   padding-top: 0px;
-  padding-bottom: 4px;
 }
-
 
 header a {
   width: 183px;
   padding-bottom: 20px;
+  font-size: 18px;
   font-weight: 500;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 
 header.sticky {
-  padding: 5px 40px;
-  background:#fff;
-  height: 50px;
+  /* padding: 5px 40px; */
+  background: #ffffff;
+  height: 90px;
   align-items: center;
   z-index: 999;
+  border-bottom: 1px solid #f5f5f5;
   /* color: #333; */
 }
 
@@ -60,7 +60,7 @@ header.sticky a {
 }
 
 header.sticky .logo {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 header.sticky ul li:hover > ul {
@@ -85,7 +85,7 @@ header.sticky .ser:hover {
 header .logo {
   display: flex;
   position: relative;
-  
+
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
@@ -113,42 +113,47 @@ header ul {
 header ul li {
   position: relative;
   list-style: none;
-  font-size: 16px;
-
 }
 
 header ul li a {
   position: relative;
   margin: 0 10px;
   text-decoration: none;
-  color: black;
+  color: #241e1e;
   /* letter-spacing: 2px; */
   /* font-weight: 500px; */
   transition: 0.6s;
-  font-size: 17.5px;
-
 }
 
-header.sticky .logo,
-header.sticky ul li a {
-  color: #333;
+
+.drop{
+  padding-left: 6%;
+  padding-right: 8%;
 }
 
-/* -----------------------------------------------------Drop-down---------------------------------------- */
+.drop img{
+  height: 130px;
+  margin-right: 6%;
+}
+
+.drop h5{
+  margin-left: -48% !important;
+  margin-top: -2px !important;
+}
 
 .drop ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
 }
 .drop ul ul {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   position: absolute;
+  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+
   padding: 0;
   /* min-width: 300px; */
   display: none;
   top: 100%;
-  left: 0%;
+  left: 0;
   /* margin-left: -80px; */
 }
 
@@ -157,7 +162,6 @@ header.sticky ul li a {
   /* text-align: center; */
   /* padding: 0 10px; */
   border-radius: 5px;
-  
 }
 .drop ul li:hover > ul li:hover {
   background: #d4effc;
@@ -197,6 +201,7 @@ header.sticky ul li a {
   width: 240px;
   margin-left: -80px;
 }
+
 .box111 {
   width: 10px;
   height: 10px;
@@ -245,7 +250,16 @@ header.sticky ul li a {
   display: grid;
   grid-template-columns: 1fr 450px;
   padding: 80px;
-  /* align-items: center; */
+}
+
+.cust-form{
+  -webkit-box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
+  box-shadow: 0 1px 4px #0000004d, 0 0 40px #0000001a inset;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding: 2em;
+  width: 100%;
 }
 
 .btn {
@@ -330,12 +344,10 @@ header.sticky ul li a {
 
 .lin1{
   width: 250px;
-
   height: 400px;
   text-align: center;
-  /* background: darkgray; */
   margin-left: 50%;
-  
+  border-radius: 1em;
 }
 
 .lin1 p{
@@ -344,11 +356,10 @@ header.sticky ul li a {
 
 .lin2{
   width: 250px;
-
   height: 400px;
   text-align: center;
-  /* background: darkgray; */
   margin-left: 10%;
+  border-radius: 1em;
 }
 
 .lin2 p{
@@ -369,6 +380,24 @@ header.sticky ul li a {
   padding-left: 80px;
   padding-right: 80px;
   text-align: center;
+}
+
+.order-now-btn{
+  border-radius: 5px;
+  height: 50px;
+  padding-top: 5px;
+  font-weight: 600;
+  text-transform: none;
+  background: #0da1ec;
+  margin-top: 30px;
+  width: 25%;
+  margin-left: 37%;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.order-now-btn:hover{
+  background: #0da1ec;
 }
 /* -------------------------------------------------------footer--------------------------------- */
 
@@ -429,3 +458,36 @@ header.sticky ul li a {
 }
 .fa-2x {
   font-size: 1.5rem;
+}
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+  .grids{
+    display: block;
+    padding: 2em;
+  }
+  
+  .bac{
+    display: block;
+    padding: 0em;
+  }
+
+  .b-lin{
+    display: block;
+  }
+
+  .lin1{
+    width: 100%;
+    margin-left: 0;
+    padding: 1em;
+  }
+  
+  .lin2{
+    width: 100%;
+    margin-left: 0;
+    padding: 1em;
+  }
+
+
+}

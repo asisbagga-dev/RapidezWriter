@@ -49,69 +49,86 @@
 
   <body>
     <header class="drop">
-      <a href="{% url 'home' %}" class="logo">
-        <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
-      </a>
+      <!-- <a href="{% url 'home' %}" class="logo"> -->
+        <img src="{% static '/image/logo.png' %}" alt="Rapidez Writer Logo" />
+        <h5>
+          <span style="color: #8c8c8c">Rapidez</span>
+          <span style="color: #0da1ec">Writer</span>
+        </h5>
+      <!-- </a> -->
       <ul>
-        <li><a href="#">Resume Analysis</a></li>
         <li>
-          <a href="#"
-            >Resume Services
-            <i
-              class="fa fa-chevron-down"
+          <a href="#">Services
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
+            <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"
-              ><li>Resume template makeover</li></a
-            >
-            <a href="{% url 'linkedIn' %}"
-              ><li>Linkedin profile branding</li></a
-            >
-            <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
-            <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
+            <a href="{% url 'resumeMakeover' %}"><li>Premium Templates</li></a>
+            <a href="{% url 'linkedIn' %}"><li>LinkedIn Branding</li></a>
+            <a href="{% url 'resumeVideo' %}"><li>Video Resume</li></a>
+            <a href="{% url 'resumeConsulting' %}"><li>Consultation</li></a>
           </ul>
         </li>
-        <li class="ser">
-          <a href="#"
-            >About
-            <i
-              class="fa fa-chevron-down"
+
+        <li>
+          <a href="#">Resources
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
-          <ul class="ser1 ser11" style="left: -30%">
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
+            <div class="box111"></div>
+            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
+            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Company
+            <i class="fa fa-chevron-down"
+              style="
+                font-size: 10px;
+                position: relative;
+                bottom: 1px;
+                opacity: 0.3;
+                color: #0783ca;
+              "
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'about' %}"><li>About Us</li></a>
-            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
+            <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
+            <a href="#"><li>Career</li></a>          
           </ul>
         </li>
+
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
-        <li><a href="#">Quiz</a></li>
 
-        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>
-
-        <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
         {% if user.is_authenticated %}
         <li>
-          <a href="#"
-            >Accounts
+          <a href="#">Accounts
             <i
               class="fa fa-chevron-down"
               style="
@@ -120,21 +137,24 @@
                 bottom: 1px;
                 opacity: 0.3;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
-            <a href="{% url 'category_list_page' %}"
-              ><li>Delete Category</li></a
-            >
-            {% endif %}
+            <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+          {% if request.user.is_staff %}
+            <a href="{% url 'signup' %}"> <li> Register User </li></a>
+          {% endif %}
+            <a href="{% url 'logout' %}"> <li> Logout </li></a>
+        {% endif %}
           </ul>
         </li>
       </ul>
     </header>
+    
     <script
       src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js"
       async
@@ -149,28 +169,13 @@
           <div class="move"></div>
           <p></p>
           <h1>
-            Get discovered — land <br />
-            your dream job
+            Optimize your LinkedIn. <br />
+            Maximize your visibility.
           </h1>
           <h5>
-            Elevate your professional presence online with an expertly- <br />
-            written LinkedIn profile makeover for
-            <span style="color: #0da1ec"> $125 . </span>
+            Escalate your professional journey with an enhanced LinkedIn profile.
           </h5>
-          <a
-            class="waves-effect waves-light btn"
-            style="
-              border-radius: 5px;
-              height: 50px;
-              padding-top: 5px;
-              font-weight: 600;
-              text-transform: none;
-              background: #0da1ec;
-              margin-top: 30px;
-              width: 35%;
-            "
-            >Order Now</a
-          >
+          <a class="waves-effect waves-light btn order-now-btn">Order Now</a>
         </div>
         <div class="image11">
           <div class="img1">
@@ -189,37 +194,35 @@
     <!-- ---------------------------------------------------%%%%%persentage%%%%%--------------------------------------- -->
     <div class="m-size">
       <div class="p1" data-aos="fade-left">
-        <h4>14 million</h4>
-        <h5><span>job openings </span> the LinkedIn platform in 2019.</h5>
+        <h4>23 million</h4>
+        <h5><span>job openings </span> the LinkedIn platform in 2020</h5>
       </div>
       <div class="p1" data-aos="fade-left">
-        <h4>97%</h4>
+        <h4>87%</h4>
         <h5>
           <span>of recruiters </span> use LinkedIn to evaluate and screen
-          candidates.
+          candidates
         </h5>
       </div>
       <div class="p1" data-aos="fade-left">
         <h4>122 million</h4>
-        <h5><span>people got an interview </span>through LinkedIn in 2019.</h5>
+        <h5><span>people got an interview </span>through LinkedIn in 2019</h5>
       </div>
     </div>
 
     <!-- ----------------------------------------------mobile-type-------------------------------------- -->
     <div class="m-mobile">
       <div class="mob-img">
-        <img
-          src="{% static '/image/linkedin-profile-e1cd7661b7.png' %}"
-          alt=""
-        />
+        <img style="width: 481px;" src="{% static '/image/linkedin_prashanth.jpg' %}"/>
+        <!-- <img src="{% static '/image/linkedin-profile-e1cd7661b7.png' %}"/> -->
       </div>
       <br /><br />
       <br /><br />
       <div class="text-1">
         <p class="light">LINKEDIN PROFILE MAKEOVER SERVICE</p>
-        <h3>Perfect your professional brand</h3>
+        <h3>Idealize your professional brand</h3>
         <p class="light1">
-          With more than 660 million LinkedIn members worldwide, having a
+          With more than 760 million LinkedIn members worldwide, having a
           profile that stands out is essential to your job-search success.
         </p>
         <br />
@@ -231,7 +234,7 @@
           <i class="fas fa-search fa-1x" style="color: #47b7f1"></i>
           <div class="cont" data-aos="zoom-in-left">
             <p class="light2">
-              <span style="font-weight: 500"> Keyword optimized</span> so you
+              <span style="font-weight: 500"> Keyword Optimized</span>, so you
               show up in more recruiters' searches.
             </p>
           </div>
@@ -267,31 +270,20 @@
               <span style="font-weight: 500">
                 Achievements and skills-based
               </span>
-              so your profile is top ranked for job opportunities.
+              so your profile is top-ranked for job opportunities.
             </p>
           </div>
         </div>
         <br />
 
         <a
-          class="waves-effect waves-light btn"
-          style="
-            width: 18%;
-            border-radius: 5px;
-            height: 38px;
-            padding-top: 1px;
-            font-weight: 600;
-            font-size: medium;
-            text-transform: none;
-            background: #0da1ec;
-            margin-top: 30px;
-            margin-left: 125px;
-          "
+          class="waves-effect waves-light btn order-now-btn"
+
           >Order Now</a
         >
       </div>
-    </div>
-
+    </div>    
+    
     <!-- -----------------------------------how it work------------------------------------- -->
 
     <div class="main-b">
@@ -315,11 +307,10 @@
           <div class="main-hiw">
             <div class="main-h1">
               <h4 style="font-size: 22.4px; font-weight: 600">
-                Match with a writer
+                Connect with a writer
               </h4>
               <p style="font-size: 17px">
-                We’ll pair you with a writer who has experience writing for your
-                industry.
+                We’ll pair you with a writer who has experience writing for your industry.
               </p>
             </div>
 
@@ -347,8 +338,14 @@
       </div>
     </div>
 
+
+    <!-- ------------------ Quote ----------------- -->
+    <div class="rw-quote">
+      <h4><span style="font-size: 3rem;">&#8220;</span>Today 48% of all recruiters advertise their job openings ONLY on LinkedIn<span style="font-size: 3rem;">&#8221;</span></h4>
+    </div>    
+
     <!-- -----------------------------------------------------------linkedin-expert---------------------------- -->
-    <div class="main-pp">
+    <!-- <div class="main-pp">
       <div class="main-c">
         <div class="b2">
           <br /><br /><br /><br /><br />
@@ -382,7 +379,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- --------------------------------------------c-write----------------------------------- -->
     <div class="main-cc">
@@ -465,19 +462,7 @@
       <h2>Set yourself up for job search success</h2>
       <a
         data-aos="zoom-in"
-        class="waves-effect waves-light btn"
-        style="
-          width: 180px;
-          border-radius: 5px;
-          height: 60px;
-          padding-top: 10px;
-          font-weight: 600;
-          font-size: large;
-          text-transform: none;
-          background: #0da1ec;
-          margin-top: 30px;
-          margin-left: 43%;
-        "
+        class="waves-effect waves-light btn order-now-btn"
         >Order Now</a
       >
     </div>
@@ -498,7 +483,7 @@
       <div class="learn">
         <h5>LEARN MORE</h5>
         <a href="#"><p>FAQs</p></a>
-        <a href="#"><p>Quiz</p></a>
+        <a href="{% url 'quizes_list' %}"><p>Quiz</p></a>
         <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
         <a href="#"><p>Carrer Advice</p></a>
       </div>

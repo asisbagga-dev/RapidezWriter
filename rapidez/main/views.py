@@ -166,15 +166,49 @@ def testimonial_delete(request, pk):
     return render(request, 'testimonialDelete.html')
 
 #Payment Gateway integration
+client = razorpay.Client(auth=("rzp_live_nQOflfXhoAJfEG", "rpKTqVpjezaNxt8SWXHjqQUg"))
 def payment(request):
+    context = {}
     if request.method == "POST":
-        amount = 1
+        order_amount = 100
+        order_currency = 'INR'
 
-        client = razorpay.Client(auth=("rzp_live_nQOflfXhoAJfEG", "rpKTqVpjezaNxt8SWXHjqQUg"))
-        payment = client.order.create({'amount': amount, 'currency': 'INR', 'payment_capture': '1'})
+        response = client.order.create({'amount': order_amount, 'currency': order_currency, 'payment_capture': '1'})
+        order_id = response['id']
+        order_status = response['status']
 
-    return render(request, 'resume_makeover.html')
+        if order_status=='created':
+            print("Order created")
+            # Server data for user convinience
+            context['price'] = order_amount
+            context['currency'] = order_currency
+            # context['name'] = name
+            # context['phone'] = phone
+            # context['email'] = email
 
+            # data that'll be send to the razorpay for
+            context['order_id'] = order_id
+
+            return render(request, 'resume_makeover.html', {'context': context})
+    return HttpResponse('<h1> Error in creating a payment order</h1>')
+
+def payment_status(request):
+
+    response = request.POST
+
+    params_dict = {
+        'razorpay_payment_id' : response['razorpay_payment_id'],
+        'razorpay_order_id' : response['razorpay_order_id'],
+        'razorpay_signature' : response['razorpay_signature']
+    }
+
+
+    # VERIFYING SIGNATURE
+    try:
+        status = client.utility.verify_payment_signature(params_dict)
+        return render(request, 'payment_success.html', {'status': 'Payment Successful!'})
+    except:
+        return render(request, 'payment_failure.html', {'status': 'Payment Failure!'})    
 def payment_success(request):
     return render(request, "payment_success.html")
 

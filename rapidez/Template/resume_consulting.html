@@ -46,69 +46,86 @@
 
   <body>
     <header class="drop">
-      <a href="{% url 'home' %}" class="logo">
-        <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-        <h5><span style="color: #0da1ec">Rapidez</span>Writer</h5>
-      </a>
+      <!-- <a href="{% url 'home' %}" class="logo"> -->
+        <img src="{% static '/image/logo.png' %}" alt="Rapidez Writer Logo" />
+        <h5>
+          <span style="color: #8c8c8c">Rapidez</span>
+          <span style="color: #0da1ec">Writer</span>
+        </h5>
+      <!-- </a> -->
       <ul>
-        <li><a href="#">Resume Analysis</a></li>
         <li>
-          <a href="#"
-            >Resume Services
-            <i
-              class="fa fa-chevron-down"
+          <a href="#">Services
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
+            <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"
-              ><li>Resume template makeover</li></a
-            >
-            <a href="{% url 'linkedIn' %}"
-              ><li>Linkedin profile branding</li></a
-            >
-            <a href="{% url 'resumeVideo' %}"><li>Video Resume Building</li></a>
-            <a href="{% url 'resumeConsulting' %}"><li>Consulting</li></a>
+            <a href="{% url 'resumeMakeover' %}"><li>Premium Templates</li></a>
+            <a href="{% url 'linkedIn' %}"><li>LinkedIn Branding</li></a>
+            <a href="{% url 'resumeVideo' %}"><li>Video Resume</li></a>
+            <a href="{% url 'resumeConsulting' %}"><li>Consultation</li></a>
           </ul>
         </li>
-        <li class="ser">
-          <a href="#"
-            >About
-            <i
-              class="fa fa-chevron-down"
+
+        <li>
+          <a href="#">Resources
+            <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
                 position: relative;
                 bottom: 1px;
                 opacity: 0.3;
+                color: #0783ca;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
-          <ul class="ser1 ser11" style="left: -30%">
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
+            <div class="box111"></div>
+            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
+            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">Company
+            <i class="fa fa-chevron-down"
+              style="
+                font-size: 10px;
+                position: relative;
+                bottom: 1px;
+                opacity: 0.3;
+                color: #0783ca;
+              "
+              aria-hidden="true">
+            </i>
+          </a>
+          <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'about' %}"><li>About Us</li></a>
-            <a href="#"><li>FAQ</li></a>
+            <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
+            <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
+            <a href="#"><li>Career</li></a>          
           </ul>
         </li>
+
         <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
-        <li><a href="#">Quiz</a></li>
 
-        <li><a href="{% url 'career_list_page' %}">Career Advice</a></li>
-
-        <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
         {% if user.is_authenticated %}
         <li>
-          <a href="#"
-            >Accounts
+          <a href="#">Accounts
             <i
               class="fa fa-chevron-down"
               style="
@@ -117,21 +134,24 @@
                 bottom: 1px;
                 opacity: 0.3;
               "
-              aria-hidden="true"
-            ></i
-          ></a>
+              aria-hidden="true">
+            </i>
+          </a>
           <ul class="ser1 ser12" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
-            <a href="{% url 'category_list_page' %}"
-              ><li>Delete Category</li></a
-            >
-            {% endif %}
+            <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+          {% if request.user.is_staff %}
+            <a href="{% url 'signup' %}"> <li> Register User </li></a>
+          {% endif %}
+            <a href="{% url 'logout' %}"> <li> Logout </li></a>
+        {% endif %}
           </ul>
         </li>
       </ul>
     </header>
+    
     <script
       src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js"
       async
@@ -143,21 +163,26 @@
 
     <div class="grids">
       <div class="text-p">
-        <h3>Affordable outplacement from the leader in career services</h3>
+        <h5>Coaching. Clarity. Confidence</h5>
+        <h3>Job Placement  Consulting for Senior Management Professionals</h3>
         <h6>
-          Over 1,000 career experts and a tailored plan to your organization
+          Mentors with over 10 years of professional experience are here to guide you.
         </h6>
         <ul>
-          <li>1:1 resume writing and job interview preparation</li>
-          <li>Proven service with millions of users</li>
-          <li>Trusted partner of over 400 leading job sites</li>
-          <li>Simple setup and reporting</li>
+          <li>Premium access to exclusive jobs</li>
+          <li>Psychometric assessments</li>
+          <li>Targeted  Resume Distribution</li>
+          <li>Employee Referral Program</li>
+          <li>Job Board Management</li>
+          <li>Salary Insights</li>
+          <li>Professional Networking</li>
+          <li>Personal Branding</li>
         </ul>
       </div>
 
       <!-- --------------------------------------------------form-------------------------------------------------- -->
 
-      <div class="row" style="margin: 0">
+      <div class="row cust-form" >
         <form class="col s12" style="width: 100%">
           <div class="row" style="width: 100%">
             <div
@@ -238,7 +263,7 @@
         <div class="b-lin">
           <div class="lin1 z-depth-4">
             <div class="t1-lin">
-              <h6><span>4 to 8 Hour Certifications</span></h6>
+              <h6><span>Personal Branding</span></h6>
               <h5>Certifications</h5>
               <p>A course that provides in-depth training. Six certifications are available.</p>
             </div>
@@ -246,7 +271,7 @@
 
           <div class="lin2  z-depth-4">
             <div class="t2-lin">
-              <h6><span>4 to 8 Hour Certifications</span></h6>
+              <h6><span>Job Consulting</span></h6>
               <h5>Certifications</h5>
               <p>A course that provides in-depth training. Six certifications are available.</p>
             </div>
@@ -255,6 +280,9 @@
 
 
     </div>
+
+    <a class="waves-effect waves-light btn order-now-btn">Order Now</a>
+    
     <!-- -----------------------------------------------------------------footer--------------------------- -->
 
     <footer class="footer">
@@ -271,7 +299,7 @@
       <div class="learn">
         <h5>LEARN MORE</h5>
         <a href="#"><p>FAQs</p></a>
-        <a href="#"><p>Quiz</p></a>
+        <a href="{% url 'quizes_list' %}"><p>Quiz</p></a>
         <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
         <a href="#"><p>Carrer Advice</p></a>
       </div>

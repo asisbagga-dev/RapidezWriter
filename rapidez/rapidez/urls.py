@@ -77,7 +77,8 @@ urlpatterns = [
 
     # Payment Gateway Integration
     path('payment/', views.payment, name='payment'),
-    path('payment_success/', views.payment_success, name='payment_success'),
+    path('payment_status/', views.payment_status, name='payment_status'),
+    # path('payment_success/', views.payment_success, name='payment_success'),
 
     # Career Page
     path('career/', views.career_page, name="career_page"),

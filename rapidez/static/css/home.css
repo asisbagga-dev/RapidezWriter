@@ -8,13 +8,22 @@
 }
 p,
 li {
-  font-size: 16px;
+  font-size: 18px;
 }
 
-body {
-  /* background: #000;
-  min-height: 200vh; */
+.drop .mobile_logo{
+  display: none;
 }
+
+.drop .desk_logo{
+  display: block;
+}
+
+.drop .menu-icon {
+  display: none;
+}
+
+
 header {
   position: fixed;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -47,7 +56,8 @@ header.sticky h5 {
 header a {
   width: 183px;
   padding-bottom: 20px;
-  font-size: 18px;
+  padding-top: 20px;
+  font-size: 22px;
   font-weight: 500;
 }
 
@@ -141,20 +151,21 @@ header.sticky ul li a {
 .parent {
   display: flex;
   margin-left: auto;
-  margin-top: 5% !important;
-  margin-bottom: -3em !important;
+  margin-top: 0% !important;
+  margin-bottom: -10em !important;
 }
+
 
 .parent-aboutus{
   display: flex;
   margin-left: auto;
-  margin-bottom: -4em !important;
+  margin-bottom: -6em !important;
 }
 
 .parent-blog{
   display: flex;
   margin-left: auto;
-  margin-top: 7% !important;
+  margin-top: 10% !important;
 }
 
 .item {
@@ -164,10 +175,11 @@ header.sticky ul li a {
   color: #000;
   background: #fff;
   min-height: 38em !important;
+  margin-top: 4em;
 }
 
 .item h3{
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .item h5{
@@ -177,25 +189,24 @@ header.sticky ul li a {
 }
 
 .last {
-  color: #222;
-  /* background: #ccc; */
   margin-right: 5em;
+  margin-top: -4em;
 }
 
 
 .aboutus-img{
   width: 50%;
-  margin-left: 2em !important;
+  margin-left: 2em;
   color: #000;
   background: #fff;
   min-height: 38em !important;
 }
 
 .aboutus-img img{ 
-  border-radius: 1em;
+  border-radius: 50%;
   width: 450px;
   height: 450px;
-  margin-left: 3.5em;
+  margin-left: 8em;
 }
 
 .abouts-desc h3{
@@ -215,23 +226,20 @@ header.sticky ul li a {
   padding: 2em 11em;
 }
 
+.linkedin-follow{
+  width: 160px;
+  height: 50px;
+}
 
+.hired{
+  background: #f8f8f8;
+  margin-top: 3em;
+  margin-bottom: -2em;
+}
 
-@media screen and (max-width: 600px){
-  
-  .parent {
-    flex-direction: column-reverse;  
-  }
-  
-  .item {
-    width: auto;
-    min-height: 200px;
-  }
-  
-  .last {
-    background: #ccc;
-  }
-  
+.rtc-image{
+  margin-top: -2em;
+  margin-bottom: -3em;
 }
 
 /* -----------------------------------------------------Drop-down---------------------------------------- */
@@ -241,7 +249,7 @@ header.sticky ul li a {
 }
 
 .drop img{
-  height: 130px;
+  height: 80px;
   margin-right: 6%;
 }
 
@@ -253,17 +261,17 @@ header.sticky ul li a {
 .drop ul li {
   position: relative;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  cursor: pointer;
 }
 .drop ul ul {
   position: absolute;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
   padding: 0;
-  /* min-width: 300px; */
   display: none;
   top: 100%;
   left: 0;
   /* margin-left: -80px; */
+    /* min-width: 300px; */
 }
 
 .drop ul li:hover > ul {
@@ -362,28 +370,31 @@ header.sticky ul li a {
   padding-top: 200px;
 }
 
-.btn {
+.resume-review-button {
   background: #0da1ec;
-  /* border-radius: 5px; */
-  /* margin-left: 230px; */
+  border-radius: 5px;
+  box-shadow: none;
 }
-.btn:hover {
-  background: #5ec4f7;
-  /* border-radius: 5px; */
+.resume-review-button:hover {
+  background: #1186c0;
+  border-radius: 5px;
+  box-shadow: none;
 }
 /* -----------------------------------------------------after video-------------------------------------- */
 
 .headline {
   text-align: center;
-  /* border-bottom: 2px solid rgb(226, 215, 215); */
-  /* padding-top: 100px; */
-  padding-top: 20px;
-  padding-bottom: 20px;
   width: 100%;
 }
 .headline h4 {
   margin-bottom: 5px;
+  font-weight: 300;
+  padding-top: 1.5em;
 }
+.headline h5{
+  font-weight: 300;
+}
+
 .colo1 {
   padding-bottom: 60px;
 }
@@ -396,32 +407,48 @@ header.sticky ul li a {
 }
 .boss {
   margin-left: auto;
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 .maindetail {
   display: grid;
   grid-template-columns: 63px 250px 63px 250px 63px 250px;
   height: 300px;
   justify-items: center;
-  grid-gap: 30px;
+  column-gap: 4em;
   margin-left: 10%;
 }
 
-.pt {
-  align-items: center;
-  text-align: left;
-  margin-top: 30px;
-  margin-left: 10px;
-  /* padding-right: 20px; */
+.pt h5{
+  font-weight: 400 !important;
+  font-size: 22px;
+  margin-top: 1.5em;
 }
 
-.pt p span {
-  font-weight: bold;
-}
 
 .image1212 img{
   width: 60px;
   height: 60px;
   margin-top: 1em;  
+}
+
+.button-wrap{
+  text-align: center;
+}
+
+.explore-all {
+  background: #0da1ec;
+  border-radius: 5px;
+  box-shadow: none;
+  margin-top: -2em;
+  margin-bottom: 1em;
+}
+.explore-all:hover {
+  background: #1186c0;
+  border-radius: 5px;
+  box-shadow: none;
+  margin-top: -2em;
+  margin-bottom: 1em;
 }
 
 /* -------------------------------------------how it work------------------------------- */
@@ -469,6 +496,48 @@ header.sticky ul li a {
   line-height: 30px;
 }
 
+.tex1 .features-images img{
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.features-table{
+  border-collapse: inherit;
+  margin-top: 1.5em;
+}
+
+.features-table-t1{
+  border-collapse: inherit;
+  border-spacing: 0 !important;
+}
+
+.features-table-t1 th{
+  margin: 0;
+  padding: 4px
+}
+
+.features-table-t1 th{
+  font-size: 22px;
+}
+
+.features-table-t1 td{
+  font-size: 16px;
+  text-align: inherit;
+}
+
+.features-table td{
+  font-size: 22px;
+}
+
+.tex2 .features-images{
+  margin-left: 5px;
+}
+
+.tex2 .features-images img{
+  width: 50px !important;
+  height: 50px !important;
+}
+
 .tex2 h5 {
   margin-top: 50px;
 }
@@ -492,17 +561,13 @@ header.sticky ul li a {
 /* <!-- ---------------------------------------------------resume sample---------------------------------- --> */
 
 .carousel {
-  height: 500px !important;
+  height: 600px !important;
   margin-right: 300px !important;
-  /* margin-bottom: 100px !important; */
-  /* padding-bottom: 100px !important; */
-  margin-top: 30px;
+  margin-top: 3em;
 }
 
 .carousel img {
-  height: 500px !important;
-  /* width: 600px !important; */
-  padding-bottom: 100px !important;
+  border: 1px solid #e0dada;
 }
 
 .rtc {
@@ -644,8 +709,18 @@ header.sticky ul li a {
   color: white;
 }
 
+
+
+.fwwsa .headline{
+  margin-bottom: 3em;
+}
+
 .fwwsa h4{
   font-weight: 600;
+}
+
+.fwwsa .headline h4{
+  font-weight: 300;
 }
 
 .fwwsa h6{
@@ -672,6 +747,10 @@ header.sticky ul li a {
   display: none;
 }
 
+.fwwsa5 {
+  display: none;
+}
+
 .fwwsa-buttons .cc{
   background-color: #fff;
   width: 3em;
@@ -681,6 +760,14 @@ header.sticky ul li a {
 }
 
 .fwwsa-buttons .ra{
+  background-color: #fff;
+  width: 3em;
+  height: 0.5em;
+  box-shadow: none;
+  margin: 1em;
+}
+
+.fwwsa-buttons .rt{
   background-color: #fff;
   width: 3em;
   height: 0.5em;
@@ -715,6 +802,16 @@ header.sticky ul li a {
 }
 
 .fwwsa-buttons-hide .ra{
+  background-color: Transparent;
+  outline: none;
+  width: 3em;
+  height: 0.5em;
+  box-shadow: none;
+  margin: 0.85em;
+  border: none;
+}
+
+.fwwsa-buttons-hide .rt{
   background-color: Transparent;
   outline: none;
   width: 3em;
@@ -762,8 +859,39 @@ header.sticky ul li a {
 }
 
 .blog-articles{
-  margin-top: -85px !important;
-  margin-bottom: 55px;
+  margin-top: 0em;
+  margin-bottom: 3em;
+}
+
+.blog-articles .headline h4{
+  margin-top: 0em !important;
+}
+
+.blog-photo {
+  width: 50%;
+  padding: 6em;
+  margin-left: 2em !important;
+  color: #000;
+  background: #fff;
+  height: 600px !important;
+}
+
+.blog-photo h3{
+  font-weight: 500;
+}
+
+.blog-photo h5{
+  color: #8d8c8c;
+  font-weight: 300;
+  margin-bottom: 1em !important;
+}
+
+.blog-text {
+  margin-right: 2em;
+  margin-top: -1em;
+}
+.blog-text h5{
+  line-height: 1.5;
 }
 
 /* <!-- -----------------------------------------------------customer rating------------------------------ --> */
@@ -835,14 +963,15 @@ header.sticky ul li a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-
-  padding: 0 80px;
+  margin-bottom: 3em;
+  margin-top: -1em;
+  padding: 0 150px;
 }
 
 .image1 img {
   height: 80px;
   margin: 30px 0px;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   justify-content: space-between;
 }
 
@@ -905,7 +1034,6 @@ header.sticky ul li a {
 
 .branded {
   text-align: right;
-  margin-right: 50px;
 }
 .fa-2x {
   font-size: 1.5rem;
@@ -915,4 +1043,462 @@ header.sticky ul li a {
   text-transform: none;
   font-size: 20px;
   font-weight: 600;
+}
+
+.footer .desk_logo{
+  height: 30%;
+  width: 62%;
+  margin-right: -6em;
+}
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+
+/* Header */
+
+header{
+  position: fixed;
+}
+
+header.sticky{
+  height: 125px;
+}
+
+.drop{
+  display: block;
+  z-index: 1;
+  user-select: none;
+  padding: 0;
+  width: 100vw;
+  height: 125px;
+  background: #fff;
+}
+
+.drop .desk_logo{
+  display: none;
+}
+
+.drop .mobile_logo{
+  display: block;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  width: 7em;
+  height: 115px;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+  display: block;
+}
+
+header ul li{
+  margin: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.drop ul ul li {
+  padding-left: 0px;
+}
+
+
+/* menu */
+
+.drop .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+/* menu icon */
+
+.drop .menu-icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+  margin-top: -7.5em;
+  margin-right: 1em;
+}
+
+.drop .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.drop .menu-icon .navicon:before,
+.drop .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.drop .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.drop .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.drop .menu-btn {
+  display: none;
+}
+
+.drop .menu-btn:checked ~ .menu {
+  max-height: 350px;
+}
+
+.drop .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.drop .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.drop .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.drop .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.drop .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.drop ul li:hover > ul {
+  display: none;
+}
+
+
+.services{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.resources{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.comp{
+  font-size: 20px;
+  font-weight: 600;
+  /* margin-right: 14%; */
+}
+
+.testimonials{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Landing page */
+
+.parent{
+  display: block;
+  width: 100vw;
+}
+
+.item{
+  width: 100vw;
+  padding-left: 3em;
+  padding-right: 2em;
+  margin: 0em;
+  min-height: 0 !important;
+}
+
+.last{
+  width: 100vw;
+  margin-right: 0em;
+  margin-top: -2em;
+  margin-bottom: 12em;
+  height: 15em;
+}
+
+.resume-review-button{
+  margin-top: 1em;
+}
+
+.item h3{
+  font-size: 2.5em;
+  margin-top: 1em;
+}
+
+.item h5{
+  font-size: 1.5em;
+}
+
+/* Trusted by companies */
+
+.trustedby{
+  width: 100vw;
+  display: block;
+}
+
+.trustedby .headline h4{
+  margin-bottom: 0;
+  font-weight: 300;
+  padding-top: 0.5em;
+}
+
+.trustedby .image1{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  /* filter: grayscale(1); */
+}
+
+.trustedby .image1 > img{
+  flex: 0 40%;
+}
+
+.trustedby .image1 img{
+  margin: 10px 15px;
+}
+
+/* About Us */
+
+.parent-aboutus{
+  margin-top: 4em;
+  display: block;
+}
+
+.aboutus-img{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  min-height: 0 !important;
+}
+
+.aboutus-img img{
+  width: 350px;
+  height: 350px;
+  margin-left: 1em;
+  border-radius: 50%;
+  transform: rotate(4deg);
+}
+
+.aboutus-desc{
+  padding: 2em;
+  margin-right: 0;
+  text-align: center;
+}
+
+.aboutus-desc h3{
+  text-align: justify !important;
+  margin-right: -1em;
+}
+
+.aboutus-desc h5{
+  text-align: center !important;
+  margin-right: 0em;
+  margin-top: 0em;
+}
+
+.linkedin-follow{
+  width: 160px;
+  height: 50px;
+}
+
+/* Hired */
+
+.hired{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.maindetail{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: auto;
+  justify-items: center;
+  column-gap: 0;
+  grid-row-gap: 1.5em;
+  margin-left: 0;
+}
+
+.image1212 img{
+  width: 60px;
+  height: 60px;
+  margin-top: 0em;
+  margin-bottom: 0em;  
+}
+
+.pt h5{
+  font-weight: 400 !important;
+  font-size: 20px;
+  margin-top: 0em;
+}
+
+/* Resume templates */
+
+/* Features of our resume */
+
+.boss1{
+  margin-top: -3em;
+}
+
+.allb{
+  margin-top: 2em;
+}
+
+.all1 img{
+  margin: 0;
+  width: 100vw;
+  padding: 0.5em;
+}
+
+.mtex{
+  float: left;
+  margin: 0;
+  padding: 1em;
+}
+
+
+.tex1 {
+  width: 100%;
+  height: auto; 
+  /*height: 230px; */
+  border-radius: 15px;
+  padding: 20px 30px;
+}
+
+/* How it works */
+
+.fwwsa{
+  margin-top: 37.5em;
+  background: linear-gradient(to right,#303D46,#1EAEDB);
+  text-align: center;
+  padding: 0;
+  height: 51em;
+  border-radius: 14px;
+}
+
+.fwwsa .headline h5{
+  font-size: 20px;
+}
+
+.fwwsa .fa-6x {
+  font-size: 4em;
+}
+
+.fwwsa h6{
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  height: 6em;
+  font-weight: 200;
+  line-height: 1.3;
+}
+
+.hiw-contact-btn{
+  width: 60%;
+  margin-top: -4em;
+}
+
+/* Blog articles */
+
+.blog-articles{
+  margin-top: 4em;
+}
+
+.parent-blog {
+  display: block;
+  margin-top: 0;
+}
+
+.blog-photo {
+  width: 100%;
+  padding: 1em;
+  margin-left: 1em !important;
+  color: #000;
+  background: #fff;
+  height: 265px !important;
+  margin-top: 5em;
+}
+
+.blog-text {
+  margin-right: 0em;
+  padding-right: 2em;
+  margin-top: 0em;
+}
+
+.footer{
+  display: block;
+  background: #09143b;
+  height: auto;
+  padding: 0;
+}
+
+.footer p{
+  color: #dbe0f2;
+}
+
+.product, .learn, .company {
+  margin: 3em;
+}
+
+.product h5{
+  padding-top: 3em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #a7b2d8;
+}
+
+.learn h5{
+  padding-bottom: 1em;
+  border-bottom: 1px solid #a7b2d8;
+}
+
+.company h5{
+  padding-bottom: 1em;
+  border-bottom: 1px solid #a7b2d8;
+}
+
+.branded {
+  text-align: center;
+  padding-bottom: 3em;
+  margin-right: 2em;
+}
+
+.footer .desk_logo{
+  width: 100%;
+  padding: 1em;
+}
+
+}
+
+
+
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+  /* some CSS here */
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  /* some CSS here */
+}
+
+/* #### Desktops / Laptops #### */
+@media screen and (min-width: 1024px){
+  /* some CSS here */
 }

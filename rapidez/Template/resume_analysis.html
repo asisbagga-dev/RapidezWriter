@@ -27,94 +27,123 @@
 
 <body>
 
-    <header class="drop">
-        <a href="Rapidez_Writer_home.html" class="logo">
-          <!-- <img src="./FINAL-LOGO12.png" alt="" /> -->
-          <h5><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
+  <header class="drop">
+
+    <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo.png' %}" alt="Rapidez Writer Logo" /></a>
+    <a href="{% url 'home' %}"><img class="mobile_logo" src="{% static '/image/logo-removebg.png' %}" alt="Rapidez Writer Logo" /></a>
+    
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    
+    <ul class="menu">
+      <li>
+        <a class="services">Services
+          <i class="fa fa-chevron-down"
+            style="
+              font-size: 10px;
+              position: relative;
+              bottom: 1px;
+              opacity: 0.3;
+              color: #0783ca;
+            "
+            aria-hidden="true">
+          </i>
         </a>
-        <ul>
-          <li><a href="#">Resume Analysis</a></li>
-          <li>
-            <a href="#"
-              >Resume Services
-              <i
-                class="fa fa-chevron-down"
-                style="
-                  font-size: 10px;
-                  position: relative;
-                  bottom: 1px;
-                  opacity: 0.3;
-                "
-                aria-hidden="true"
-              ></i
-            ></a>
-            <ul class="ser1 ser12 z-depth-3" style="left: 38%;">
-              <div class="box111"></div>
-              <a href=".\service--resumewrite.html"><li>Resume Writing</li></a>
-              <a href=".\resume-makeover.html"><li>Resume template makeover</li></a>
-              <a href=".\linkedin.html"><li>Linkedin profile branding</li></a>
-              <a href=".\video-resume.html"><li>Video Resume Building</li></a>
-              <a href=".\CONSULTING-resume.html"><li>Consulting</li></a>
-            </ul>
-          </li>
-  
-          <li class="ser">
-            <a href="#"
-              >About
-              <i
-                class="fa fa-chevron-down"
-                style="
-                  font-size: 10px;
-                  position: relative;
-                  bottom: 1px;
-                  opacity: 0.3;
-                "
-                aria-hidden="true"
-              ></i
-            ></a>
-            <ul class="ser1 ser11 z-depth-3" style="left: -30%;">
-              <div class="box111"></div>
-              <a href=".\about.html"><li>About Us</li></a>
-              <a href="#"><li>FAQ</li></a>
-            </ul>
-          </li>
-          <li><a href=".\Testimonials.html">Testimonials</a></li>
-          <li><a href="#">Quiz</a></li>
-          <li><a href="#">Career Advice</a></li>    
-          <li><a href=".\contact.html">Contact Us</a></li>
+        <ul class="ser1 ser12 serv" style="left: 38%">
+          <div class="box111"></div>
+          <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
+          <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
+          <a href="{% url 'resumeMakeover' %}"><li>Premium Templates</li></a>
+          <a href="{% url 'linkedIn' %}"><li>LinkedIn Branding</li></a>
+          <a href="{% url 'resumeVideo' %}"><li>Video Resume</li></a>
+          <a href="{% url 'resumeConsulting' %}"><li>Consultation</li></a>
         </ul>
-    </header>
+      </li>
 
-    <div class="over">
-      <div class="headtex">
-        <h1>
-          How strong is your resume?
-        </h1>
-        <h5>Get a free, confidential review from a resume expert</h5>
+      <li>
+        <a class="resources">Resources
+          <i class="fa fa-chevron-down"
+            style="
+              font-size: 10px;
+              position: relative;
+              bottom: 1px;
+              opacity: 0.3;
+              color: #0783ca;
+            "
+            aria-hidden="true">
+          </i>
+        </a>
+        <ul class="ser1 ser12 rscs" style="left: 38%">
+          <!-- <div class="box111"></div> -->
+          <a href="#"><li>FAQ</li></a>
+          <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
+          <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>
+        </ul>
+      </li>
 
-            <br /> 
-            <a href="{% url 'resumeAnalysis:resumeUpload' %}" class="waves-effect waves-light btn btn-top btn-large">
-              Get a Free Resume Review
-            </a> 
-            
-<!--   
-        <div class="upload_resume_top">
-          <h4>Upload your resume today!</h4>
-          <img src="{% static '\image\uimage.PNG' %}" />
-          <a href="{% url 'resumeAnalysis:resumeUpload' %}" class="waves-effect waves-light btn btn-large">
-            Get a Free Resume Review
-          </a>          
-        </div> -->
+      <li>
+        <a class="comp">Company
+          <i class="fa fa-chevron-down"
+            style="
+              font-size: 10px;
+              position: relative;
+              bottom: 1px;
+              opacity: 0.3;
+              color: #0783ca;
+            "
+            aria-hidden="true">
+          </i>
+        </a>
+        <ul class="ser1 ser12 cmpy" style="left: 38%">
+          <!-- <div class="box111"></div> -->
+          <a href="{% url 'about' %}"><li>About Us</li></a>
+          <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
+          <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
+          <a href="#"><li>Career</li></a>          
+        </ul>
+      </li>
 
-    </div>
-    </div>
-    <section class="Banner">
+      <li><a href="{% url 'testimonials' %}" class="testimonials">Testimonials</a></li>
+
+      {% if user.is_authenticated %}
+      <li>
+        <a href="#">Accounts
+          <i
+            class="fa fa-chevron-down"
+            style="
+              font-size: 10px;
+              position: relative;
+              bottom: 1px;
+              opacity: 0.3;
+            "
+            aria-hidden="true">
+          </i>
+        </a>
+        <ul class="ser1 ser12" style="left: 38%">
+          <!-- <div class="box111"></div> -->
+          <hr>
+          <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
+          <a href="{% url 'add_category' %}"><li>Create Category</li></a>
+          <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
+        {% if request.user.is_staff %}
+          <a href="{% url 'signup' %}"> <li> Register User </li></a>
+        {% endif %}
+          <a href="{% url 'logout' %}"> <li> Logout </li></a>
+          <hr>
+      {% endif %}
+        </ul>
+      </li>
+    </ul>
+  </header>
+  <!-- navbar-end -->
+    
+    
+    <section class="banner">
       <img src="{% static '/image/resumeAnalysis.png' %}" alt="">
-      <!-- <video autoplay loop muted> -->
-        <!-- <source src="./Rapidez Writer-1.mp4" type="video/mp4" /> -->
-        <!-- <source src="{% static '/video/RapidezWriter-2.mp4' %}" type="video/mp4" /> -->
-        
-      <!-- </video> -->
+
+      <a href="{% url 'resumeAnalysis:resumeUpload' %}" class="waves-effect waves-light btn btn-top btn-large">
+        Review my resume
+      </a> 
     </section>
 
     <!-- ------------------------------------------------------------how it works ------------------------------------ -->
@@ -126,25 +155,25 @@
         <div class="gworkm pt ptt1">
           <div class="hits">
             <img src="{% static '\image\hiwr1.PNG' %}" />
-            <h4 class="hith">Show us your resume</h4>
+            <h4 class="hith">Upload your Resume</h4>
             <p>
-              Upload your resume to be reviewed — just a few basic details and we are good to go
+              Click on the upload button and share your updated resume with us
             </p>
           </div>
 
           <div class="hits">
             <img src="{% static '\image\hiwr2.PNG' %}" />
-            <h4 class="hith">Wait while we analyse</h4>
+            <h4 class="hith">We Evaluate</h4>
             <p>
-              It takes up to 48 hours for us to review your resume and provide personalized and actionable feedback
+              Our in-house resume experts will systematically analyze your resume and provide personalized and detailed feedback
             </p>
           </div>
 
           <div class="hits">
             <img src="{% static '\image\hiwr3.PNG' %}" />
-            <h4 class="hith">View your results</h4>
+            <h4 class="hith">Check your Inbox</h4>
             <p>
-              When the results land in your inbox, find out what you’re doing right and what you could improve upon
+              Receive the  evaluation report after 24 hours and make your next move with confidence
             </p>
           </div>
         </div>
@@ -191,17 +220,17 @@
     <div class="boss1"> 
       <div class="allb">
         <div class="all1">
-          <img src="{% static '\image\wdas.png' %}" />
+          <img src="{% static '\image\what_does_ats_see.png' %}" />
         </div>
 
         <div class="all2">
           <div class="mtex">
             <div class="tex1">
-              <h2>What does the ATS see?</h2>
-              <h3> <span style="font-weight: 600;"> 75 percent </span> of job applications are rejected before they are seen by human eyes.</h3>
+              <h2>WHAT IS APPLICANT TRACKING SYSTEM (ATS) ?</h2>
+              <h3> <span style="font-weight: 600;">  48% </span>of resumes pass the Applicant Tracking System</h3>
+              <h3>On an average, Recruiters spend just <span style="font-weight: 600;">  5 to 7 seconds</span> looking over a resume</h3>
               <p>
                 Before your resume reaches the hands of a hiring manager, it often must satisfy an ATS — applicant tracking system. An ATS is a type of software used by recruiters and employers to collect, sort, scan, and rank the job applications they receive for open positions. If a resume is not written with an ATS in mind, a qualified candidate can be easily passed over.
-                Upload your resume for free and find out what an applicant tracking system will think. <span style="font-weight: 600;"> Your dream job could depend on it!</span>
               </p>
             </div>
           </div>
@@ -211,7 +240,7 @@
 
 
     <!-- -----------------------------------------------------customer raiting------------------------------ -->
-    <div class="colo1" style="background: #f8f8f8">
+    <!-- <div class="colo1" style="background: #f8f8f8">
     <div class="headline container" style="padding-bottom: 10px">
       <h4>Our Customers Love Us </h4>
       <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
@@ -292,7 +321,7 @@
         </div>
       </div>
     </div>
-    </div>
+    </div> -->
 
 
     <!-- -------------------------------------------------memorial-design--------------------------------- -->
@@ -325,7 +354,7 @@
       </div>
     </div>
 
-    <a href="{% url 'resumeAnalysis:test' %}">Test</a>
+    <!-- <a href="{% url 'resumeAnalysis:test' %}">Test</a> -->
     
   <!-- -----------------------------------------------------------------footer--------------------------- -->
 

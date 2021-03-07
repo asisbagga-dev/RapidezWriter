@@ -33,7 +33,8 @@ def signup(request):
 
 # General Page
 def home(request):
-    return render(request,"home.html")
+    all_objects = Database.objects.all()
+    return render(request,"home.html", {"blog":all_objects})
 def about(request):
     return render(request,"about.html")
 def contact_us(request):

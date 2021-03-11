@@ -47,6 +47,7 @@
   </head>
 
   <body>
+    <!-- Navbar -->
     <header class="drop">
 
       <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo.png' %}" alt="Rapidez Writer Logo" /></a>
@@ -94,7 +95,6 @@
             </i>
           </a>
           <ul class="ser1 ser12 rscs" style="left: 38%">
-            <!-- <div class="box111"></div> -->
             <a href="{% url 'faq' %}"><li>FAQ</li></a>
             <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
             <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
@@ -115,7 +115,6 @@
             </i>
           </a>
           <ul class="ser1 ser12 cmpy" style="left: 38%">
-            <!-- <div class="box111"></div> -->
             <a href="{% url 'about' %}"><li>About Us</li></a>
             <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
             <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
@@ -140,8 +139,6 @@
             </i>
           </a>
           <ul class="ser1 ser12" style="left: 38%">
-            <!-- <div class="box111"></div> -->
-            <hr>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
             <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
@@ -149,7 +146,6 @@
             <a href="{% url 'signup' %}"> <li> Register User </li></a>
           {% endif %}
             <a href="{% url 'logout' %}"> <li> Logout </li></a>
-            <hr>
         {% endif %}
           </ul>
         </li>
@@ -611,8 +607,6 @@
     </div>
 
     <!-- --------------------------------------------------footer----------------------------- -->
-    <!-- -----------------------------------------------------------------footer--------------------------- -->
-
     <footer class="footer">
       <div class="product">
         <h5>PRODUCTS</h5>

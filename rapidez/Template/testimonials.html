@@ -39,17 +39,18 @@
   </head>
 
   <body>
+    <!-- Navbar -->
     <header class="drop">
-      <!-- <a href="{% url 'home' %}" class="logo"> -->
-        <img src="{% static '/image/logo.png' %}" alt="Rapidez Writer Logo" />
-        <h5>
-          <span style="color: #8c8c8c">Rapidez</span>
-          <span style="color: #0da1ec">Writer</span>
-        </h5>
-      <!-- </a> -->
-      <ul>
+
+      <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo.png' %}" alt="Rapidez Writer Logo" /></a>
+      <a href="{% url 'home' %}"><img class="mobile_logo" src="{% static '/image/logo-removebg.png' %}" alt="Rapidez Writer Logo" /></a>
+      
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      
+      <ul class="menu">
         <li>
-          <a href="#">Services
+          <a class="services">Services
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -61,7 +62,7 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
+          <ul class="ser1 ser12 serv" style="left: 38%">
             <div class="box111"></div>
             <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
             <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
@@ -73,7 +74,7 @@
         </li>
 
         <li>
-          <a href="#">Resources
+          <a class="resources">Resources
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -85,16 +86,15 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
-            <a href="#"><li>FAQ</li></a>
+          <ul class="ser1 ser12 rscs" style="left: 38%">
+            <a href="{% url 'faq' %}"><li>FAQ</li></a>
             <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
-            <!-- <a href="{% url 'quizes' %}"><li>Quiz</li></a>             -->
+            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
           </ul>
         </li>
 
         <li>
-          <a href="#">Company
+          <a class="comp">Company
             <i class="fa fa-chevron-down"
               style="
                 font-size: 10px;
@@ -106,8 +106,7 @@
               aria-hidden="true">
             </i>
           </a>
-          <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
+          <ul class="ser1 ser12 cmpy" style="left: 38%">
             <a href="{% url 'about' %}"><li>About Us</li></a>
             <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
             <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
@@ -115,7 +114,7 @@
           </ul>
         </li>
 
-        <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+        <li><a href="{% url 'testimonials' %}" class="testimonials">Testimonials</a></li>
 
         {% if user.is_authenticated %}
         <li>
@@ -132,7 +131,6 @@
             </i>
           </a>
           <ul class="ser1 ser12" style="left: 38%">
-            <div class="box111"></div>
             <a href="{% url 'create_blog' %}"><li>Create Blog</li></a>
             <a href="{% url 'add_category' %}"><li>Create Category</li></a>
             <a href="{% url 'category_list_page' %}"><li>Delete Category</li></a>
@@ -145,10 +143,8 @@
         </li>
       </ul>
     </header>
-    
-        <script src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js" async></script>
-
     <!-- navbar-end -->
+
     <!-- ---------------------------------------------------analysis detail--------------------------------------- -->
     <div class="container heading">
       <h2>TESTIMONIALS</h2>        
@@ -245,60 +241,66 @@
       </div>
       {% endfor %}
     </div>
-      <!-- -----------------------------------------------------customer raiting------------------------------ -->
-   <!-- -----------------------------------------------------------------footer--------------------------- -->
 
+    <!-- --------------------------------------------------footer----------------------------- -->
+    <footer class="footer">
+      <div class="product">
+        <h5>PRODUCTS</h5>
+        <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><p>Resume Analysis</p></a>
+        <a href="{% url 'resumeWriting' %}"><p>Resume Writing</p></a>
+        <a href="{% url 'resumeMakeover' %}"><p>Resume Template Makeover</p></a>
+        <a href="{% url 'linkedIn' %}"><p>Linkedin Profile Branding</p></a>
+        <a href="{% url 'resumeVideo' %}"><p>Video Resume Building</p></a>
+        <a href="{% url 'resumeConsulting' %}"><p>Consulting</p></a>
+      </div>
 
-   <footer class="footer">
-    <div class="product">
-      <h5>PRODUCTS</h5>
-      <a href="#"><p>Resume Analysis</p></a>
-      <a href="{% url 'resumeWriting' %}"><p>Resume Writing</p></a>
-      <a href="{% url 'resumeMakeover' %}"><p>Resume Template Makeover</p></a>
-      <a href="{% url 'linkedIn' %}"><p>Linkedin Profile Branding</p></a>
-      <a href="{% url 'resumeVideo' %}"><p>Video Resume Building</p></a>
-      <a href="{% url 'resumeConsulting' %}"><p>Consulting</p></a>
-    </div>
+      <div class="learn">
+        <h5>LEARN MORE</h5>
+        <a href="#"><p>FAQs</p></a>
+        <a href="{% url 'quizes_list' %}"><p>Quiz</p></a>
+        <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
+        <a href="#"><p>Carrer Advice</p></a>
+      </div>
 
-    <div class="learn">
-      <h5>LEARN MORE</h5>
-      <a href="#"><p>FAQs</p></a>
-      <a href="#"><p>Quiz</p></a>
-      <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
-      <a href="#"><p>Carrer Advice</p></a>
-    </div>
+      <div class="company">
+        <h5>COMPANY</h5>
+        <a href="#"><p>Careers</p></a>
+        <a href="{% url 'about' %}"><p>About Us</p></a>
+        <a href="{% url 'contactUs' %}"><p>Contact Us</p></a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}"> <p> Logout </p></a>
+        {% else %}
+        <a href="{% url 'login' %}"> <p> Login </p></a>
+        {% endif %}
+      </div>
 
-    <div class="company">
-      <h5>COMPANY</h5>
-      <a href="#"><p>Careers</p></a>
-      <a href="{% url 'about' %}"><p>About Us</p></a>
-      <a href="{% url 'contactUs' %}"><p>Contact Us</p></a>
-    </div>
-
-    <div class="branded">
-      <a href="#">
-        <h5 style="color:#fff;"><span style="color: #0da1ec;">Rapidez</span>Writer</h5>
-
-        <a href="#" style="color: #a7b2d8;"
-          ><i class="fa fa-facebook fa-2x" aria-hidden="true"></i
-        ></a>
-        <a href="#" style="color: #a7b2d8;">
-          <i
-            class="fa fa-twitter fa-2x"
-            style="margin-left: 20px;"
-            aria-hidden="true"
-          ></i
-        ></a>
-        <a href="#" style="color: #a7b2d8;">
-          <i
-            class="fa fa-linkedin fa-2x"
-            style="margin-left: 20px; margin-right: 7px;"
-            aria-hidden="true"
-          ></i
-        ></a>
-      </a>
-    </div>
-  </footer>
+      <div class="branded">
+        <a href="{% url 'home' %}">
+        <img 
+        class="desk_logo" 
+        src="{% static '/image/homepage_logo-removebg.png' %}" 
+        alt="Rapidez Writer Logo" 
+        style="margin-bottom: 1.5em" />
+       
+          <a 
+            href="https://www.facebook.com/RapidezWriter/" 
+            style="color: #dbe0f2"
+            target="blank">
+            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+          </a> 
+          <a 
+            href="https://www.linkedin.com/company/rapidezwriters/" 
+            style="color: #dbe0f2"
+            target="blank">
+            <i
+              class="fa fa-linkedin fa-2x"
+              style="margin-left: 20px; margin-right: 7px"
+              aria-hidden="true"
+            ></i
+          ></a>
+        </a>
+      </div>
+    </footer>
     
     <!--JavaScript at end of body for optimized loading-->
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
@@ -351,5 +353,6 @@
         prevArrow: $(".pat3"),
       });
     </script>
+    <script src="//code.tidio.co/8cfnhkqijnxjlimblu2zc8oezedbmt9r.js" async></script>
   </body>
 </html>

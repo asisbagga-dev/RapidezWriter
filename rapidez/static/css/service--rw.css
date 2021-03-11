@@ -1,19 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
-
 p,
 li {
   font-size: 18px;
 }
-/* ------------------------------------------------------navbar start----------------------------------------- */
 
+/* Navbar */
 
-/* New navbar changes */
 .drop .mobile_logo{
   display: none;
 }
@@ -26,18 +25,8 @@ li {
   display: none;
 }
 
-.footer .desk_logo{
-  height: 30%;
-  width: 62%;
-  margin-right: -6em;
-}
-/* end of new navbar changes */
-
-
 header {
   position: fixed;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
   top: 0;
   left: 0;
   width: 100%;
@@ -48,8 +37,6 @@ header {
   padding: 40px 40px;
   z-index: 999;
   height: 80px;
-  /* overflow: hidden; */
-  /* z-index: 888; */
 }
 header h5 {
   font-weight: 600 !important;
@@ -67,18 +54,16 @@ header a {
   width: 183px;
   padding-bottom: 20px;
   padding-top: 20px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
 }
 
 header.sticky {
-  /* padding: 5px 40px; */
   background: #ffffff;
   height: 90px;
   align-items: center;
   z-index: 999;
   border-bottom: 1px solid #f5f5f5;
-  /* color: #333; */
 }
 
 header.sticky a {
@@ -93,11 +78,7 @@ header.sticky .logo {
 
 header.sticky ul li:hover > ul {
   display: block;
-  /* bottom: -70px; */
-  /* padding: 0px 100px; */
-  /* margin-top: 80px; */
   background: #fff;
-  /* height: 50px; */
   align-items: center;
   z-index: 999;
   color: #333;
@@ -117,14 +98,10 @@ header .logo {
   color: #fff;
   text-decoration: none;
   font-size: 2rem;
-  /* text-transform: uppercase; */
-  /* letter-spacing: 2px; */
   transition: 0.6s;
   width: 290px;
-  /* align-items: center; */
 }
 header .logo img {
-  /* width: 100px; */
   height: 40px;
   align-items: center;
   margin-top: 8px;
@@ -148,12 +125,11 @@ header ul li a {
   margin: 0 10px;
   text-decoration: none;
   color: #241e1e;
-  /* letter-spacing: 2px; */
-  /* font-weight: 500px; */
   transition: 0.6s;
 }
 
 
+/* -----------------------------------------------------Drop-down---------------------------------------- */
 .drop{
   padding-left: 6%;
   padding-right: 8%;
@@ -177,24 +153,18 @@ header ul li a {
 .drop ul ul {
   position: absolute;
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
   padding: 0;
-  /* min-width: 300px; */
   display: none;
   top: 100%;
   left: 0;
-  /* margin-left: -80px; */
 }
 
 .drop ul li:hover > ul {
   display: block;
-  /* text-align: center; */
-  /* padding: 0 10px; */
   border-radius: 5px;
 }
 .drop ul li:hover > ul li:hover {
   background: #d4effc;
-  /* padding: 10px 0; */
   width: 100%;
 }
 
@@ -230,7 +200,6 @@ header ul li a {
   width: 240px;
   margin-left: -80px;
 }
-
 .box111 {
   width: 10px;
   height: 10px;
@@ -240,7 +209,7 @@ header ul li a {
   margin-left: 45%;
 }
 
-/* ------------------------------------------------------navbar end----------------------------------------- */
+/* Navbar end */
 
 .update {
   padding-top: 80px;
@@ -678,21 +647,17 @@ header ul li a {
   margin: 50px;
   margin-bottom: 0px;
 }
-/* -------------------------------------------------------footer--------------------------------- */
+
 
 /* -------------------------------------------------------footer--------------------------------- */
-
 .footer {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 250px) 1fr;
   height: 273px;
-  /* margin-top: 80px; */
-  /* border-top: 2px solid #a7b2d8; */
   padding: 9px 60px;
   background: #09143b;
   color: #6275b975;
-  margin-top: 15px;
   background-image: linear-gradient(
     174deg,
     rgba(59, 11, 72, 0) 32%,
@@ -731,19 +696,26 @@ header ul li a {
 
 .branded h5 {
   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-  /* margin-top: 15px; */
   font-weight: 600;
   font-size: 34px;
-  /* font-size: 2.1rem; */
 }
 
 .branded {
   text-align: right;
-  margin-right: 50px;
 }
-.fa-2x {
-  font-size: 1.5rem;
+
+.btn-large {
+  text-transform: none;
+  font-size: 20px;
+  font-weight: 600;
 }
+
+.footer .desk_logo{
+  height: 30%;
+  width: 62%;
+  margin-right: -6em;
+}
+
 
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){

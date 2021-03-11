@@ -474,52 +474,30 @@
     <!-- -----------------------------------------------------Blog articles------------------------------ -->
 
     <div class="carousel carousel-slider center blog-articles">
-      <div class="headline" style="margin-top: -4em;">
+      <div class="headline">
         <h4>Our Latest Blogs</h4>
       </div>
   
       <div class="carousel-fixed-item center"></div>
-      <div class="carousel-item " id="caro-one" href="#one">
+      {% for i in blog %}
+      <div class="carousel-item " id="caro-one" href="{% url 'career_detail_page' i.pk %}">
         <div class="parent-blog">
-          <div class="blog-photo" style="background: url({% static 'image/interview.jpg' %}) no-repeat; background-size: contain;"></div>
+          <div class="blog-photo" style="background: url({{ i.banner.url }}) no-repeat; background-size: contain;"></div>
           <div class="blog-photo blog-text">
             <div class="headline-blog">
-              <a class="waves-effect waves-light btn" href="">Covid 19</a>
-              <a class="waves-effect waves-light btn" href="">LinkedIn</a>
               <a class="waves-effect waves-light btn">Tags</a>
-              {% for i in blog_details.category.all %}
-              <a class="waves-effect waves-light btn" href="">Relevant Tags from backend</a>
+              {% for j in i.category.all %}
+              <a class="waves-effect waves-light btn" href="{% url 'view_category_wise' j.category %}">{{j}}</a>
               {% endfor %}
             </div>
-            <h4>This is blog heading 1</h4>
+            <h4><a target="_blank" href="{% url 'career_detail_page' i.pk %}" style="text-decoration: none; color: black">{{i.heading}}</a></h4>
             <h5 style="text-align: justify; font-size: large">
-              Description of blog 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem, officiis illo harum soluta quod, voluptatem neque, mollitia accusamus delectus nam ab. Maxime iusto delectus numquam odio quia doloremque praesentium?
-              Description of blog 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quidem, officiis illo harum soluta quod, voluptatem neque, mollitia accusamus delectus nam ab. Maxime iusto delectus numquam odio quia doloremque praesentium?
+              <a target="_blank" href="{% url 'career_detail_page' i.pk %}" style="text-decoration: none; color: black;" ></a>{{i.pre_description}}</a>
             </h5>
           </div>
         </div>
       </div>
-   
-      <div class="carousel-item " id="caro-two" href="#two">
-        <div class="parent-blog">
-          <div class="blog-photo " style="background: url({% static 'image/video-r.jpg' %}) no-repeat; background-size: contain;"></div>
-          <div class="blog-photo blog-text">
-            <div class="headline-blog">
-              <a class="waves-effect waves-light btn" href="">Resume</a>
-              <a class="waves-effect waves-light btn" href="">Covid 19</a>
-              {% for i in blog_details.category.all %}
-              <a class="waves-effect waves-light btn" href="">Relevant Tags from backend</a>
-              {% endfor %}
-              <a class="waves-effect waves-light btn">Tags</a>
-            </div>
-            <h4>This is blog heading 2</h4>
-            <h5 style="text-align: justify; font-size: large">
-              Description of blog 2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maxime minus quisquam at minima, culpa deserunt earum totam vitae, impedit laboriosam amet nemo ipsa eum. At amet ducimus ipsam esse?
-              Description of blog 2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maxime minus quisquam at minima, culpa deserunt earum totam vitae, impedit laboriosam amet nemo ipsa eum. At amet ducimus ipsam esse?
-            </h5>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
 
     <!-- -----------------------------------------------------customer rating------------------------------ -->
@@ -528,83 +506,95 @@
         <h4>What customers say about us </h4>
         <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
       </div>
-
-      <div class="page-wrapper">
-        <div class="post-slider">
-          <i class="fas fa-chevron-left fa-3x prev"></i>
-          <i class="fas fa-chevron-right fa-3x next"></i>
-          <div class="post-wrapper">
-            <div class="post z-depth-3">
-              <p class="b">
-                Rose Birdsell Jr. <br />
-                <span>&#9733; &#9733; &#9733; &#9733;</span>
-              </p>
-              <br />
-              <p>
-                I utilized Zety’s builder app to the fullest, applying
-                everything I learned, and even added some unique touches the
-                resume software offered. Now, instead of stressing over what
-                keyword or language to use on my resume, I can focus on which
-                job offer to accept.
-              </p>
-            </div>
-            <div class="post z-depth-3">
-              <p class="b">
-                Denise P. Jr. <br />
-                <span>&#9733; &#9733; &#9733; &#9733;</span>
-              </p>
-             <br />
-              <p>
-                I went from fired to hired in less than 3 weeks. I was let go
-                from my old job due to downsizing. With Zety, I was able to
-                build custom resumes tailored to the jobs I was applying to
-                quickly and easily. My last day was 3/9/18 and I had several
-                offers by 3/25/18. Accepted an excellent job on 3/27/18.
-              </p>
-            </div>
-            <div class="post z-depth-3">
-              <p class="b">
-                Jeanne Jr. <br />
-                <span>&#9733; &#9733; &#9733; &#9733;</span>
-              </p>
-              <br />
-              <p>
-                Zety is what will make you stand out. In less than a month and a
-                half, I got contacted by six employers and went in for three
-                interviews. They’ve all commented on how my résumé caught their
-                eye, and how “visually pleasant” it is.
-              </p>
-            </div>
-            <div class="post z-depth-3">
-              <p class="b">
-                Rania Jr. <br />
-                <span>&#9733; &#9733; &#9733; &#9733;</span>
-              </p>
-              <br />
-              <p>
-                Zety is what will make you stand out. In less than a month and a
-                half, I got contacted by six employers and went in for three
-                interviews. They’ve all commented on how my résumé caught their
-                eye, and how “visually pleasant” it is.
-              </p>
-            </div>
-            <div class="post z-depth-3">
-              <p class="b">
-                Olivia William <br />
-                <span>&#9733; &#9733; &#9733; &#9733;</span>
-              </p>
-              <br />
-              <p>
-                Zety is what will make you stand out. In less than a month and a
-                half, I got contacted by six employers and went in for three
-                interviews. They’ve all commented on how my résumé caught their
-                eye, and how “visually pleasant” it is.
-              </p>
-            </div>
+      <div class="taggbox-container" style=" width:100%;height:100%;overflow: auto;">
+        <div class="taggbox-socialwall" data-wall-id="51184" view-url="https://widget.taggbox.com/51184">  
+        </div>
+          <script src="https://widget.taggbox.com/embed.min.js" type="text/javascript">
+          </script>
+        </div>
+    </div>
+   <!-- -----------------------------------------------------customer rating------------------------------ -->
+   <!-- <div class="colo1" style="background: #f8f8f8">
+    <div class="headline container" style="padding-bottom: 10px">
+      <h4>What customers say about us </h4>
+      <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
+    </div>
+    <div class="page-wrapper">
+      <div class="post-slider">
+        <i class="fas fa-chevron-left fa-3x prev"></i>
+        <i class="fas fa-chevron-right fa-3x next"></i>
+        <div class="post-wrapper">
+          <div class="post z-depth-3">
+            <p class="b">
+              Rose Birdsell Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              I utilized Zety’s builder app to the fullest, applying
+              everything I learned, and even added some unique touches the
+              resume software offered. Now, instead of stressing over what
+              keyword or language to use on my resume, I can focus on which
+              job offer to accept.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Denise P. Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+           <br />
+            <p>
+              I went from fired to hired in less than 3 weeks. I was let go
+              from my old job due to downsizing. With Zety, I was able to
+              build custom resumes tailored to the jobs I was applying to
+              quickly and easily. My last day was 3/9/18 and I had several
+              offers by 3/25/18. Accepted an excellent job on 3/27/18.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Jeanne Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              Zety is what will make you stand out. In less than a month and a
+              half, I got contacted by six employers and went in for three
+              interviews. They’ve all commented on how my résumé caught their
+              eye, and how “visually pleasant” it is.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Rania Jr. <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              Zety is what will make you stand out. In less than a month and a
+              half, I got contacted by six employers and went in for three
+              interviews. They’ve all commented on how my résumé caught their
+              eye, and how “visually pleasant” it is.
+            </p>
+          </div>
+          <div class="post z-depth-3">
+            <p class="b">
+              Olivia William <br />
+              <span>&#9733; &#9733; &#9733; &#9733;</span>
+            </p>
+            <br />
+            <p>
+              Zety is what will make you stand out. In less than a month and a
+              half, I got contacted by six employers and went in for three
+              interviews. They’ve all commented on how my résumé caught their
+              eye, and how “visually pleasant” it is.
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div> -->
 
     <!-- --------------------------------------------------footer----------------------------- -->
     <footer class="footer">
@@ -792,11 +782,6 @@
         });
 
       }
-
-    </script>
-
-
-    <script>
 
     </script>
 

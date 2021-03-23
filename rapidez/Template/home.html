@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
 
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -50,7 +51,7 @@
     <!-- Navbar -->
     <header class="drop">
 
-      <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo.png' %}" alt="Rapidez Writer Logo" /></a>
+      <a href="{% url 'home' %}"><img class="desk_logo" src="{% static '/image/homepage_logo_new.png' %}" alt="Rapidez Writer Logo" /></a>
       <a href="{% url 'home' %}"><img class="mobile_logo" src="{% static '/image/logo-removebg.png' %}" alt="Rapidez Writer Logo" /></a>
       
       <input class="menu-btn" type="checkbox" id="menu-btn" />
@@ -72,12 +73,12 @@
           </a>
           <ul class="ser1 ser12 serv" style="left: 38%">
             <div class="box111"></div>
-            <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Resume Analysis</li></a>
-            <a href="{% url 'resumeWriting' %}"><li>Resume Writing</li></a>
-            <a href="{% url 'resumeMakeover' %}"><li>Premium Templates</li></a>
+            <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><li>Free Resume Critique</li></a>
+            <a href="{% url 'resumeWriting' %}"><li>Executive Resume Writing</li></a>
+            <a href="{% url 'resumeMakeover' %}"><li>Resume Makeover</li></a>
             <a href="{% url 'linkedIn' %}"><li>LinkedIn Branding</li></a>
             <a href="{% url 'resumeVideo' %}"><li>Video Resume</li></a>
-            <a href="{% url 'resumeConsulting' %}"><li>Consultation</li></a>
+            <a href="{% url 'resumeConsulting' %}"><li>Job Consulting</li></a>
           </ul>
         </li>
 
@@ -95,9 +96,10 @@
             </i>
           </a>
           <ul class="ser1 ser12 rscs" style="left: 38%">
-            <a href="{% url 'faq' %}"><li>FAQ</li></a>
+            <a href="{% url 'quizes_list' %}"><li>Career Assessment</li></a>            
             <a href="{% url 'career_list_page' %}"><li>Career Advice</li></a>
-            <a href="{% url 'quizes_list' %}"><li>Quiz</li></a>            
+            <a href="{% url 'faq' %}"><li>FAQ</li></a>
+            
           </ul>
         </li>
 
@@ -115,10 +117,10 @@
             </i>
           </a>
           <ul class="ser1 ser12 cmpy" style="left: 38%">
-            <a href="{% url 'about' %}"><li>About Us</li></a>
+            <a href="{% url 'about' %}"><li>Overview</li></a>
             <a href="{% url 'about' %}#aboutFounder"><li>About Founder</li></a>
             <a href="{% url 'contactUs' %}"><li>Contact Us</li></a>
-            <a href="#"><li>Career</li></a>          
+            <a href="#"><li>Careers</li></a>          
           </ul>
         </li>
 
@@ -163,7 +165,7 @@
     <h5>The  #1 Talent Acquisition and Resume Writing Company,
       Trusted by Professionals.
     </h5>
-    <a class="waves-effect waves-light btn btn-large resume-review-button">Get a Free Resume Review</a>
+    <a class="waves-effect waves-light btn btn-large resume-review-button">Get Resume Review</a>
   </div>
 
   <div class="item last" style="background: url({% static 'image/homepage_banner.jpg' %}) center center no-repeat; background-size: contain;"></div>
@@ -173,7 +175,13 @@
     <!-- -------------------------------Resumes have been shortlisted by--------------------------- -->
 <div class="trustedby">
     <div class="headline container ">
-      <h4>Trusted by professionals from</h4>
+      <h4  
+      style="
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 2em;
+      letter-spacing: 1.4px;
+      ">TRUSTED BY PROFESSIONALS FROM</h4>
     </div>
     <br>
 
@@ -199,8 +207,11 @@
   </div>
 
   <div class="aboutus-desc">
-    <h3 style="text-align: center;">Prashanth Mudaliar</h3>
-    <br>
+    <h3 style="text-align: left; font-weight: 800;">Prashanth Mudaliar</h3>
+    <!-- <h5 style="font-size: 22px; color: black;">Founder & CEO, Rapidez Writer <br> Director, Rapidez HR Global Services</h5> -->
+    
+    <h5 style="font-size: 22px; font-weight: 600; color: black;">Leadership Branding and Career Coach <h5>
+
     <h5>
       Talent leader with 15 years of experience in building and scaling businesses through strategic business operations, 
       talent acquisition, HR transformation, marketing and branding.
@@ -211,7 +222,7 @@
       font-weight: 500;"> Read more</a>
     </h5>
 
-      <a href="https://www.linkedin.com/in/prashanthmudaliar/?originalSubdomain=in" target="blank">
+    <a href="https://www.linkedin.com/in/prashanthmudaliar/?originalSubdomain=in" target="blank" style="font-size: 22px; color: black;">
         <!-- <i class="fa fa-linkedin fa-1x" style="margin-left: 5px; margin-right: 2px" aria-hidden="true"></i> -->
         <img 
           class="linkedin-follow"  
@@ -229,17 +240,18 @@
 
     <div class="headline container">
       <h4>What's preventing you from being Hired?</h4>
-      <h5>Everything you need to know to make your next career move.</h5>
+      <h5>Everything you need to make your next career move.</h5>
     </div>
     <div class="boss">
       <div class="maindetail">
         <div class="image1212">
           <img src="{% static '\image\wsh1.png' %}" />
         </div>
-        <div class="pt1 pt" data-aos="fade-left" data-aos-duration="2500">
+        <div class="pt1 pt" data-aos="fade-left" data-aos-duration="3500">
           <h5>
-            <span>Resume Visibility on Job Portals</span>
+            <span>Visibility on Job Portals</span>
           </h5>
+          <h6>Resumes are not optimized on Job portal due to insignificant keywords</h6>
         </div>
 
         <div class="image1212">
@@ -247,10 +259,11 @@
           <img src="{% static '\image\wsh2.png' %}" />
         </div>
 
-        <div class="pt2 pt" data-aos="fade-left" data-aos-duration="3000">
+        <div class="pt2 pt" data-aos="fade-left" data-aos-duration="4000">
           <h5>
-            <span>Adoption of ATS eco-system</span>
+            <span>Adoption of ATS</span>
           </h5>
+          <h6>The resume should be ATS Compliant to pass the system check</h6>
         </div>
 
         <div class="image1212">
@@ -258,10 +271,11 @@
           <img src="{% static '\image\wsh8.png' %}" />
         </div>
 
-        <div class="pt3 pt" data-aos="fade-left" data-aos-duration="3500">
+        <div class="pt3 pt" data-aos="fade-left" data-aos-duration="4500">
           <h5>
             <span>Vague Content</span>
           </h5>
+          <h6>The content in the resume should be short & crisp by using bulletin points not mere paragraphs</h6>
         </div>
 
         <div class="image1212">
@@ -269,10 +283,11 @@
           <img src="{% static '\image\wsh7.png' %}" />
         </div>
 
-        <div class="pt4 pt" data-aos="fade-left" data-aos-duration="4500">
+        <div class="pt4 pt" data-aos="fade-left" data-aos-duration="5000">
           <h5>
             <span>Irrelevant Interview calls</span>
           </h5>
+          <h6>Lack of Job Targeted keywords in Resume</h6>
         </div>
 
         <div class="image1212">
@@ -280,10 +295,11 @@
           <img src="{% static '\image\wsh6.png' %}" />
         </div>
 
-        <div class="pt5 pt" data-aos="fade-left" data-aos-duration="5000">
+        <div class="pt5 pt" data-aos="fade-left" data-aos-duration="5500">
           <h5>
             <span>Insignificant keywords</span>
           </h5>
+          <h6>Generic keywords would not increase the visibility on Job portals</h6>
         </div>
 
         <div class="image1212">
@@ -291,10 +307,11 @@
           <img src="{% static '\image\wsh9.png' %}" />
         </div>
 
-        <div class="p6 pt" data-aos="fade-left" data-aos-duration="5500">
+        <div class="p6 pt" data-aos="fade-left" data-aos-duration="6000">
           <h5>
             <span>Grammatical errors</span>
           </h5>
+          <h6>Spell Errors on the CV would impact in shortlisting your resume</h6>
         </div>
       </div>
     </div>
@@ -395,7 +412,7 @@
                 </tr>
                 <tr>
                   <th class="features-images"><img src="{% static '\image\f5.png' %}" /></th>
-                  <td>Proofreading by career coach</td>
+                  <td>Proofreading by Career Coach</td>
                 </tr>
                 <tr>
                   <th class="features-images"><img src="{% static '\image\f6.png' %}" /></th>
@@ -415,7 +432,7 @@
     
     <div class="fwwsa">
       <div class="headline" >
-        <h4>Why RapidezWriter</h4>
+        <h4>Why Rapidez Writer</h4>
         <h5>The biggest challenge always is to decide on what to do next. And we’re ready with the plan for you.</h5>
       </div>
       <div class="fwwsa1" style="display: block !important">
@@ -504,7 +521,8 @@
     <div class="colo1" style="background: #f8f8f8">
       <div class="headline container" style="padding-bottom: 10px">
         <h4>What customers say about us </h4>
-        <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p>
+        <!-- <p><span style="color: #f8c20e;">&#9733; &#9733; &#9733; &#9733;</span><span style="font-weight: bold; margin-left: 10px;"> 4.3 </span> Rating <span style="font-weight: bold; margin-left: 10px;">1033</span> Reviews</p> -->
+        <br>
       </div>
       <div class="taggbox-container" style=" width:100%;height:100%;overflow: auto;">
         <div class="taggbox-socialwall" data-wall-id="51184" view-url="https://widget.taggbox.com/51184">  
@@ -600,58 +618,109 @@
     <footer class="footer">
       <div class="product">
         <h5>PRODUCTS</h5>
-        <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><p>Resume Analysis</p></a>
-        <a href="{% url 'resumeWriting' %}"><p>Resume Writing</p></a>
-        <a href="{% url 'resumeMakeover' %}"><p>Resume Template Makeover</p></a>
-        <a href="{% url 'linkedIn' %}"><p>Linkedin Profile Branding</p></a>
-        <a href="{% url 'resumeVideo' %}"><p>Video Resume Building</p></a>
-        <a href="{% url 'resumeConsulting' %}"><p>Consulting</p></a>
+        <a href="{% url 'resumeAnalysis:resumeAnalysis' %}"><p>Free Resume Critique</p></a>
+        <a href="{% url 'resumeWriting' %}"><p>Executive Resume Writing</p></a>
+        <a href="{% url 'resumeMakeover' %}"><p>Resume Makeover</p></a>
+        <a href="{% url 'linkedIn' %}"><p>Linkedin Branding</p></a>
+        <a href="{% url 'resumeVideo' %}"><p>Video Resume</p></a>
+        <a href="{% url 'resumeConsulting' %}"><p>Job Consulting</p></a>
       </div>
 
       <div class="learn">
         <h5>LEARN MORE</h5>
-        <a href="#"><p>FAQs</p></a>
-        <a href="{% url 'quizes_list' %}"><p>Quiz</p></a>
+        <a href="{% url 'quizes_list' %}"><p>Career Assessment</p></a>
+        <a href="#"><p>Career Advice</p></a>
         <a href="{% url 'testimonials' %}"><p>Testimonials</p></a>
-        <a href="#"><p>Carrer Advice</p></a>
+        <a href="#"><p>FAQs</p></a>
       </div>
 
       <div class="company">
         <h5>COMPANY</h5>
-        <a href="#"><p>Careers</p></a>
-        <a href="{% url 'about' %}"><p>About Us</p></a>
+        <a href="{% url 'about' %}"><p>Overview</p></a>
+        <a href="{% url 'about' %}#aboutFounder"><p>About Founder</p></a>
         <a href="{% url 'contactUs' %}"><p>Contact Us</p></a>
+        <a href="#"><p>Careers</p></a>
         {% if user.is_authenticated %}
         <a href="{% url 'logout' %}"> <p> Logout </p></a>
         {% else %}
         <a href="{% url 'login' %}"> <p> Login </p></a>
         {% endif %}
+
       </div>
 
+      <!-- src="{% static '/image/homepage_logo-removebg.png' %}"  -->
       <div class="branded">
         <a href="{% url 'home' %}">
         <img 
         class="desk_logo" 
-        src="{% static '/image/homepage_logo-removebg.png' %}" 
+        src="{% static '/image/homepage_logo_small-removebg.png' %}" 
         alt="Rapidez Writer Logo" 
         style="margin-bottom: 1.5em" />
        
+        <!-- Google -->
+        <a 
+        href="https://www.linkedin.com/company/rapidezwriters/" 
+        style="color: #dbe0f2"
+        target="blank">
+        <i
+          class="fab fa-google fa-2x"
+          style="margin-left: 20px; margin-right: 7px"
+          aria-hidden="true"
+        ></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a 
+        href="https://www.linkedin.com/company/rapidezwriters/" 
+        style="color: #dbe0f2"
+        target="blank">
+        <i
+          class="fa fa-linkedin fa-2x"
+          style="margin-left: 20px; margin-right: 7px"
+          aria-hidden="true"
+        ></i
+      ></a>
+
+      <!-- Facebook -->
           <a 
             href="https://www.facebook.com/RapidezWriter/" 
             style="color: #dbe0f2"
             target="blank">
-            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-          </a> 
+            <i 
+            class="fa fa-facebook fa-2x" 
+            style="margin-left: 20px; margin-right: 7px"
+            aria-hidden="true">
+          </i>
+          </a>
+
+        <!-- Instagram -->
+        <a 
+        href="https://www.facebook.com/RapidezWriter/" 
+        style="color: #dbe0f2"
+        target="blank">
+        <i 
+        class="fab fa-instagram fa-2x"
+        aria-hidden="true"
+        style="margin-left: 20px; margin-right: 7px"
+        ></i>
+      </a>
+
+
+        <!-- Youtube -->
           <a 
-            href="https://www.linkedin.com/company/rapidezwriters/" 
+            href="https://www.facebook.com/RapidezWriter/" 
             style="color: #dbe0f2"
             target="blank">
-            <i
-              class="fa fa-linkedin fa-2x"
-              style="margin-left: 20px; margin-right: 7px"
-              aria-hidden="true"
-            ></i
-          ></a>
+            <i 
+            class="fa fa-youtube fa-2x" 
+            aria-hidden="true"
+            style="margin-left: 20px; margin-right: 7px"
+            ></i>
+          </a>
+
+
+
+          
         </a>
       </div>
     </footer>

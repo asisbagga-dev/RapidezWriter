@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Muli";
 }
 p,
 li {
@@ -238,7 +238,7 @@ header ul li a {
 }
 
 .order-now-btn{
-  border-radius: 5px;
+  border-radius: 2em;
   height: 50px;
   padding-top: 5px;
   font-weight: 600;
@@ -361,7 +361,7 @@ header ul li a {
 .text-1 {
   width: 60%;
   float: right;
-  margin-top: 16em;
+  margin-top: 2em;
   padding-left: 2em;
 }
 .mob-img {
@@ -375,6 +375,7 @@ header ul li a {
   color: #8992a4;
   margin-left: 99px;
   font-size: 14.4px;
+  font-weight: bold;
 }
 .text-1 h3 {
   font-size: 27.4px;
@@ -446,11 +447,12 @@ header ul li a {
 
   .rw-quote{
     padding: 3em 8em;
-    text-align: justify;
+    text-align: center;
   }
   
   .rw-quote h4{
     font-weight: 200;
+    font-size: 24px;
   }
 
 /* -----------------------------------------how it work------------------------------------------ */

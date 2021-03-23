@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  /* font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; */
+  font-family: "Muli";
 }
 p,
 li {
@@ -308,6 +309,7 @@ header ul li a {
 
 .rw-quote h4{
   font-weight: 200;
+  font-size: 24px;
 }
 
 /* <!-- -------------------------------------------------memorial-design--------------------------------- --> */
@@ -319,7 +321,7 @@ header ul li a {
 
 .headline h4 {
   margin-bottom: 5px;
-  font-weight: 300;
+  font-weight: 600;
   padding-top: 1.5em;
 }
 
@@ -457,6 +459,7 @@ header ul li a {
 .headlines1 h5 {
   margin-top: 50px;
   font-weight: bold;
+  font-size: 34px;
 }
 
 .contents1 p {

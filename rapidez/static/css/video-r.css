@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: "Muli";
 }
 p,
 li {
@@ -616,7 +616,7 @@ figure {
 .tips .content {
   padding-left: 6em;
   padding-right: 7em;
-  color: #666666 !important;
+  color: #080f1a !important;
   text-align: justify;
   line-height: 1.2;
 }

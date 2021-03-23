@@ -16,6 +16,8 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+
     <!--Import materialize.css-->
     <link
       rel="stylesheet"
@@ -206,10 +208,12 @@
 
     <div class="contents1">
       <div class="headlines1">
-        <h5 style="font-weight: 400; text-align: center; margin-bottom: 1em;">Do you think buying a Template is enough?</h5>
+        <h5 style="font-weight: 600; text-align: center; margin-bottom: 1em; margin-top: -2em;">Do you think buying a Template is enough?</h5>
       </div>
       <p style="font-weight: 300; font-size: 20px; text-align: justify;">
-      Resume Makeover is a unique service offered by Rapidez Writers, wherein the customer will have to share their content with our team. Our designer will work on the aesthetic as well as the  technical aspect of the resume layout which eventually would highlight your brand value.
+      Resume Makeover is a unique service offered by Rapidez Writers, wherein the customer will have to share their content with our team. 
+      <br><br>
+      Our designer will work on the aesthetic as well as the  technical aspect of the resume layout which eventually would highlight your brand value.
       </p>
     </div>
   </div>
@@ -225,26 +229,24 @@
 
             <h5>Buy A Template</h5>
             <p>
-              A mighty engine with the agility to adapt to your business, now
-              and in the future
+              Choose from our extensive list of templates based on your preference
             </p>
           </div>
 
           <div class="upd2 upa z-depth-3">
             <img src="{% static '/image/font2.PNG' %}" alt="" />
 
-            <h5>Connect with our designers and share your content</h5>
+            <h5>Connect </h5>
             <p>
-              An award-winning and streamlined user experience for all quality
-              processes
+              Interact with our designers and share your content
             </p>
           </div>
 
           <div class="upd3 upa z-depth-3">
             <img src="{% static '/image/font3.PNG' %}" alt="" />
 
-            <h5>Get your transformed resume delivered to your inbox</h5>
-            <p>Access securely anytime and anywhere</p>
+            <h5>Transform</h5>
+            <p>Get your transformed resume delivered to your inbox</p>
           </div>
         </div>
       </div>
@@ -255,21 +257,21 @@
       <div>
         <p style="border-bottom: 2px solid #3983fa">
           <a
-            href="{% url 'resumeMakeover' %}#templates_section"
+            href="{% url 'resumeMakeover2' %}#templates_section"
             style="color: #3983fa; font-weight: 700"
           >
-            ATS Resumes
+            Visual Resumes
           </a>
         </p>
       </div>
       <div>
         <p>
-          <a href="{% url 'resumeMakeover1' %}">Infographic Resumes</a>
+          <a href="{% url 'resumeMakeover' %}">ATS Resumes</a>
         </p>
       </div>
       <div>
         <p>
-          <a href="{% url 'resumeMakeover2' %}">Visual Resumes </a>
+          <a href="{% url 'resumeMakeover1' %}">Infographic Resumes </a>
         </p>
       </div>
 
@@ -295,11 +297,11 @@
             </a>
           </div>
           <div class="m-text">
-            <h5>Cascade</h5>
+            <!-- <h5>200</h5>
             <p>
               Professional cover letter template with a column for contact
               information
-            </p>
+            </p> -->
 
             <form class="text-center border border-light p-5" action="{% url 'payment_status' %}" method="POST">
               {% csrf_token %}
@@ -312,7 +314,7 @@
                     data-amount=100
                     data-currency="INR"
                     data-order_id="{{context.order_id}}"
-                    data-buttontext="Order Now"
+                    data-buttontext="Order Now @ 500"
                     data-name="Rapidez Writer"
                     data-description="Resume Template"
                     data-image="{% static '/image/logo.png' %}"
@@ -337,11 +339,11 @@
             </a>
           </div>
           <div class="m-text">
-            <h5>Concept</h5>
+            <!-- <h5>Concept</h5>
             <p>
               Modern cover letter template with delicate icons for contact
               information.
-            </p>
+            </p> -->
             <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
               >Order Now</a
             >
@@ -360,13 +362,13 @@
             </a>
           </div>
           <div class="m-text">
-            <h5>Crisp</h5>
+            <!-- <h5>Crisp</h5>
             <p>
               Creative cover letter template with graphic elements and two
               columns
-            </p>
+            </p> -->
             <a data-aos="zoom-in" class="waves-effect waves-light btn btn90"
-              >Order Now</a
+              >Order Now @ 1000</a
             >
             <br />
           </div>

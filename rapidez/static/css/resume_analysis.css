@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-family: 'Muli';
 }
 p,
 li {
@@ -38,8 +38,6 @@ header {
 }
 header h5 {
   font-weight: 600 !important;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-
   font-size: 26px;
   padding-top: 15px;
 }
@@ -66,7 +64,6 @@ header.sticky {
 
 header.sticky a {
   padding-bottom: 0px;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   padding-bottom: 20px;
 }
 
@@ -145,12 +142,10 @@ header ul li a {
 
 .drop ul li {
   position: relative;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   cursor: pointer;
 }
 .drop ul ul {
   position: absolute;
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   padding: 0;
   display: none;
   top: 100%;
@@ -430,7 +425,8 @@ header ul li a {
 .tex1 p {
   line-height: 1.7;
   font-size: 1.15em;
-  color: #505050;
+  color: #080f1a;
+
 }
 
 .tex2 h5 {
@@ -583,7 +579,6 @@ header ul li a {
 
 /* -------------------------------------------------------footer--------------------------------- */
 .footer {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   display: grid;
   grid-template-columns: repeat(3, 250px) 1fr;
   height: 273px;
@@ -608,14 +603,12 @@ header ul li a {
 }
 
 .footer h5 {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: #a7b2d8;
 }
 
 .footer p {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 5px;
@@ -627,7 +620,6 @@ header ul li a {
 }
 
 .branded h5 {
-  font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight: 600;
   font-size: 34px;
 }
@@ -640,6 +632,11 @@ header ul li a {
   text-transform: none;
   font-size: 20px;
   font-weight: 600;
+  border-radius: 2em;
+}
+
+.btn-large:hover {
+  border-radius: 2em;
 }
 
 .footer .desk_logo{
